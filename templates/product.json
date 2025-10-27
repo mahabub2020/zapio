@@ -58,16 +58,16 @@
         "collapsible_tab_ychK9a": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Details",
             "icon": "check_mark",
-            "content": "",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>",
             "page": ""
           }
         },
         "collapsible_tab_79jFkD": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Shipping",
             "icon": "check_mark",
             "content": "",
             "page": ""
@@ -76,7 +76,7 @@
         "collapsible_tab_kJBHxr": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Returns",
             "icon": "check_mark",
             "content": "",
             "page": ""
