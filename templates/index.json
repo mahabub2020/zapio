@@ -63,13 +63,14 @@
         "column_JPxGpm": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Milestone_Rewards.png",
             "tagline": "Increase Average Order Value",
             "title": "Milestone Rewards",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
             "button_label": "View Demo",
-            "button_link": ""
+            "button_link": "shopify://products/bundle-discount"
           }
         },
         "column_kyV6K8": {
