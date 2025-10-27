@@ -50,13 +50,14 @@
         "column_nhjtpF": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Buy_X_Get_Y.png",
             "tagline": "Increase Average Order Value",
             "title": "Buy X Get Y",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
             "button_label": "View Demo",
-            "button_link": ""
+            "button_link": "shopify://products/bxgy-embedded"
           }
         },
         "column_JPxGpm": {
