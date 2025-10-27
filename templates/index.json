@@ -260,8 +260,8 @@
       "settings": {
         "title": "Widget Types",
         "heading_size": "h1",
-        "subtitle": "",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "",
         "button_label": "Explore All Widgets",
         "button_link": "",
         "columns_desktop": 1,
