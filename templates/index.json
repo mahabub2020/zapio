@@ -132,10 +132,10 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "color_scheme": "",
-        "padding_top": 96,
-        "padding_bottom": 96,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
+        "padding_top": 68,
+        "padding_bottom": 76,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 16
       }
     },
     "zapio_widget_types_4dCgAV": {
