@@ -49,12 +49,6 @@
           "type": "description",
           "settings": {}
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
         "collapsible_tab_ychK9a": {
           "type": "collapsible_tab",
           "settings": {
@@ -91,7 +85,6 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share",
         "collapsible_tab_ychK9a",
         "collapsible_tab_79jFkD",
         "collapsible_tab_kJBHxr"
