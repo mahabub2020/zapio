@@ -1,0 +1,156 @@
+{{ 'component-breadcrumbs.css' | asset_url | stylesheet_tag }}
+
+{%- unless template == 'index' or template == 'cart' or template == '404' -%}
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+  <nav
+    class="breadcrumbs section-{{ section.id }}-padding{% if section.settings.show_divider %} breadcrumbs--divider{% endif %}"
+    role="navigation"
+    aria-label="breadcrumbs"
+  >
+    <div class="page-width">
+      <ol class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="{{ routes.root_url }}" class="breadcrumbs__link" itemprop="item">
+            <span itemprop="name">{{ 'general.breadcrumbs.home' | t }}</span>
+          </a>
+          <meta itemprop="position" content="1">
+        </li>
+
+        {%- case template.name -%}
+          {%- when 'product' -%}
+            {%- if collection -%}
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="{{ collection.url }}" class="breadcrumbs__link" itemprop="item">
+                  <span itemprop="name">{{ collection.title }}</span>
+                </a>
+                <meta itemprop="position" content="2">
+              </li>
+              <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">{{ product.title }}</span>
+                <meta itemprop="position" content="3">
+              </li>
+            {%- else -%}
+              <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">{{ product.title }}</span>
+                <meta itemprop="position" content="2">
+              </li>
+            {%- endif -%}
+
+          {%- when 'collection' -%}
+            {%- if current_tags -%}
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="{{ collection.url }}" class="breadcrumbs__link" itemprop="item">
+                  <span itemprop="name">{{ collection.title }}</span>
+                </a>
+                <meta itemprop="position" content="2">
+              </li>
+              <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">{{ current_tags | join: ' + ' }}</span>
+                <meta itemprop="position" content="3">
+              </li>
+            {%- else -%}
+              <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">{{ collection.title }}</span>
+                <meta itemprop="position" content="2">
+              </li>
+            {%- endif -%}
+
+          {%- when 'blog' -%}
+            <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <span itemprop="name">{{ blog.title }}</span>
+              <meta itemprop="position" content="2">
+            </li>
+
+          {%- when 'article' -%}
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a href="{{ blog.url }}" class="breadcrumbs__link" itemprop="item">
+                <span itemprop="name">{{ blog.title }}</span>
+              </a>
+              <meta itemprop="position" content="2">
+            </li>
+            <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <span itemprop="name">{{ article.title }}</span>
+              <meta itemprop="position" content="3">
+            </li>
+
+          {%- when 'page' -%}
+            <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <span itemprop="name">{{ page.title }}</span>
+              <meta itemprop="position" content="2">
+            </li>
+
+          {%- when 'search' -%}
+            <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <span itemprop="name">{{ 'general.search.title' | t }}</span>
+              <meta itemprop="position" content="2">
+            </li>
+
+          {%- when 'account' -%}
+            <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <span itemprop="name">{{ 'customer.account.title' | t }}</span>
+              <meta itemprop="position" content="2">
+            </li>
+
+          {%- else -%}
+            <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <span itemprop="name">{{ page_title }}</span>
+              <meta itemprop="position" content="2">
+            </li>
+        {%- endcase -%}
+      </ol>
+    </div>
+  </nav>
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "Breadcrumbs",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "default": false,
+      "label": "Show top divider"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 20
+    }
+  ]
+}
+{% endschema %}

@@ -27,37 +27,11 @@
 }
 
 .footer-cta__heading {
-  margin: 0 0 1rem 0;
-  font-weight: 700;
+  margin: 0 0 1rem 0; 
   line-height: 1.2;
   color: rgb(var(--color-foreground));
 }
-
-.footer-cta__heading.h0 {
-  font-size: 3.6rem;
-}
-
-.footer-cta__heading.h1 {
-  font-size: 3rem;
-}
-
-.footer-cta__heading.h2 {
-  font-size: 2.4rem;
-}
-
-@media screen and (min-width: 750px) {
-  .footer-cta__heading.h0 {
-    font-size: 4.2rem;
-  }
-
-  .footer-cta__heading.h1 {
-    font-size: 3.6rem;
-  }
-
-  .footer-cta__heading.h2 {
-    font-size: 3rem;
-  }
-}
+ 
 
 .footer-cta__description {
   margin: 0;
