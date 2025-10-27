@@ -17,114 +17,116 @@
         "padding_bottom": 28
       }
     },
-    "zapio_multicolumn_84YNWC": {
+    "zapio_multicolumn_fpewky": {
       "type": "zapio-multicolumn",
       "blocks": {
-        "column_CkdbAd": {
+        "column_VaUqT4": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame9.jpg",
+            "image": "shopify://shop_images/Free-Gift.png",
             "tagline": "Increase Average Order Value",
             "title": "Free Gift",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
             "button_label": "View Demo",
-            "button_link": ""
+            "button_link": "shopify://products/floating-pop-up"
           }
         },
-        "column_Yqiidb": {
+        "column_EUkYYE": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9.jpg",
+            "image": "shopify://shop_images/Buy_X_Get_Y.png",
             "tagline": "Increase Average Order Value",
             "title": "Buy X Get Y",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
             "button_label": "View Demo",
-            "button_link": ""
+            "button_link": "shopify://products/bxgy-embedded"
           }
         },
-        "column_wiy96c": {
+        "column_rVfDhA": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9_ce6ae9bd-76c3-4c62-b50c-a6aad8446422.jpg",
+            "image": "shopify://shop_images/Milestone_Rewards.png",
             "tagline": "Increase Average Order Value",
             "title": "Milestone Rewards",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
             "button_label": "View Demo",
-            "button_link": ""
+            "button_link": "shopify://products/bundle-discount"
           }
         },
-        "column_it34zA": {
+        "column_eUwKVy": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9_eef34987-7d85-4c7b-9e97-02be5c77607a.jpg",
+            "image": "shopify://shop_images/Product_Bundles.png",
             "tagline": "Increase Average Order Value",
             "title": "Product Bundles",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
             "button_label": "View Demo",
-            "button_link": ""
+            "button_link": "shopify://products/floating-slider"
           }
         },
-        "column_ziqpRk": {
+        "column_HH9YhA": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9_fa9bda4a-10ee-4681-a69d-f99f7b7d1c29.jpg",
+            "image": "shopify://shop_images/Volume_Discounts.png",
             "tagline": "Increase Average Order Value",
             "title": "Volume Discounts",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
             "button_label": "View Demo",
-            "button_link": ""
+            "button_link": "shopify://products/floating-pop-up"
           }
         },
-        "column_9tYmFM": {
+        "column_yJbrny": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9_e70c0172-393b-4075-87f7-1ff2d2216ae3.jpg",
+            "image": "shopify://shop_images/Frequently_Bought_Together.png",
             "tagline": "Increase Average Order Value",
             "title": "Frequently Bought Together",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
             "button_label": "View Demo",
-            "button_link": ""
+            "button_link": "shopify://products/bundle-discount"
           }
         }
       },
       "block_order": [
-        "column_CkdbAd",
-        "column_Yqiidb",
-        "column_wiy96c",
-        "column_it34zA",
-        "column_ziqpRk",
-        "column_9tYmFM"
+        "column_VaUqT4",
+        "column_EUkYYE",
+        "column_rVfDhA",
+        "column_eUwKVy",
+        "column_HH9YhA",
+        "column_yJbrny"
       ],
       "name": "Zapio Multicolumn",
       "settings": {
         "title": "Campaign Type and Use Cases",
         "heading_size": "h1",
         "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>",
-        "button_label": "Explore All Campaign Types",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "color_scheme": "",
         "padding_top": 96,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
     }
   },
   "order": [
     "main",
-    "zapio_multicolumn_84YNWC"
+    "zapio_multicolumn_fpewky"
   ]
 }
