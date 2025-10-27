@@ -151,9 +151,9 @@
       "settings": {
         "title": "Widget Types",
         "heading_size": "h1",
-        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "description": "",
-        "button_label": "Explore All Widgets",
+        "subtitle": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 1,
         "columns_mobile": "1",
