@@ -54,6 +54,33 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "collapsible_tab_ychK9a": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_79jFkD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_kJBHxr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -64,7 +91,10 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "collapsible_tab_ychK9a",
+        "collapsible_tab_79jFkD",
+        "collapsible_tab_kJBHxr"
       ],
       "settings": {
         "enable_sticky_info": true,
