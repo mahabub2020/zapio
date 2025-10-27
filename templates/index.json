@@ -76,13 +76,14 @@
         "column_kyV6K8": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Product_Bundles.png",
             "tagline": "Increase Average Order Value",
             "title": "Product Bundles",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
             "button_label": "View Demo",
-            "button_link": ""
+            "button_link": "shopify://products/floating-slider"
           }
         },
         "column_DRHWke": {
