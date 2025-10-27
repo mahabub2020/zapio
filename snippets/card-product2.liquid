@@ -1,0 +1,157 @@
+{% comment %}
+  Renders a product card with layout 2
+
+  Accepts:
+  - card_product: {Object} Product Liquid object (optional)
+  - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+  - image_shape: {String} Image mask to apply to the product image card. Values are "arch", "blob", "chevronleft", "chevronright", "diamond", "parallelogram", and "round". (optional)
+  - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+  - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+
+  Usage:
+  {% render 'card-product2', card_product: product %}
+{% endcomment %}
+
+<style>
+  .card-product2 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+  }
+  .card-product2__image-wrapper {
+    position: relative;
+    background-color: #F5F5F5;
+    padding: 20px;
+  }
+  .card-product2__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  .card-product2__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .card-product2__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #D4EDDA;
+    color: #155724;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .card-product2__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+  }
+  .card-product2__description {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  .card-product2__use-cases {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .card-product2__use-cases strong {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .card-product2__use-cases ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .card-product2__use-cases li {
+    margin-bottom: 5px;
+    padding-left: 15px;
+    position: relative;
+  }
+  .card-product2__use-cases li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #555;
+  }
+  .card-product2__button-wrapper {
+    margin-top: auto;
+  }
+  .card-product2__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: auto;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+</style>
+<div class="card-product2">
+  <div class="card-product2__image-wrapper">
+    {%- if card_product.media[1] -%}
+      <img class="card-product2__image" src="{{ card_product.media[1] | image_url: width: 533 }}" alt="{{ card_product.media[1].alt | escape }}" loading="lazy" width="{{ card_product.media[1].width }}" height="{{ card_product.media[1].height }}">
+    {%- elsif card_product.featured_media -%}
+      <img class="card-product2__image" src="{{ card_product.featured_media | image_url: width: 533 }}" alt="{{ card_product.featured_media.alt | escape }}" loading="lazy" width="{{ card_product.featured_media.width }}" height="{{ card_product.featured_media.height }}">
+    {%- else -%}
+      {{ 'product-apparel-2' | placeholder_svg_tag: 'placeholder-svg card-product2__image' }}
+    {%- endif -%}
+  </div>
+  <div class="card-product2__content">
+    <div class="card-product2__badge">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 15L15 1M15 1V11.8M15 1H4.2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>
+        {%- if card_product.metafields.my_fields.badge -%}
+          {{ card_product.metafields.my_fields.badge }}
+        {%- else -%}
+          Increase Average Order Value
+        {%- endif -%}
+      </span>
+    </div>
+    <h3 class="card-product2__title">
+      {%- if card_product.title -%}
+        {{ card_product.title }}
+      {%- else -%}
+        Free Gift
+      {%- endif -%}
+    </h3>
+    <div class="card-product2__description">
+      {{ card_product.description | strip_html | truncate: 120 }}
+    </div>
+    <div class="card-product2__use-cases">
+      <strong>Use Cases:</strong>
+      <ul>
+        {%- if card_product.metafields.my_fields.use_cases -%}
+          {%- assign use_cases = card_product.metafields.my_fields.use_cases | split: ',' -%}
+          {%- for use_case in use_cases -%}
+            <li>{{ use_case | strip }}</li>
+          {%- endfor -%}
+        {%- else -%}
+          <li>Spend $50, get a Free Gift</li>
+          <li>You're only $20 away from FREE Shipping</li>
+          <li>New Customers Only: Free Gift on your first purchase</li>
+        {%- endif -%}
+      </ul>
+    </div>
+    <div class="card-product2__button-wrapper">
+      <a href="{{ card_product.url | default: '#' }}" class="card-product2__button">
+        <span>View Demo</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8H15M15 8L8.5 1.5M15 8L8.5 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</div>

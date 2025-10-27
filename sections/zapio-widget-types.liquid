@@ -1,0 +1,863 @@
+{{ 'section-zapio-widget-types.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media screen and (min-width: 750px) {
+    .show-on-mobile {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .show-on-desktop {
+      display: none;
+    }
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+
+  /* #shopify-section-{{ section.id }} .zapio-widget-types__card {
+    height: {{ section.settings.card_height_mobile }}px;
+  } */
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    #shopify-section-{{ section.id }} .zapio-widget-types__card {
+      height: {{ section.settings.card_height_desktop }}px;
+    }
+  }
+
+  {%- for block in section.blocks -%}
+    {%- if block.settings.button_hover_text_color != blank -%}
+      .zapio-widget-btn-{{ block.id }}:hover {
+        color: {{ block.settings.button_hover_text_color }} !important;
+      }
+    {%- endif -%}
+  {%- endfor -%}
+{%- endstyle -%}
+
+<div class="zapio-widget-types color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width">
+    {%- comment -%} Header Section {%- endcomment -%}
+    <div class="zapio-widget-types__header">
+     <div class="wrp-widget-types__title">
+      {%- if section.settings.title != blank -%}
+        <h2 class="zapio-widget-types__title {{ section.settings.heading_size }}">
+          {{ section.settings.title }}
+        </h2>
+      {%- endif -%}
+
+      {%- if section.settings.subtitle != blank -%}
+        <p class="zapio-widget-types__subtitle">{{ section.settings.subtitle }}</p>
+      {%- endif -%} 
+      
+   </div>
+    <div class="wrp-widget-types__title_right"> 
+      {%- if section.settings.description != blank -%}
+        <p class="zapio-widget-types__description">{{ section.settings.description }}</p>
+      {%- endif -%}
+      {%- if section.settings.button_label != blank -%}
+        <a
+          {% if section.settings.button_link == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ section.settings.button_link }}"
+          {% endif %}
+          class="button button--secondary zapio-widget-types__button"
+        >
+          {{ section.settings.button_label | escape }}
+        </a>
+      {%- endif -%}
+    </div>
+   </div>
+    {%- comment -%} Filter and Sort Section {%- endcomment -%}
+    {%- if section.blocks.size > 0 -%}
+      <div class="zapio-widget-types__controls">
+        <div class="zapio-widget-types__filters" data-widget-filters>
+          <button class="zapio-widget-types__filter-tab active" data-filter="all">All Widgets</button>
+          <button class="zapio-widget-types__filter-tab" data-filter="product-page">Product page</button>
+          <button class="zapio-widget-types__filter-tab" data-filter="cart-page">Cart page</button>
+          <button class="zapio-widget-types__filter-tab" data-filter="checkout-page">Checkout page</button>
+          <button class="zapio-widget-types__filter-tab" data-filter="thank-you-page">Thank you page</button>
+          <button class="zapio-widget-types__filter-tab" data-filter="pop-up">Pop-up</button>
+        </div>
+
+        <div class="zapio-widget-types__sort">
+          <label for="widget-type-{{ section.id }}">Sort by:</label>
+          <select id="widget-type-{{ section.id }}" data-widget-type>
+            <option value="all">All Types</option>
+            <option value="free-gift">Free Gift</option>
+            <option value="bxgy-bogo">BXGY / BOGO</option>
+            <option value="milestone-rewards">Milestone Rewards</n            <option value="placement">Placement</option>
+          </select>
+        </div>
+      </div>
+
+      {%- comment -%} Widget Cards Grid {%- endcomment -%}
+      <div class="zapio-widget-types__grid zapio-widget-types__grid--{{ section.settings.columns_desktop }}-col-desktop zapio-widget-types__grid--{{ section.settings.columns_mobile }}-col-mobile" data-widget-grid>
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign image_position = 'left: ' | append: block.settings.image_position_x | append: '%; top: ' | append: block.settings.image_position_y | append: '%;'
+            assign card_bg_style = 'background-color: ' | append: block.settings.background_color | append: '; position: relative; overflow: hidden;'
+          -%}
+          <div
+            class="zapio-widget-types__card zapio-widget-types__card--{{ block.settings.content_layout }}"
+            data-widget-card
+            data-category="{{ block.settings.category }}"
+            data-widget-type="{{ block.settings.widget_type }}"
+            data-name="{{ block.settings.title | escape }}"
+            style="{{ card_bg_style }}"
+            {{ block.shopify_attributes }}
+          >
+            {%- if block.settings.background_image != blank -%}
+              <div
+                class="zapio-widget-types__card-bg-image"
+                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; background-image: url('{{ block.settings.background_image | image_url: width: 1000 }}'); background-position: {{ block.settings.background_image_position | default: 'right' }}; background-size: {{ block.settings.background_size | default: 'cover' }};"
+              > &nbsp; </div>
+            {%- endif -%}
+
+            {%- if block.settings.overlay_opacity > 0 -%}
+              {%- liquid
+                assign overlay_opacity_decimal = block.settings.overlay_opacity | divided_by: 100.0
+              -%}
+              <div
+                class="zapio-widget-types__card-overlay"
+                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; background-color: {{ block.settings.overlay_color }}; opacity: {{ overlay_opacity_decimal }};"
+              > &nbsp; </div>
+            {%- endif -%}
+
+            <div class="zapio-widget-types__card-content" style="position: relative; z-index: 2;">
+            
+            {%- if block.settings.badge != blank -%}
+                <span class="zapio-widget-types__badge">{{ block.settings.badge }}</span>
+              {%- endif -%}
+                {%- if block.settings.preview_image != blank -%}
+                <div class="zapio-widget-types__preview-small show-on-mobile">
+                  <img
+                    src="{{ block.settings.preview_image | image_url: width: 600 }}"
+                    alt="{{ block.settings.title | escape }}"
+                    loading="lazy"
+                    style="width: 100%; height: auto;"
+                  >
+                </div>
+              {%- endif -%}
+ 
+
+              <div class="zapio-widget-types__card-text">
+                {%- if block.settings.title != blank -%}
+                  <h3 class="zapio-widget-types__card-title" style="font-size: {{ block.settings.title_font_size }}px; {% if block.settings.title_color != blank %}color: {{ block.settings.title_color }};{% endif %}">{{ block.settings.title }}</h3>
+                {%- endif -%}
+
+                {%- if block.settings.description != blank -%}
+                  <p class="zapio-widget-types__card-description" style="font-size: {{ block.settings.description_font_size }}px; {% if block.settings.description_color != blank %}color: {{ block.settings.description_color }};{% endif %}">{{ block.settings.description }}</p>
+                {%- endif -%}
+              </div>
+                {%- if block.settings.button_label != blank -%}
+                  <a
+                    {% if block.settings.button_link == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link }}"
+                    {% endif %}
+                    class="zapio-widget-types__card-link zapio-widget-btn-{{ block.id }}"
+                    style="font-size: {{ block.settings.button_font_size }}px; {% if block.settings.button_text_color != blank %}color: {{ block.settings.button_text_color }};{% endif %}"
+                  >
+                    {{ block.settings.button_label | escape }}
+                    <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
+                  </a>
+                {%- endif -%}
+               
+          
+            </div>
+
+            {%- if block.settings.main_image != blank -%}
+              <div class="zapio-widget-types__preview-large show-on-desktop" style="{{ image_position }}">
+                <img
+                  src="{{ block.settings.main_image | image_url: width: 800 }}"
+                  alt="{{ block.settings.title | escape }}"
+                  loading="lazy"
+                >
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%} No Results Message {%- endcomment -%}
+      <div class="zapio-widget-types__no-results" data-no-results style="display: none;">
+        <p>No widgets found matching your filters. Please try a different selection.</p>
+      </div>
+
+      {%- comment -%} Pagination {%- endcomment -%}
+      {%- if section.settings.enable_pagination -%}
+        <div class="zapio-widget-types__pagination" data-widget-pagination>
+          <button class="zapio-widget-types__pagination-btn" data-pagination-prev disabled>← Previous</button>
+          <div class="zapio-widget-types__pagination-pages" data-pagination-pages></div>
+          <button class="zapio-widget-types__pagination-btn" data-pagination-next>Next →</button>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  class WidgetTypesFilter {
+    constructor(container) {
+      this.container = container;
+      this.filters = container.querySelectorAll('[data-filter]');
+      this.cards = container.querySelectorAll('[data-widget-card]');
+      this.widgetTypeSelect = container.querySelector('[data-widget-type]');
+      this.grid = container.querySelector('[data-widget-grid]');
+      this.noResults = container.querySelector('[data-no-results]');
+      this.pagination = container.querySelector('[data-widget-pagination]');
+      this.itemsPerPage = {{ section.settings.items_per_page | default: 6 }};
+      this.currentPage = 1;
+      this.currentFilter = 'all';
+
+      this.init();
+    }
+
+    init() {
+      this.filters.forEach(filter => {
+        filter.addEventListener('click', (e) => this.handleFilter(e));
+      });
+
+      if (this.widgetTypeSelect) {
+        this.widgetTypeSelect.addEventListener('change', () => this.handleWidgetType());
+      }
+
+      if (this.pagination) {
+        const prevBtn = this.pagination.querySelector('[data-pagination-prev]');
+        const nextBtn = this.pagination.querySelector('[data-pagination-next]');
+
+        if (prevBtn) prevBtn.addEventListener('click', () => this.goToPage(this.currentPage - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => this.goToPage(this.currentPage + 1));
+      }
+
+      this.filterAndSort();
+    }
+
+    handleFilter(e) {
+      this.filters.forEach(f => f.classList.remove('active'));
+      e.target.classList.add('active');
+      this.currentFilter = e.target.dataset.filter;
+      this.currentPage = 1;
+      this.filterAndSort();
+    }
+
+    handleWidgetType() {
+      this.currentPage = 1;
+      this.filterAndSort();
+    }
+
+    filterAndSort() {
+      let visibleCards = Array.from(this.cards);
+
+      // Filter by category
+      if (this.currentFilter !== 'all') {
+        visibleCards = visibleCards.filter(card =>
+          card.dataset.category === this.currentFilter
+        );
+      }
+
+      // Filter by widget type
+      if (this.widgetTypeSelect) {
+        const widgetType = this.widgetTypeSelect.value;
+        if (widgetType !== 'all') {
+          visibleCards = visibleCards.filter(card =>
+            card.dataset.widgetType === widgetType
+          );
+        }
+      }
+
+      // Hide all cards first
+      this.cards.forEach(card => card.style.display = 'none');
+
+      // Check if no results
+      if (visibleCards.length === 0) {
+        if (this.noResults) this.noResults.style.display = 'block';
+        if (this.pagination) this.pagination.style.display = 'none';
+        return;
+      }
+
+      // Hide no results message
+      if (this.noResults) this.noResults.style.display = 'none';
+
+      // Show filtered cards
+      if (this.pagination) {
+        this.paginateCards(visibleCards);
+      } else {
+        visibleCards.forEach(card => card.style.display = '');
+      }
+    }
+
+    paginateCards(cards) {
+      const totalPages = Math.ceil(cards.length / this.itemsPerPage);
+
+      // Hide pagination if only one page or less
+      if (totalPages <= 1) {
+        this.pagination.style.display = 'none';
+        cards.forEach(card => card.style.display = '');
+        return;
+      }
+
+      // Show pagination
+      this.pagination.style.display = 'flex';
+
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      const end = start + this.itemsPerPage;
+
+      cards.slice(start, end).forEach(card => card.style.display = '');
+
+      this.updatePaginationControls(totalPages);
+    }
+
+    updatePaginationControls(totalPages) {
+      const pagesContainer = this.pagination.querySelector('[data-pagination-pages]');
+      const prevBtn = this.pagination.querySelector('[data-pagination-prev]');
+      const nextBtn = this.pagination.querySelector('[data-pagination-next]');
+
+      // Update buttons state
+      prevBtn.disabled = this.currentPage === 1;
+      nextBtn.disabled = this.currentPage === totalPages;
+
+      // Update page numbers
+      pagesContainer.innerHTML = '';
+      for (let i = 1; i <= totalPages; i++) {
+        const pageBtn = document.createElement('button');
+        pageBtn.textContent = i;
+        pageBtn.className = 'zapio-widget-types__pagination-page' + (i === this.currentPage ? ' active' : '');
+        pageBtn.addEventListener('click', () => this.goToPage(i));
+        pagesContainer.appendChild(pageBtn);
+      }
+    }
+
+    goToPage(page) {
+      this.currentPage = page;
+      this.filterAndSort();
+      this.container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const widgetSection = document.querySelector('.zapio-widget-types');
+    if (widgetSection) {
+      new WidgetTypesFilter(widgetSection);
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Zapio Widget Types",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Section title",
+      "default": "Widget Types"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Explore All Widgets"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Grid Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2,
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 column"
+        },
+        {
+          "value": "2",
+          "label": "2 columns"
+        }
+      ],
+      "default": "1",
+      "label": "Number of columns on mobile"
+    },
+    {
+      "type": "range",
+      "id": "card_height_desktop",
+      "min": 300,
+      "max": 800,
+      "step": 10,
+      "unit": "px",
+      "label": "Card height on desktop",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "card_height_mobile",
+      "min": 200,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "label": "Card height on mobile",
+      "default": 400
+    },
+    {
+      "type": "header",
+      "content": "Pagination"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination",
+      "label": "Enable pagination",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "items_per_page",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "default": 6,
+      "label": "Items per page"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top (mobile)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom (mobile)",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "widget",
+      "name": "Widget Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "category",
+          "label": "Widget category",
+          "options": [
+            {
+              "value": "all",
+              "label": "All Widgets"
+            },
+            {
+              "value": "product-page",
+              "label": "Product page"
+            },
+            {
+              "value": "cart-page",
+              "label": "Cart page"
+            },
+            {
+              "value": "checkout-page",
+              "label": "Checkout page"
+            },
+            {
+              "value": "thank-you-page",
+              "label": "Thank you page"
+            },
+            {
+              "value": "pop-up",
+              "label": "Pop-up"
+            }
+          ],
+          "default": "all"
+        },
+        {
+          "type": "select",
+          "id": "widget_type",
+          "label": "Widget type",
+          "options": [
+            {
+              "value": "free-gift",
+              "label": "Free Gift"
+            },
+            {
+              "value": "bxgy-bogo",
+              "label": "BXGY / BOGO"
+            },
+            {
+              "value": "milestone-rewards",
+              "label": "Milestone Rewards"
+            },
+            {
+              "value": "placement",
+              "label": "Placement"
+            }
+          ],
+          "default": "free-gift"
+        },
+        {
+          "type": "header",
+          "content": "Card Layout"
+        },
+        {
+          "type": "select",
+          "id": "content_layout",
+          "label": "Content layout",
+          "options": [
+            {
+              "value": "content-left",
+              "label": "Content left, Image right"
+            },
+            {
+              "value": "content-right",
+              "label": "Content right, Image left"
+            }
+          ],
+          "default": "content-left"
+        },
+        {
+          "type": "header",
+          "content": "Card Content"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge text",
+          "default": "Free Gift",
+          "info": "e.g., Free Gift, Buy X Get Y, Coming Soon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Widget name",
+          "default": "Floating Pop-up"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        },
+        {
+          "type": "header",
+          "content": "Card Typography"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title color"
+        },
+        {
+          "type": "range",
+          "id": "title_font_size",
+          "min": 12,
+          "max": 48,
+          "step": 1,
+          "unit": "px",
+          "label": "Title font size",
+          "default": 28
+        },
+        {
+          "type": "color",
+          "id": "description_color",
+          "label": "Description color"
+        },
+        {
+          "type": "range",
+          "id": "description_font_size",
+          "min": 10,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Description font size",
+          "default": 14
+        },
+        {
+          "type": "header",
+          "content": "Card Background"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "#F5D78E",
+          "info": "Base background color (shows behind image)"
+        },
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Background image"
+        },
+        {
+          "type": "select",
+          "id": "background_image_position",
+          "label": "Background image position",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "right",
+          "info": "Horizontal position of background image"
+        },
+        {
+          "type": "select",
+          "id": "background_size",
+          "label": "Background size",
+          "options": [
+            {
+              "value": "cover",
+              "label": "Cover"
+            },
+            {
+              "value": "contain",
+              "label": "Contain"
+            },
+            {
+              "value": "auto",
+              "label": "Auto"
+            }
+          ],
+          "default": "cover"
+        },
+        {
+          "type": "color",
+          "id": "overlay_color",
+          "label": "Overlay color",
+          "default": "#F5D78E",
+          "info": "Color overlay on top of background image"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay opacity",
+          "default": 95,
+          "info": "Adjust overlay transparency (0 = transparent, 100 = solid)"
+        },
+        {
+          "type": "header",
+          "content": "Card Images"
+        },
+        {
+          "type": "image_picker",
+          "id": "preview_image",
+          "label": "Preview image (small device mockup)"
+        },
+        {
+          "type": "image_picker",
+          "id": "main_image",
+          "label": "Main image (large demo)"
+        },
+        {
+          "type": "range",
+          "id": "image_position_x",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Image position X axis",
+          "default": 50,
+          "info": "Adjust horizontal position of main image"
+        },
+        {
+          "type": "range",
+          "id": "image_position_y",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Image position Y axis",
+          "default": 50,
+          "info": "Adjust vertical position of main image"
+        },
+        {
+          "type": "header",
+          "content": "Card Button"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "View Widget"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "range",
+          "id": "button_font_size",
+          "min": 10,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Button font size",
+          "default": 14
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button text color"
+        },
+        {
+          "type": "color",
+          "id": "button_hover_text_color",
+          "label": "Button hover text color"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Zapio Widget Types",
+      "blocks": [
+        {
+          "type": "widget",
+          "settings": {
+            "category": "pop-up",
+            "widget_type": "free-gift",
+            "badge": "Free Gift",
+            "title": "Floating Pop-up"
+          }
+        },
+        {
+          "type": "widget",
+          "settings": {
+            "category": "product-page",
+            "widget_type": "free-gift",
+            "badge": "Free Gift",
+            "title": "Floating Slider"
+          }
+        },
+        {
+          "type": "widget",
+          "settings": {
+            "category": "cart-page",
+            "widget_type": "bxgy-bogo",
+            "badge": "Buy X Get Y",
+            "title": "BXGY Embedded"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

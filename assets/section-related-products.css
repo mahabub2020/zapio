@@ -1,0 +1,31 @@
+.related-products {
+  display: block;
+} 
+/* Zapio Product Card Styles */
+
+
+.zapio-product-card__category {
+  font-size: 0.8em;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.zapio-product-card__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.7em;
+  z-index: 3;
+}
+
+.zapio-product-card {
+  background-image: url("{{ 'card-bg-img.png' | asset_url }}");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-color: {{ card_product.metafields.custom.widget_types_color | default: '#F5D17B' }};
+}

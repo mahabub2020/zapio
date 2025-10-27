@@ -1,0 +1,221 @@
+.zapio-multicolumn {
+  overflow: hidden;
+}
+
+/* Header */
+.zapio-multicolumn__header {
+  text-align: left;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.zapio-multicolumn__title {
+  margin: 0 0 1rem 0;  
+  flex: 1;
+  min-width: 300px;
+}
+ 
+
+.zapio-multicolumn__description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: rgba(var(--color-foreground), 0.75);
+  margin-bottom: 1rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.zapio-multicolumn__header-button {
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+/* Grid */
+.zapio-multicolumn__grid {
+   
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 749px) {
+  .zapio-multicolumn__grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Item */
+.zapio-multicolumn__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.zapio-multicolumn__card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(13, 12, 12, 0.1);
+  border-radius: 0;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background: rgb(var(--color-background));
+  height: 100%;
+}
+
+.zapio-multicolumn__card:hover {
+  box-shadow: 0 2px 6px rgba(13, 12, 12 0.1);
+  transform: translateY(-2px);
+}
+
+/* Image */
+.zapio-multicolumn__image-wrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background-color: rgba(var(--color-foreground), 0.04);
+}
+
+.zapio-multicolumn__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content */
+.zapio-multicolumn__content {
+  padding: 32px;
+   
+}
+
+/* Tagline */
+.zapio-multicolumn__tagline { 
+  gap: .4rem;
+  font-size: 12px;
+  font-weight: 500;
+  color: #0d0c0c;
+  background-color: #b6f7d0;
+  border-radius: 16px;
+  display: inline-flex;
+  padding: 4px 12px;
+  line-height: 11px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+ 
+/* Item Title */
+.zapio-multicolumn__item-title {
+  margin: 0;  
+}
+
+/* Item Description */
+.zapio-multicolumn__item-description {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+/* Use Cases */
+.zapio-multicolumn__use-cases {
+  margin-top: auto;
+  padding-top: 1rem;
+  margin-bottom: 20px;
+}
+
+.zapio-multicolumn__use-cases-title {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.zapio-multicolumn__use-cases-content {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: rgba(var(--color-foreground), 0.7);
+}
+
+.zapio-multicolumn__use-cases-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.zapio-multicolumn__use-cases-content ul li {
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.zapio-multicolumn__use-cases-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0.5rem;
+  color: rgba(var(--color-foreground), 0.5);
+}
+
+.zapio-multicolumn__use-cases-content ol {
+  padding-left: 2rem;
+  margin: 0;
+}
+
+.zapio-multicolumn__use-cases-content p {
+  margin: 0.5rem 0;
+}
+
+/* Button */
+.zapio-multicolumn__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 6px 18px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: none;
+  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border-radius: 0;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: rgb(var(--color-foreground));
+  margin-top: 1rem;
+}
+
+.zapio-multicolumn__button:hover {
+  border-color: rgb(var(--color-foreground));
+  background: rgba(var(--color-foreground), 0.05);
+}
+
+.zapio-multicolumn__button-icon { 
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+.zapio-multicolumn__button span.zapio-multicolumn__button-icon{
+  line-height: 1rem;
+}
+
+.zapio-multicolumn__button:hover .zapio-multicolumn__button-icon {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media screen and (max-width: 749px) {
+  .zapio-multicolumn__header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .zapio-multicolumn__header-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .zapio-multicolumn__content {
+    padding: 1.5rem;
+  }
+}

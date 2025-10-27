@@ -1,0 +1,304 @@
+{{ 'section-zapio-banner.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  #ZapioBanner-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    #ZapioBanner-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (min-width: 991px) {
+    .show-on-mobile {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .show-on-desktop {
+      display: none;
+    }
+  }
+{%- endstyle -%}
+
+<div id="ZapioBanner-{{ section.id }}" class="zapio-banner color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="zapio-banner__wrapper">
+     
+      {%- if section.settings.image != blank -%}
+        <div class="zapio-banner__image-wrapper show-on-desktop">
+          <img
+            srcset="
+              {%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+              {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+              {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+            "
+            src="{{ section.settings.image | image_url: width: 1500 }}"
+            loading="lazy"
+            alt="{{ section.settings.image.alt | escape }}"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+            class="zapio-banner__image"
+          >
+        </div>
+      {%- else -%}
+        <div class="zapio-banner__image-wrapper show-on-desktop">
+          {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {%- endif -%}
+
+      <div class="zapio-banner__content">
+        {%- if section.settings.badge_text_1 != blank or section.settings.badge_text_2 != blank or section.settings.badge_text_3 != blank -%}
+          <div class="zapio-banner__badges">
+            {%- if section.settings.badge_text_1 != blank -%}
+              <span class="zapio-banner__badge badge-1">{{ section.settings.badge_text_1 }}</span>
+            {%- endif -%}
+            {%- if section.settings.badge_text_2 != blank -%}
+              <span class="zapio-banner__badge badge-2">{{ section.settings.badge_text_2 }}</span>
+            {%- endif -%}
+            {%- if section.settings.badge_text_3 != blank -%}
+              <span class="zapio-banner__badge badge-3">{{ section.settings.badge_text_3 }}</span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.heading != blank -%}
+          <h1 class="zapio-banner__heading {{ section.settings.heading_size }}">
+            {{ section.settings.heading }}
+          </h1>
+        {%- endif -%}
+
+        {%- if section.settings.image != blank -%}
+          <div class="zapio-banner__image-wrapper show-on-mobile">
+            <img
+              srcset="
+                {%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+              "
+              src="{{ section.settings.image | image_url: width: 1500 }}"
+              loading="lazy"
+              alt="{{ section.settings.image.alt | escape }}"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+              class="zapio-banner__image"
+            >
+          </div>
+        {%- else -%}
+          <div class="zapio-banner__image-wrapper show-on-mobile">
+            {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.description != blank -%}
+          <div class="zapio-banner__description">
+            {{ section.settings.description }}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.button_label_1 != blank or section.settings.button_label_2 != blank -%}
+          <div class="zapio-banner__buttons">
+            {%- if section.settings.button_label_1 != blank -%}
+              <a
+                {% if section.settings.button_link_1 == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ section.settings.button_link_1 }}"
+                {% endif %}
+                class="button button--primary"
+              >
+                {{ section.settings.button_label_1 | escape }}
+              </a>
+            {%- endif -%}
+            {%- if section.settings.button_label_2 != blank -%}
+              <a
+                {% if section.settings.button_link_2 == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ section.settings.button_link_2 }}"
+                {% endif %}
+                class="button button--secondary"
+              >
+                {{ section.settings.button_label_2 | escape }}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Zapio Banner",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Badges"
+    },
+    {
+      "type": "text",
+      "id": "badge_text_1",
+      "label": "Badge 1",
+      "default": "12+ Campaign types"
+    },
+    {
+      "type": "text",
+      "id": "badge_text_2",
+      "label": "Badge 2",
+      "default": "25+ Use cases"
+    },
+    {
+      "type": "text",
+      "id": "badge_text_3",
+      "label": "Badge 3",
+      "default": "8+ Widget types"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Unlock Your Store's Full Sales Potential"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h0",
+      "label": "Heading size"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Transform your Shopify store with our powerful upsell and marketing tools. Increase your sales, enhance visibility, and engage customers effortlessly."
+    },
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    {
+      "type": "text",
+      "id": "button_label_1",
+      "label": "Button 1 label",
+      "default": "Install for Free"
+    },
+    {
+      "type": "url",
+      "id": "button_link_1",
+      "label": "Button 1 link"
+    },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Button 2 label",
+      "default": "Visit Official Website"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Button 2 link"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top (Desktop)",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom (Desktop)",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top (Mobile)",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom (Mobile)",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Zapio Banner"
+    }
+  ]
+}
+{% endschema %}

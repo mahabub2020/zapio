@@ -1,0 +1,222 @@
+<style>
+  .zapio-product-card {  
+  background-position: right;
+  background-repeat: no-repeat;
+  position: relative; 
+  padding: 6.5rem;
+  background-color: #F5D17B;
+  background-size: contain;
+}
+  .zapio-product-card__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    max-width: 36%;
+}
+.zapio-product-card__category {
+    display: inline-block;
+    padding: .4rem 1rem;
+    background: #000000b3;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    width: fit-content;
+}
+.zapio-widget-types__card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000000e6;
+    text-decoration: none;
+    margin-top: .5rem;
+    width: fit-content;
+    transition: gap .3s ease;
+}
+.zapio-widget-types__card-link:hover {
+    color: var(--shopify-editor-template--25610314187038__zapio_widget_types_4dCgAV__widget_hxjBQL-button_hover_text_color) !important;
+}
+.zapio-widget-types__card-link .zapio-widget-types__card-arrow {
+    font-size: 1.6rem;
+    transition: transform .3s ease;
+}
+.zapio-product-card__media{
+  position: absolute;
+  left: 67%; 
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+ 
+.zapio-product-card.floating-slider{
+    background-position: left;
+}
+.zapio-product-card.floating-slider .zapio-product-card__content{
+    margin-left: auto;
+    position: relative;
+}
+
+.zapio-product-card.floating-slider .zapio-product-card__media{
+  position: absolute;
+  left: 0; 
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.zapio-product-card.congrats-bar .zapio-product-card__media{
+  position: absolute;
+  left: 75%; 
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+ 
+.zapio-widget-product-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000e6;
+    text-decoration: none;
+    margin-top: .5rem;
+    width: fit-content;
+    transition: gap .3s ease;
+}
+.zapio-widget-product-card-link:hover {
+    gap: 1rem;
+}
+</style>
+
+{%- liquid
+  assign product_type =  card_product.metafields.custom.card_template
+-%}
+ 
+ {%- if product_type == 'floating-pop-up' %}
+
+<div style="background-image: url({{ 'card-bg-img.png' | asset_url }}); background-color: {{ card_product.metafields.custom.widget_types_color }}" class="zapio-product-card {{ card_product.metafields.custom.card_template }}"> 
+  <div class="zapio-product-card__content">
+    {% if card_product.collections.size > 0 %}
+      <div class="zapio-product-card__category">{{ card_product.collections.first.title }}</div>
+    {% endif %}  
+    <div class="zapio-widget-product-card-text">
+      <h3 class="zapio-product-card__title">{{ card_product.title }}</h3>
+      {% if card_product.description != blank %}
+        <p class="zapio-product-card__description">{{ card_product.description | strip_html | truncatewords: 15 }}</p>
+      {% endif %}
+   </div>
+    <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
+      <span class="zapio-widget-types__card-arrow">→</span>
+    </a>
+  </div>
+   <div class="zapio-product-card__media">
+    <a href="{{ card_product.url }}">
+      {% assign display_image = card_product.images[1] | default: card_product.featured_image %}
+      {% if display_image %}
+        <img src="{{ display_image | image_url: width: 300 }}" alt="{{ display_image.alt | escape }}">
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </a> 
+  </div>
+</div>
+{%- elsif product_type == 'floating-slider' -%}
+
+<div style="background-image: url({{ 'card-bg-img.png' | asset_url }}); background-color: {{ card_product.metafields.custom.widget_types_color }}" class="zapio-product-card {{ card_product.metafields.custom.card_template }}"> 
+  <div class="zapio-product-card__content">
+    {% if card_product.collections.size > 0 %}
+      <div class="zapio-product-card__category">{{ card_product.collections.first.title }}</div>
+    {% endif %}  
+    <div class="zapio-widget-product-card-text">
+      <h3 class="zapio-product-card__title">{{ card_product.title }}</h3>
+      {% if card_product.description != blank %}
+        <p class="zapio-product-card__description">{{ card_product.description | strip_html | truncatewords: 15 }}</p>
+      {% endif %}
+   </div>
+    <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
+      <span class="zapio-widget-types__card-arrow">→</span>
+    </a>
+  </div>
+   <div class="zapio-product-card__media">
+    <a href="{{ card_product.url }}">
+      {% assign display_image = card_product.images[1] | default: card_product.featured_image %}
+      {% if display_image %}
+        <img src="{{ display_image | image_url: width: 300 }}" alt="{{ display_image.alt | escape }}">
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </a> 
+  </div>
+</div>
+{%- elsif product_type == 'congrats-bar' -%} 
+<div style="background-image: url({{ 'card-bg-img.png' | asset_url }}); background-color: {{ card_product.metafields.custom.widget_types_color }}" class="zapio-product-card {{ card_product.metafields.custom.card_template }}"> 
+  <div class="zapio-product-card__content">
+    {% if card_product.collections.size > 0 %}
+      <div class="zapio-product-card__category">{{ card_product.collections.first.title }}</div>
+    {% endif %}  
+    <div class="zapio-widget-product-card-text">
+      <h3 class="zapio-product-card__title">{{ card_product.title }}</h3>
+      {% if card_product.description != blank %}
+        <p class="zapio-product-card__description">{{ card_product.description | strip_html | truncatewords: 15 }}</p>
+      {% endif %}
+   </div>
+    <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
+      <span class="zapio-widget-types__card-arrow">→</span>
+    </a>
+  </div>
+   <div class="zapio-product-card__media">
+    <a href="{{ card_product.url }}">
+      {% assign display_image = card_product.images[1] | default: card_product.featured_image %}
+      {% if display_image %}
+        <img src="{{ display_image | image_url: width: 300 }}" alt="{{ display_image.alt | escape }}">
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </a> 
+  </div>
+</div>
+{%- else -%} 
+<div style="background-image: url({{ 'card-bg-img.png' | asset_url }}); background-color: {{ card_product.metafields.custom.widget_types_color }}" class="zapio-product-card {{ card_product.metafields.custom.card_template }}"> 
+  <div class="zapio-product-card__content">
+    {% if card_product.collections.size > 0 %}
+      <div class="zapio-product-card__category">{{ card_product.collections.first.title }}</div>
+    {% endif %}  
+    <div class="zapio-widget-product-card-text">
+      <h3 class="zapio-product-card__title">{{ card_product.title }}</h3>
+      {% if card_product.description != blank %}
+        <p class="zapio-product-card__description">{{ card_product.description | strip_html | truncatewords: 15 }}</p>
+      {% endif %}
+   </div>
+    <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
+      <span class="zapio-widget-types__card-arrow">→</span>
+    </a>
+  </div>
+   <div class="zapio-product-card__media">
+    <a href="{{ card_product.url }}">
+      {% assign display_image = card_product.images[1] | default: card_product.featured_image %}
+      {% if display_image %}
+        <img src="{{ display_image | image_url: width: 300 }}" alt="{{ display_image.alt | escape }}">
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </a> 
+  </div>
+</div>
+{% endif %}

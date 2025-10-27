@@ -1,0 +1,120 @@
+.zapio-banner {
+  overflow: hidden;
+}
+
+.zapio-banner__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 990px) {
+  .zapio-banner__wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+}
+
+/* Content Area */
+.zapio-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  order: 2;
+}
+
+@media screen and (min-width: 990px) {
+  .zapio-banner__content {
+    order: 1;
+  }
+}
+
+/* Badges */
+.zapio-banner__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.zapio-banner__badge {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  color: #0D0C0C;
+  background-color: #B6F7D0;
+}
+
+
+/* Heading */
+.zapio-banner__heading {
+  margin: 0;  
+  word-break: break-word;
+} 
+/* Description */
+.zapio-banner__description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: rgba(var(--color-foreground), 0.75);
+  max-width: 54rem;
+}
+
+/* Buttons */
+.zapio-banner__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin-top: 1rem;
+}
+
+
+/* Image Area */
+.zapio-banner__image-wrapper {
+  position: relative;
+  width: 100%;
+  order: 0;
+}
+
+@media screen and (min-width: 990px) {
+  .zapio-banner__image-wrapper {
+    order: 2;
+  }
+}
+
+.zapio-banner__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 749px) {
+  .zapio-banner__content {
+    gap: 1.5rem;
+  }
+
+  .zapio-banner__badges {
+    gap: 0.8rem;
+  }
+
+  .zapio-banner__badge {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .zapio-banner__buttons {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .zapio-banner__buttons .button {
+    width: 100%;
+    text-align: center;
+  }
+}

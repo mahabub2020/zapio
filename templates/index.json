@@ -1,0 +1,288 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "zapio_banner_7Yatk3": {
+      "type": "zapio-banner",
+      "name": "Zapio Banner",
+      "settings": {
+        "image": "shopify://shop_images/zapio-hero-image.png",
+        "badge_text_1": "12+ Campaign types",
+        "badge_text_2": "25+ Use cases",
+        "badge_text_3": "8+ Widget types",
+        "heading": "Unlock Your Store's Full Sales Potential",
+        "heading_size": "h0",
+        "description": "Transform your Shopify store with our powerful upsell and marketing tools. Increase your sales, enhance visibility, and engage customers effortlessly.",
+        "button_label_1": "Install for Free",
+        "button_link_1": "",
+        "button_label_2": "Visit Official Website",
+        "button_link_2": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "zapio_multicolumn_pKY3Bc": {
+      "type": "zapio-multicolumn",
+      "blocks": {
+        "column_pA6WDA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame9.jpg",
+            "tagline": "Increase Average Order Value",
+            "title": "Free Gift",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
+            "button_label": "View Demo",
+            "button_link": ""
+          }
+        },
+        "column_nhjtpF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_9.jpg",
+            "tagline": "Increase Average Order Value",
+            "title": "Buy X Get Y",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
+            "button_label": "View Demo",
+            "button_link": ""
+          }
+        },
+        "column_JPxGpm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_9_ce6ae9bd-76c3-4c62-b50c-a6aad8446422.jpg",
+            "tagline": "Increase Average Order Value",
+            "title": "Milestone Rewards",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
+            "button_label": "View Demo",
+            "button_link": ""
+          }
+        },
+        "column_kyV6K8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_9_eef34987-7d85-4c7b-9e97-02be5c77607a.jpg",
+            "tagline": "Increase Average Order Value",
+            "title": "Product Bundles",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
+            "button_label": "View Demo",
+            "button_link": ""
+          }
+        },
+        "column_DRHWke": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_9_fa9bda4a-10ee-4681-a69d-f99f7b7d1c29.jpg",
+            "tagline": "Increase Average Order Value",
+            "title": "Volume Discounts",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
+            "button_label": "View Demo",
+            "button_link": ""
+          }
+        },
+        "column_wyV3zL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_9_e70c0172-393b-4075-87f7-1ff2d2216ae3.jpg",
+            "tagline": "Increase Average Order Value",
+            "title": "Frequently Bought Together",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend $50, get a Free Gift</li><li>You're only $20 away from FREE Shipping</li><li>New Customers Only: Free Gift on your first purchase</li></ul>",
+            "button_label": "View Demo",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_pA6WDA",
+        "column_nhjtpF",
+        "column_JPxGpm",
+        "column_kyV6K8",
+        "column_DRHWke",
+        "column_wyV3zL"
+      ],
+      "name": "Zapio Multicolumn",
+      "settings": {
+        "title": "Campaign Type and Use Cases",
+        "heading_size": "h1",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>",
+        "button_label": "Explore All Campaign Types",
+        "button_link": "",
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "color_scheme": "",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "zapio_widget_types_4dCgAV": {
+      "type": "zapio-widget-types",
+      "blocks": {
+        "widget_hxjBQL": {
+          "type": "widget",
+          "settings": {
+            "category": "pop-up",
+            "widget_type": "free-gift",
+            "content_layout": "content-left",
+            "badge": "Free Gift",
+            "title": "Floating Pop-up",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+            "title_color": "",
+            "title_font_size": 24,
+            "description_color": "",
+            "description_font_size": 16,
+            "background_color": "#F5D78E",
+            "background_image": "shopify://shop_images/Container.png",
+            "background_image_position": "right",
+            "background_size": "auto",
+            "overlay_color": "#F5D78E",
+            "overlay_opacity": 60,
+            "main_image": "shopify://shop_images/Floating_popup_ca90306a-b48d-4752-8775-f8465a59ee82.png",
+            "image_position_x": 67,
+            "image_position_y": 50,
+            "button_label": "View Widget",
+            "button_link": "",
+            "button_font_size": 14,
+            "button_text_color": "",
+            "button_hover_text_color": ""
+          }
+        },
+        "widget_XFyEXX": {
+          "type": "widget",
+          "settings": {
+            "category": "product-page",
+            "widget_type": "free-gift",
+            "content_layout": "content-right",
+            "badge": "Free Gift",
+            "title": "Floating Slider",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+            "title_color": "",
+            "title_font_size": 24,
+            "description_color": "",
+            "description_font_size": 16,
+            "background_color": "#bac7fe",
+            "background_image": "shopify://shop_images/Container.png",
+            "background_image_position": "left",
+            "background_size": "auto",
+            "overlay_color": "#bac7fe",
+            "overlay_opacity": 60,
+            "main_image": "shopify://shop_images/Group_6.png",
+            "image_position_x": 14,
+            "image_position_y": 50,
+            "button_label": "View Widget",
+            "button_link": "",
+            "button_font_size": 14,
+            "button_text_color": "",
+            "button_hover_text_color": ""
+          }
+        },
+        "widget_tB63VR": {
+          "type": "widget",
+          "settings": {
+            "category": "cart-page",
+            "widget_type": "bxgy-bogo",
+            "content_layout": "content-left",
+            "badge": "Buy X Get Y",
+            "title": "BXGY Embedded",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+            "title_color": "",
+            "title_font_size": 24,
+            "description_color": "",
+            "description_font_size": 16,
+            "background_color": "#d0b9ef",
+            "background_image": "shopify://shop_images/Container.png",
+            "background_image_position": "right",
+            "background_size": "auto",
+            "overlay_color": "#d0b9ef",
+            "overlay_opacity": 75,
+            "main_image": "shopify://shop_images/BXGY_-_embed.png",
+            "image_position_x": 72,
+            "image_position_y": 50,
+            "button_label": "View Widget",
+            "button_link": "",
+            "button_font_size": 14,
+            "button_text_color": "",
+            "button_hover_text_color": ""
+          }
+        },
+        "widget_heRUeb": {
+          "type": "widget",
+          "settings": {
+            "category": "product-page",
+            "widget_type": "free-gift",
+            "content_layout": "content-right",
+            "badge": "Free Gift",
+            "title": "Floating Slider",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+            "title_color": "",
+            "title_font_size": 24,
+            "description_color": "",
+            "description_font_size": 16,
+            "background_color": "#febaf3",
+            "background_image": "shopify://shop_images/Container.png",
+            "background_image_position": "left",
+            "background_size": "auto",
+            "overlay_color": "#febaf3",
+            "overlay_opacity": 50,
+            "main_image": "shopify://shop_images/Group_6.png",
+            "image_position_x": 14,
+            "image_position_y": 50,
+            "button_label": "View Widget",
+            "button_link": "",
+            "button_font_size": 14,
+            "button_text_color": "",
+            "button_hover_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "widget_hxjBQL",
+        "widget_XFyEXX",
+        "widget_tB63VR",
+        "widget_heRUeb"
+      ],
+      "name": "Zapio Widget Types",
+      "settings": {
+        "title": "Widget Types",
+        "heading_size": "h1",
+        "subtitle": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "button_label": "Explore All Widgets",
+        "button_link": "",
+        "columns_desktop": 1,
+        "columns_mobile": "1",
+        "card_height_desktop": 500,
+        "card_height_mobile": 400,
+        "enable_pagination": false,
+        "items_per_page": 5,
+        "color_scheme": "scheme-3",
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "zapio_banner_7Yatk3",
+    "zapio_multicolumn_pKY3Bc",
+    "zapio_widget_types_4dCgAV"
+  ]
+}

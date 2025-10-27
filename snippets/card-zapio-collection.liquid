@@ -1,0 +1,30 @@
+<div class="zapio-card-wrapper"> 
+  <div class="zapio-card">
+    <div class="zapio-card__media">
+      <a href="{{ card_collection.url }}">
+        {% if card_collection.featured_image %}
+          <img src="{{ card_collection.featured_image | image_url: width: 1500 }}" alt="{{ card_collection.featured_image.alt | escape }}" class="motion-reduce" loading="lazy" width="{{ card_collection.featured_image.width }}" height="{{ card_collection.featured_image.height }}" sizes="(min-width: 1200px) 366.66650390625px, (min-width: 990px) calc((100vw - 130px) / 3), (min-width: 750px) calc((100vw - 120px) / 2), calc(100vw - 48px)" srcset="{{ card_collection.featured_image | image_url: width: 165 }} 165w,{{ card_collection.featured_image | image_url: width: 360 }} 360w,{{ card_collection.featured_image | image_url: width: 533 }} 533w,{{ card_collection.featured_image | image_url: width: 720 }} 720w,{{ card_collection.featured_image | image_url: width: 940 }} 940w,{{ card_collection.featured_image | image_url: width: 1066 }} 1066w">
+        {% else %}
+          {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+      </a>
+    </div>
+    <div class="zapio-card__content">
+      <div class="zapio-card__information">
+        {%- if card_collection.metafields.custom.tagline != blank -%}
+         <div class="zapio-collection__tagline">
+            {{ 'trending-up.svg' | inline_asset_content }} {{- card_collection.metafields.custom.tagline -}}
+          </div>
+       {%- endif -%} 
+          
+        <h3 class="zapio-card__heading h2">
+          <a href="{{ card_collection.url }}" class="full-unstyled-link">{{ card_collection.title }}</a>
+        </h3> 
+        <div class="zapio-card__caption">{{ card_collection.description }}</div>
+       
+        <a href="{{ card_collection.url }}" class="button button--secondary zapio-multicolumn__button"> View Demo <span class="zapio-multicolumn__button-icon"> {{ 'right-linear.svg' | inline_asset_content }}</span></a>
+ 
+      </div>
+    </div>
+  </div>
+</div>
