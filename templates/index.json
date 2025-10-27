@@ -13,7 +13,7 @@
       "type": "zapio-banner",
       "name": "Zapio Banner",
       "settings": {
-        "image": "shopify://shop_images/zapio-hero-image.png",
+        "image": "shopify://shop_images/hero-image.png",
         "badge_text_1": "12+ Campaign types",
         "badge_text_2": "25+ Use cases",
         "badge_text_3": "8+ Widget types",
@@ -26,7 +26,9 @@
         "button_link_2": "",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
       }
     },
     "zapio_multicolumn_pKY3Bc": {
@@ -35,7 +37,6 @@
         "column_pA6WDA": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame9.jpg",
             "tagline": "Increase Average Order Value",
             "title": "Free Gift",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
@@ -48,7 +49,6 @@
         "column_nhjtpF": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9.jpg",
             "tagline": "Increase Average Order Value",
             "title": "Buy X Get Y",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
@@ -61,7 +61,6 @@
         "column_JPxGpm": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9_ce6ae9bd-76c3-4c62-b50c-a6aad8446422.jpg",
             "tagline": "Increase Average Order Value",
             "title": "Milestone Rewards",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
@@ -74,7 +73,6 @@
         "column_kyV6K8": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9_eef34987-7d85-4c7b-9e97-02be5c77607a.jpg",
             "tagline": "Increase Average Order Value",
             "title": "Product Bundles",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
@@ -87,7 +85,6 @@
         "column_DRHWke": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9_fa9bda4a-10ee-4681-a69d-f99f7b7d1c29.jpg",
             "tagline": "Increase Average Order Value",
             "title": "Volume Discounts",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
@@ -100,7 +97,6 @@
         "column_wyV3zL": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9_e70c0172-393b-4075-87f7-1ff2d2216ae3.jpg",
             "tagline": "Increase Average Order Value",
             "title": "Frequently Bought Together",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
@@ -131,7 +127,9 @@
         "swipe_on_mobile": true,
         "color_scheme": "",
         "padding_top": 96,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
     },
     "zapio_widget_types_4dCgAV": {
@@ -150,13 +148,11 @@
             "title_font_size": 24,
             "description_color": "",
             "description_font_size": 16,
-            "background_color": "#F5D78E",
-            "background_image": "shopify://shop_images/Container.png",
+            "background_color": "#f5d78e",
             "background_image_position": "right",
             "background_size": "auto",
-            "overlay_color": "#F5D78E",
+            "overlay_color": "#f5d78e",
             "overlay_opacity": 60,
-            "main_image": "shopify://shop_images/Floating_popup_ca90306a-b48d-4752-8775-f8465a59ee82.png",
             "image_position_x": 67,
             "image_position_y": 50,
             "button_label": "View Widget",
@@ -180,12 +176,10 @@
             "description_color": "",
             "description_font_size": 16,
             "background_color": "#bac7fe",
-            "background_image": "shopify://shop_images/Container.png",
             "background_image_position": "left",
             "background_size": "auto",
             "overlay_color": "#bac7fe",
             "overlay_opacity": 60,
-            "main_image": "shopify://shop_images/Group_6.png",
             "image_position_x": 14,
             "image_position_y": 50,
             "button_label": "View Widget",
@@ -209,12 +203,10 @@
             "description_color": "",
             "description_font_size": 16,
             "background_color": "#d0b9ef",
-            "background_image": "shopify://shop_images/Container.png",
             "background_image_position": "right",
             "background_size": "auto",
             "overlay_color": "#d0b9ef",
             "overlay_opacity": 75,
-            "main_image": "shopify://shop_images/BXGY_-_embed.png",
             "image_position_x": 72,
             "image_position_y": 50,
             "button_label": "View Widget",
@@ -238,12 +230,10 @@
             "description_color": "",
             "description_font_size": 16,
             "background_color": "#febaf3",
-            "background_image": "shopify://shop_images/Container.png",
             "background_image_position": "left",
             "background_size": "auto",
             "overlay_color": "#febaf3",
             "overlay_opacity": 50,
-            "main_image": "shopify://shop_images/Group_6.png",
             "image_position_x": 14,
             "image_position_y": 50,
             "button_label": "View Widget",
@@ -276,7 +266,9 @@
         "items_per_page": 5,
         "color_scheme": "scheme-3",
         "padding_top": 60,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
     }
   },
