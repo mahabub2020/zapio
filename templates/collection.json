@@ -27,7 +27,7 @@
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
-        "primary_image": "second_image",
+        "primary_image": "featured_media",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
