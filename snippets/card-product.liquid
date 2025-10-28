@@ -129,6 +129,11 @@
                 {{ card_product.title | escape }}
               </a>
             </h3>
+            {%- if card_product.metafields.custom.short_description != blank -%}
+              <div class="card__short-description">
+                {{ card_product.metafields.custom.short_description }}
+              </div>
+            {%- endif -%}
           </div>
           <div class="card__badge {{ settings.badge_position }}">
             {%- if card_product.available == false -%}
