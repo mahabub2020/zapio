@@ -109,6 +109,7 @@
       "type": "related-products",
       "settings": {
         "heading": "More Layouts",
+        "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "heading_size": "h2",
         "layout": "zapio_product",
         "products_to_show": 4,
