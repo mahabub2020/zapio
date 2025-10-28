@@ -67,6 +67,7 @@ div.mega-menu__no-link{
   font-weight: 600;
   font-size: 16px;
   position: relative;
+  display: inline-flex;
 }
 
 .mega-menu__link::before {
