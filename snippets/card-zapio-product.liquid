@@ -6,7 +6,14 @@
   padding: 6.5rem;
   background-color: #F5D17B;
   background-size: contain;
+  transition: transform .3s ease, box-shadow .3s ease;
 }
+
+.zapio-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px #0000001f;
+}
+
   .zapio-product-card__content {
     position: relative;
     z-index: 2;
@@ -123,7 +130,7 @@
       {% endif %}
    </div>
     <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
-      <span class="zapio-widget-types__card-arrow">→</span>
+      <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
     </a>
   </div>
    <div class="zapio-product-card__media">
@@ -151,7 +158,7 @@
       {% endif %}
    </div>
     <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
-      <span class="zapio-widget-types__card-arrow">→</span>
+      <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
     </a>
   </div>
    <div class="zapio-product-card__media">
@@ -178,7 +185,7 @@
       {% endif %}
    </div>
     <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
-      <span class="zapio-widget-types__card-arrow">→</span>
+      <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
     </a>
   </div>
    <div class="zapio-product-card__media">
@@ -205,7 +212,7 @@
       {% endif %}
    </div>
     <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
-      <span class="zapio-widget-types__card-arrow">→</span>
+      <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
     </a>
   </div>
    <div class="zapio-product-card__media">
