@@ -244,7 +244,7 @@ a.product__text {
 .product__text.caption-with-letter-spacing {
   text-transform: uppercase;
 }
-.product__text.caption-with-letter-spacing .product__title h1{
+.product__info-wrapper .product__title h1{
   font-size: 44px;
 }
 .product__title {
