@@ -9,6 +9,15 @@
  */
 {
   "sections": {
+    "zapio_breadcrumbs_PfFJrE": {
+      "type": "zapio-breadcrumbs",
+      "name": "Zapio Breadcrumbs",
+      "settings": {
+        "show_divider": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -129,15 +138,6 @@
         "show_rating": false,
         "padding_top": 76,
         "padding_bottom": 68
-      }
-    },
-    "zapio_breadcrumbs_PfFJrE": {
-      "type": "zapio-breadcrumbs",
-      "name": "Zapio Breadcrumbs",
-      "settings": {
-        "show_divider": false,
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     }
   },
