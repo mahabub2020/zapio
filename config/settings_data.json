@@ -173,18 +173,18 @@
           "button": "#ffffff",
           "button_label": "#0d0c0c",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#0d0c0c"
         }
       },
       "scheme-4": {
         "settings": {
-          "background": "#121212",
+          "background": "#0F0F0F",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#121212",
+          "button_label": "#0F0F0F",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#0F0F0F"
         }
       },
       "scheme-5": {
