@@ -2,7 +2,7 @@
   overflow: hidden;
 }
 
-.footer-cta  .footer-cta__wrapper.color-scheme-3  {
+.footer-cta  .footer-cta__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
