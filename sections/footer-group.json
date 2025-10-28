@@ -19,7 +19,7 @@
         "heading_size": "h2",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "button_label": "Install for Free",
-        "button_link": "",
+        "button_link": "#",
         "color_scheme": "scheme-3",
         "padding_top": 60,
         "padding_bottom": 60
