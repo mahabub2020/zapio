@@ -275,7 +275,7 @@
         "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "description": "",
         "button_label": "Explore All Widgets",
-        "button_link": "",
+        "button_link": "#",
         "columns_desktop": 1,
         "columns_mobile": "1",
         "card_height_desktop": 500,
