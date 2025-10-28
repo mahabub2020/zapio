@@ -27,5 +27,13 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  background-color: {{ card_product.metafields.custom.widget_types_color | default: '#F5D17B' }};
+  /* background-color: {{ card_product.metafields.custom.widget_types_color | default: '#F5D17B' }}; */
+}
+.related-products .zapio-product-card p.zapio-product-card__description{
+color: #0D0C0C;
+}
+
+.related-products .zapio-product-card .zapio-product-card__category {
+color: #0D0C0C;
+background-color: #fff;
 }
