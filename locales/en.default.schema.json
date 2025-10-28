@@ -1,4 +1,9 @@
 {
+  "general": {
+    "breadcrumbs": {
+      "home": "Home"
+    }
+  },
   "settings_schema": {
     "global": {
       "settings": {
