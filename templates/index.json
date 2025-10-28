@@ -127,7 +127,7 @@
         "heading_size": "h1",
         "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>",
         "button_label": "Explore All Campaign Types",
-        "button_link": "",
+        "button_link": "#",
         "columns_desktop": 3,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
