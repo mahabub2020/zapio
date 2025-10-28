@@ -274,6 +274,7 @@
   margin-top: 0.5rem;
   width: fit-content;
   transition: gap 0.3s ease;
+  color: #0D0C0C;
 }
 
 .zapio-widget-types__card-link:hover {
