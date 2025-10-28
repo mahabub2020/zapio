@@ -128,8 +128,7 @@
               >
                 {{ card_product.title | escape }}
               </a>
-            </h3>
-            svssd
+            </h3> 
             {%- if card_product.metafields.custom.short_description != blank -%}
               <div class="card__short-description">
                 {{ card_product.metafields.custom.short_description }}
@@ -173,6 +172,11 @@
             </a>
           </h3>
           <div class="card-information">
+            {%- if card_product.metafields.custom.short_description != blank -%}
+              <div class="card__short-description">
+                {{ card_product.metafields.custom.short_description }}
+              </div>
+            {%- endif -%}
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
