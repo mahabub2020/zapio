@@ -33,8 +33,13 @@
 .related-products .zapio-product-card .zapio-product-card__title{
 color: #0D0C0C;
 }
-
+.related-products .zapio-product-card .zapio-product-card__title{
+  font-size: 28px;
+} 
 .related-products .zapio-product-card .zapio-product-card__category {
-color: #0D0C0C;
-background-color: #fff;
+  color: #0D0C0C;
+  background-color: #fff;
+}
+.related-products .zapio-product-card .zapio-widget-product-card-link:hover{
+  color: #444444;
 }
