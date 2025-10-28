@@ -5,11 +5,9 @@
 /* Header */
 .zapio-multicolumn__header {
   text-align: left;
-  margin-bottom: 4rem;
-  display: flex;
+  margin-bottom: 4rem; 
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
+  align-items: flex-start; 
   flex-wrap: wrap;
 }
 .zapio-multicolumn__header.inline .title-wrp{

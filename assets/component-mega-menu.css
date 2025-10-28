@@ -44,9 +44,10 @@ li.mega-menu-items{
   margin-bottom: 10px;
 }
 .mega-menu__description{
-  margin: 1px 0 0 0;
-  padding: 0;
-  font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.2;
 }
 div.mega-menu__no-link{
   text-transform: uppercase;
