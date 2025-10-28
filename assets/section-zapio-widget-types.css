@@ -269,10 +269,7 @@
 .zapio-widget-types__card-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 16px;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.9);
+  gap: 0.5rem;   
   text-decoration: none;
   margin-top: 0.5rem;
   width: fit-content;
@@ -282,9 +279,9 @@
 .zapio-widget-types__card-link:hover {
   gap: 1rem;
 }
-
-.zapio-widget-types__card-arrow {
- line-height: 1;
+ 
+.zapio-widget-types__card-link .zapio-widget-types__card-arrow {
+ line-height: .3;
   transition: transform 0.3s ease;
 }
 
