@@ -29,7 +29,7 @@
   >
     {% if recommendations.performed and recommendations.products_count > 0 %}
       <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
-        {{ section.settings.heading }}
+        {% if product.collections.size > 0 %}{{ product.collections.first.title }} Of {% endif %}{{ section.settings.heading }}
       </h2>
 <div class="related-products__subheading">{{ section.settings.subheading }}</div>
       <ul
