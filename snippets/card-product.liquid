@@ -31,10 +31,16 @@
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
-    if card_product.featured_media and media_aspect_ratio == 'portrait'
+    if primary_image == 'second_image' and card_product.media[1]
+      assign primary_image_object = card_product.media[1]
+    else
+      assign primary_image_object = card_product.featured_media
+    endif
+
+    if primary_image_object and media_aspect_ratio == 'portrait'
       assign ratio = 0.8
-    elsif card_product.featured_media and media_aspect_ratio == 'adapt'
-      assign ratio = card_product.featured_media.aspect_ratio
+    elsif primary_image_object and media_aspect_ratio == 'adapt'
+      assign ratio = primary_image_object.aspect_ratio
     endif
     if ratio == 0 or ratio == null
       assign ratio = 1
@@ -63,23 +69,23 @@
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
                 srcset="
-                  {%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
-                  {{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w
+                  {%- if primary_image_object.width >= 165 -%}{{ primary_image_object | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if primary_image_object.width >= 360 -%}{{ primary_image_object | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if primary_image_object.width >= 533 -%}{{ primary_image_object | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if primary_image_object.width >= 720 -%}{{ primary_image_object | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if primary_image_object.width >= 940 -%}{{ primary_image_object | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if primary_image_object.width >= 1066 -%}{{ primary_image_object | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ primary_image_object | image_url }} {{ primary_image_object.width }}w
                 "
-                src="{{ card_product.featured_media | image_url: width: 533 }}"
+                src="{{ primary_image_object | image_url: width: 533 }}"
                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                alt="{{ card_product.featured_media.alt | escape }}"
+                alt="{{ primary_image_object.alt | escape }}"
                 class="motion-reduce"
                 {% unless lazy_load == false %}
                   loading="lazy"
                 {% endunless %}
-                width="{{ card_product.featured_media.width }}"
-                height="{{ card_product.featured_media.height }}"
+                width="{{ primary_image_object.width }}"
+                height="{{ primary_image_object.height }}"
               >
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
