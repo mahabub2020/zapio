@@ -92,6 +92,7 @@
 
 .card-information {
   text-align: var(--text-alignment);
+  font-size: 14px;
 }
 
 .card__media,
