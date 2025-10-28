@@ -66,6 +66,23 @@ div.mega-menu__no-link{
   word-wrap: break-word;
   font-weight: 600;
   font-size: 16px;
+  position: relative;
+}
+
+.mega-menu__link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  background-color: currentColor;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.mega-menu__link:hover::before {
+  width: 100%;
 }
 
 .mega-menu__link--level-2 {
@@ -87,7 +104,7 @@ div.mega-menu__no-link{
 .mega-menu__link:hover,
 .mega-menu__link--active {
   color: rgb(var(--color-foreground));
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .mega-menu__link--active:hover {
