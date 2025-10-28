@@ -41,7 +41,7 @@
     {% endif %}
   >
     {%- if section.settings.title != blank or section.settings.description != blank -%}
-      <div class="zapio-multicolumn__header">
+      <div class="zapio-multicolumn__header {{ section.settings.description_alignment }}">
        <div class="title-wrp">
       {%- if section.settings.title != blank -%}
           <h2 class="zapio-multicolumn__title {{ section.settings.heading_size }}">
@@ -226,6 +226,22 @@
       "id": "description",
       "label": "Description",
       "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>"
+    },
+    {
+      "type": "select",
+      "id": "description_alignment",
+      "label": "Description alignment",
+      "options": [
+        {
+          "value": "block",
+          "label": "Block"
+        },
+        {
+          "value": "inline",
+          "label": "Inline"
+        }
+      ],
+      "default": "block"
     },
     {
       "type": "text",
