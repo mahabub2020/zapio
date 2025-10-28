@@ -244,7 +244,9 @@ a.product__text {
 .product__text.caption-with-letter-spacing {
   text-transform: uppercase;
 }
-
+.product__text.caption-with-letter-spacing .product__title h1{
+  font-size: 44px;
+}
 .product__title {
   word-break: break-word;
   margin-bottom: 1.5rem;
