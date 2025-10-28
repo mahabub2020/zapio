@@ -112,6 +112,7 @@
         "title": "Campaign Type and Use Cases",
         "heading_size": "h1",
         "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>",
+        "description_alignment": "inline",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
