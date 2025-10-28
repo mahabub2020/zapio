@@ -1,10 +1,11 @@
 .related-products {
   display: block;
 } 
-
-.related-products__subheading {
-  text-align: center;
-  margin-bottom: 10px;
+.related-products__heading{
+  margin-bottom: 1rem;
+}
+.related-products__subheading { 
+  margin-bottom: 4rem;
 }
 
 /* Zapio Product Card Styles */
@@ -40,7 +41,7 @@
 color: #0D0C0C;
 }
 .related-products .zapio-product-card .zapio-product-card__title{
-  font-size: 28px;
+  font-size: 28px; 
 } 
 .related-products .zapio-product-card .zapio-product-card__category {
   color: #0D0C0C;
