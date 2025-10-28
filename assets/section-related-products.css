@@ -1,6 +1,12 @@
 .related-products {
   display: block;
 } 
+
+.related-products__subheading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 /* Zapio Product Card Styles */
 
 
