@@ -24,7 +24,7 @@
 }
 
 .breadcrumbs__item:not(:last-child)::after {
-  content: '/';
+  content: '>';
   margin: 0 0.8rem;
   color: rgba(var(--color-foreground), 0.5);
 }
