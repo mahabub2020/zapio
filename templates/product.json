@@ -13,7 +13,7 @@
       "type": "zapio-breadcrumbs",
       "name": "Zapio Breadcrumbs",
       "settings": {
-        "show_divider": true,
+        "show_divider": false,
         "padding_top": 20,
         "padding_bottom": 20
       }
