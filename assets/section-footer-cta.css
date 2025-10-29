@@ -13,10 +13,10 @@
 }
 
 @media screen and (max-width: 989px) {
-  .footer-cta__wrapper {
+  .footer-cta .footer-cta__wrapper {
     flex-direction: column;
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 2rem 2rem;
     gap: 2rem;
   }
 }
