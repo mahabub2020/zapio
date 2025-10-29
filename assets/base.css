@@ -659,6 +659,7 @@ summary .icon-caret {
   height: 0.6rem;
   right: 1.5rem;
   top: calc(50% - 0.2rem);
+  transition: transform 0.2s ease;
 }
 
 summary::-webkit-details-marker {

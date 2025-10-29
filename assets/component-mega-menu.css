@@ -113,6 +113,10 @@ div.mega-menu__no-link{
   text-decoration-thickness: 0.2rem;
 }
 
+.mega-menu[open] .icon-caret {
+  transform: rotate(180deg);
+}
+
 .mega-menu .mega-menu__list--condensed {
   display: block;
 }
