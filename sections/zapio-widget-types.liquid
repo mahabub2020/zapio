@@ -17,18 +17,7 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
-  @media screen and (max-width: 749px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top_mobile }}px;
-      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
-    }
-  }
-
-  /* #shopify-section-{{ section.id }} .zapio-widget-types__card {
-    height: {{ section.settings.card_height_mobile }}px;
-  } */
-
+ 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -41,7 +30,12 @@
       height: {{ section.settings.card_height_desktop }}px;
     }
   }
-
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  } 
   {%- for block in section.blocks -%}
     {%- if block.settings.button_hover_text_color != blank -%}
       .zapio-widget-btn-{{ block.id }}:hover {
