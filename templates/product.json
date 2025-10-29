@@ -129,7 +129,7 @@
         "layout": "zapio_product",
         "products_to_show": 4,
         "columns_desktop": 1,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "color_scheme": "scheme-4",
         "image_ratio": "square",
         "image_shape": "default",
