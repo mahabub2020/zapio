@@ -33,9 +33,9 @@
                         <span class="svg-wrapper">
                           {{- 'icon-arrow.svg' | inline_asset_content -}}
                         </span>
-                        <span class="svg-wrapper">
+                        {% comment %} <span class="svg-wrapper">
                           {{- 'icon-caret.svg' | inline_asset_content -}}
-                        </span>
+                        </span> {% endcomment %}
                       </summary>
                       <div
                         id="link-{{ link.handle | escape }}"
@@ -73,9 +73,9 @@
                                       <span class="svg-wrapper">
                                         {{- 'icon-arrow.svg' | inline_asset_content -}}
                                       </span>
-                                      <span class="svg-wrapper">
+                                      {% comment %} <span class="svg-wrapper">
                                         {{- 'icon-caret.svg' | inline_asset_content -}}
-                                      </span>
+                                      </span> {% endcomment %}
                                     </summary>
                                     <div
                                       id="childlink-{{ childlink.handle | escape }}"
@@ -96,6 +96,15 @@
                                         tabindex="-1"
                                       >
                                         {%- for grandchildlink in childlink.links -%}
+                                          {%- liquid
+                                            assign title_parts = grandchildlink.title | split: '<span>'
+                                            assign main_title = title_parts[0]
+                                            assign description = ''
+                                            if title_parts.size > 1
+                                              assign span_content = title_parts[1] | split: '</span>'
+                                              assign description = span_content[0]
+                                            endif
+                                          -%}
                                           <li>
                                             <a
                                               id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
@@ -105,8 +114,11 @@
                                                 aria-current="page"
                                               {% endif %}
                                             >
-                                              {{ grandchildlink.title | escape }}
+                                              {{ main_title | strip }}
                                             </a>
+                                            {%- if description != blank -%}
+                                              <p class="menu-drawer__description">{{ description | strip }}</p>
+                                            {%- endif -%}
                                           </li>
                                         {%- endfor -%}
                                       </ul>
