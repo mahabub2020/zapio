@@ -16,7 +16,7 @@
       "name": "Footer CTA",
       "settings": {
         "heading": "Transform Your Store Today",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "button_label": "Install for Free",
         "button_link": "#",
