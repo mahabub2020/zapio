@@ -290,6 +290,13 @@ a.product__text {
 }
 
 @media screen and (min-width: 750px) {
+  .product__media-wrapper {
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+  .product__info-wrapper .product__title h1 {
+    font-size: 28px;
+}
   .product__info-container {
     max-width: 60rem;
   }

@@ -79,7 +79,7 @@
     background-position: right;
     background-repeat: no-repeat;
     position: relative;
-    padding: 5.5rem 30px; 
+    padding: 5rem 16px !important; 
     background-size: contain;
   }
 .zapio-product-card__content {
@@ -87,18 +87,31 @@
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0;
     max-width: 100%;
 }
-.zapio-product-card.congrats-bar .zapio-product-card__media {
-     
-    display: none !important;
-}
+  .zapio-product-card.congrats-bar .zapio-product-card__media {
+      
+      display: none !important;
+  }
 .zapio-product-card__media_mobile{
     display: block;
     visibility: visible;
   }
+  .related-products .zapio-product-card .zapio-product-card__title {
+    font-size: 24px;
+    margin: 11px 0 0 0;
+  }
+  .related-products .zapio-product-card .zapio-product-card__category {
+      color: #0d0c0c;
+      background-color: #fff;
+      margin-bottom: 20px;
+  }
+  .product__accordion .accordion__content {
+    padding: 0;
+  }
  }
+
 .zapio-product-card.floating-slider{
     background-position: left;
 }
@@ -178,7 +191,7 @@
       {% endif %}
    </div>
     <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
-      <span class="zapio-widget-types__card-arrow">→</span>
+      <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
     </a>
   </div>
    <div class="zapio-product-card__media">
@@ -216,7 +229,7 @@
       {% endif %}
    </div>
     <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
-      <span class="zapio-widget-types__card-arrow">→</span>
+      <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
     </a>
   </div>
    <div class="zapio-product-card__media">
@@ -253,7 +266,7 @@
       {% endif %}
    </div>
     <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
-      <span class="zapio-widget-types__card-arrow">→</span>
+      <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
     </a>
   </div>
    <div class="zapio-product-card__media">
@@ -290,7 +303,7 @@
       {% endif %}
    </div>
     <a href="{{ card_product.url | default: '#' }}" role="link" aria-disabled="true" class="zapio-widget-product-card-link" style="font-size: 14px;">View Widget
-      <span class="zapio-widget-types__card-arrow">→</span>
+      <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
     </a>
   </div>
    <div class="zapio-product-card__media">
