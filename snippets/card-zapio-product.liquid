@@ -199,6 +199,16 @@
     {% if card_product.collections.size > 0 %}
       <div class="zapio-product-card__category">{{ card_product.collections.first.title }}</div>
     {% endif %}  
+    <div class="zapio-product-card__media_mobile">
+    <a href="{{ card_product.url }}">
+      {% assign display_image = card_product.images[1] | default: card_product.featured_image %}
+      {% if display_image %}
+        <img src="{{ display_image | image_url: width: 300 }}" alt="{{ display_image.alt | escape }}">
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </a> 
+  </div>
     <div class="zapio-widget-product-card-text">
       <h3 class="zapio-product-card__title">{{ card_product.title }}</h3>
       {% if card_product.description != blank %}
@@ -226,6 +236,16 @@
     {% if card_product.collections.size > 0 %}
       <div class="zapio-product-card__category">{{ card_product.collections.first.title }}</div>
     {% endif %}  
+    <div class="zapio-product-card__media_mobile">
+    <a href="{{ card_product.url }}">
+      {% assign display_image = card_product.images[1] | default: card_product.featured_image %}
+      {% if display_image %}
+        <img src="{{ display_image | image_url: width: 300 }}" alt="{{ display_image.alt | escape }}">
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </a> 
+  </div>
     <div class="zapio-widget-product-card-text">
       <h3 class="zapio-product-card__title">{{ card_product.title }}</h3>
       {% if card_product.description != blank %}
@@ -253,6 +273,16 @@
     {% if card_product.collections.size > 0 %}
       <div class="zapio-product-card__category">{{ card_product.collections.first.title }}</div>
     {% endif %}  
+    <div class="zapio-product-card__media_mobile">
+    <a href="{{ card_product.url }}">
+      {% assign display_image = card_product.images[1] | default: card_product.featured_image %}
+      {% if display_image %}
+        <img src="{{ display_image | image_url: width: 300 }}" alt="{{ display_image.alt | escape }}">
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </a> 
+  </div>
     <div class="zapio-widget-product-card-text">
       <h3 class="zapio-product-card__title">{{ card_product.title }}</h3>
       {% if card_product.description != blank %}
