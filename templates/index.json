@@ -134,9 +134,9 @@
         "swipe_on_mobile": true,
         "color_scheme": "",
         "padding_top": 100,
-        "padding_bottom": 76,
-        "padding_top_mobile": 56,
-        "padding_bottom_mobile": 16
+        "padding_bottom": 100,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 60
       }
     },
     "zapio_widget_types_4dCgAV": {
