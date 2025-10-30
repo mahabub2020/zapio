@@ -13,23 +13,25 @@
       padding-left: 0.5rem;
       padding-right: 0.5rem;
     } 
-    .zapio-multicolumn__header .zapio-multicolumn__header-button{
-        display: none;
+   .buttons-holder-mobile .zapio-multicolumn__header-button{
+      display: none;
     }
   }
 
   @media screen and (max-width: 749px) { 
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  .slider-buttons.large-up-hide{
-        margin-bottom: 2rem;
-  }
-   .section-{{ section.id }}-padding {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    } 
+    .slider-buttons.large-up-hide{
+          margin-bottom: 2rem;
+    }
+    .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top_mobile }}px;
       padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+    .zapio-multicolumn__header .zapio-multicolumn__header-button{
+      display: none;
     }
 }
   
@@ -194,7 +196,9 @@
         {%- endif -%}
       </slider-component>
     {%- endif -%}
-     {%- if section.settings.button_label != blank -%}
+    
+    {%- if section.settings.button_label != blank -%}
+        <div class="buttons-holder-mobile">
         <a
           {% if section.settings.button_link == blank %}
             role="link" aria-disabled="true"
@@ -205,7 +209,9 @@
         >
           {{ section.settings.button_label | escape }}
         </a>
+         </div>
       {%- endif -%}
+
   </div>
 </div>
 
