@@ -13,6 +13,9 @@
       padding-left: 0.5rem;
       padding-right: 0.5rem;
     } 
+    .zapio-multicolumn__header .zapio-multicolumn__header-button{
+        display: none;
+    }
   }
 
   @media screen and (max-width: 749px) { 
@@ -20,9 +23,7 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-  .zapio-multicolumn__header .zapio-multicolumn__header-button{
-      display: none;
-  }
+
   .slider-buttons.large-up-hide{
         margin-bottom: 2rem;
   }
