@@ -2,16 +2,8 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  @media screen and (max-width: 749px) { 
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-  .zapio-multicolumn__header .zapio-multicolumn__header-button{
-      display: none;
-  }
-}
-  @media screen and (min-width: 750px) {
+
+  @media screen and (min-width: 749px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -20,12 +12,26 @@
       flex-basis: 55%;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
-    }
-    .section-{{ section.id }}-padding {
+    } 
+  }
+
+  @media screen and (max-width: 749px) { 
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .zapio-multicolumn__header .zapio-multicolumn__header-button{
+      display: none;
+  }
+  .slider-buttons.large-up-hide{
+        margin-bottom: 2rem;
+  }
+   .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top_mobile }}px;
       padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
     }
-  }
+}
+  
 {%- endstyle -%}
 
 {%- liquid
