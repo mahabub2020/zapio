@@ -187,6 +187,18 @@
         {%- endif -%}
       </slider-component>
     {%- endif -%}
+     {%- if section.settings.button_label != blank -%}
+        <a
+          {% if section.settings.button_link == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ section.settings.button_link }}"
+          {% endif %}
+          class="button button--secondary zapio-multicolumn__header-button"
+        >
+          {{ section.settings.button_label | escape }}
+        </a>
+      {%- endif -%}
   </div>
 </div>
 
