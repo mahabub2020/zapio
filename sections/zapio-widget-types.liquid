@@ -242,6 +242,7 @@
       this.currentPage = 1;
       this.currentFilter = 'all';
 
+      console.log('WidgetTypesFilter initialized');
       this.init();
     }
 
@@ -269,6 +270,7 @@
       this.filters.forEach(f => f.classList.remove('active'));
       e.target.classList.add('active');
       this.currentFilter = e.target.dataset.filter;
+      console.log('Filter changed to:', this.currentFilter);
       this.currentPage = 1;
       this.filterAndSort();
     }
@@ -285,7 +287,9 @@
       if (this.currentFilter !== 'all') {
         visibleCards = visibleCards.filter(card => {
           const categories = card.dataset.category ? card.dataset.category.split(/\s+/) : [];
-          return categories.includes(this.currentFilter);
+          const match = categories.includes(this.currentFilter);
+          console.log(`Card "${card.dataset.name}" categories:`, categories, 'Match:', match);
+          return match;
         });
       }
 
