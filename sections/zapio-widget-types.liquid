@@ -283,9 +283,10 @@
 
       // Filter by category
       if (this.currentFilter !== 'all') {
-        visibleCards = visibleCards.filter(card =>
-          card.dataset.category.split(' ').includes(this.currentFilter)
-        );
+        visibleCards = visibleCards.filter(card => {
+          const categories = card.dataset.category ? card.dataset.category.split(/\s+/) : [];
+          return categories.includes(this.currentFilter);
+        });
       }
 
       // Filter by widget type
