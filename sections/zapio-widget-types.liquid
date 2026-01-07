@@ -106,6 +106,7 @@
       {%- comment -%} Widget Cards Grid {%- endcomment -%}
       <div class="zapio-widget-types__grid zapio-widget-types__grid--{{ section.settings.columns_desktop }}-col-desktop zapio-widget-types__grid--{{ section.settings.columns_mobile }}-col-mobile" data-widget-grid>
         {%- for block in section.blocks -%}
+          <!-- Debug: Rendering Block {{ block.id }} -->
           {%- liquid
             assign image_position = 'left: ' | append: block.settings.image_position_x | append: '%; top: ' | append: block.settings.image_position_y | append: '%;'
             assign card_bg_style = 'background-color: ' | append: block.settings.background_color | append: '; position: relative; overflow: hidden;'
@@ -283,6 +284,10 @@
     filterAndSort() {
       let visibleCards = Array.from(this.cards);
       console.log(`filterAndSort running. Total cards found in DOM: ${visibleCards.length}`);
+      
+      if (visibleCards.length === 0) {
+        console.warn('WARNING: No cards found. Dumping container HTML (first 500 chars):', this.container.innerHTML.substring(0, 500));
+      }
 
       // Filter by category
       if (this.currentFilter !== 'all') {
@@ -374,10 +379,22 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    const widgetSection = document.querySelector('.zapio-widget-types');
-    if (widgetSection) {
-      new WidgetTypesFilter(widgetSection);
+    function initWidgetTypes(container) {
+      if (container.querySelector('.zapio-widget-types')) {
+        new WidgetTypesFilter(container.querySelector('.zapio-widget-types'));
+      } else if (container.classList.contains('zapio-widget-types')) {
+        new WidgetTypesFilter(container);
+      }
     }
+
+    // Init on load
+    initWidgetTypes(document);
+
+    // Init on Theme Editor section load
+    document.addEventListener('shopify:section:load', (e) => {
+      console.log('Theme Editor: Section Reloaded', e.target);
+      initWidgetTypes(e.target);
+    });
   });
 </script>
 
