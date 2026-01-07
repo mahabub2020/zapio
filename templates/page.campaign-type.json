@@ -61,6 +61,7 @@
         },
         "column_eUwKVy": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Product_Bundles.png",
             "tagline": "Increase Average Order Value",
@@ -74,6 +75,7 @@
         },
         "column_HH9YhA": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Volume_Discounts.png",
             "tagline": "Increase Average Order Value",
@@ -87,6 +89,7 @@
         },
         "column_yJbrny": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Frequently_Bought_Together.png",
             "tagline": "Increase Average Order Value",
