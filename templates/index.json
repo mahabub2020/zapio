@@ -261,13 +261,44 @@
             "button_text_color": "",
             "button_hover_text_color": ""
           }
+        },
+        "widget_cEj7yK": {
+          "type": "widget",
+          "settings": {
+            "category": "cart-page",
+            "widget_type": "bxgy-bogo",
+            "content_layout": "content-left",
+            "badge": "BXGY / BOGO",
+            "title": "Popup",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+            "title_color": "",
+            "title_font_size": 24,
+            "description_color": "",
+            "description_font_size": 16,
+            "background_color": "#d0b9ef",
+            "background_image": "shopify://shop_images/card-bg-img_d3fa7d85-5223-47b4-9119-900e52317207.png",
+            "background_image_position": "right",
+            "background_size": "auto",
+            "overlay_color": "#d0b9ef",
+            "overlay_opacity": 65,
+            "preview_image": "shopify://shop_images/BXGY_Embedded.png",
+            "main_image": "shopify://shop_images/BXGY_Embedded.png",
+            "image_position_x": 73,
+            "image_position_y": 50,
+            "button_label": "View Widget",
+            "button_link": "shopify://products/bxgy-embedded",
+            "button_font_size": 14,
+            "button_text_color": "",
+            "button_hover_text_color": ""
+          }
         }
       },
       "block_order": [
         "widget_hxjBQL",
         "widget_XFyEXX",
         "widget_tB63VR",
-        "widget_LxfgtD"
+        "widget_LxfgtD",
+        "widget_cEj7yK"
       ],
       "name": "Zapio Widget Types",
       "settings": {
