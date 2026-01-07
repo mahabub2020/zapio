@@ -145,7 +145,7 @@
         "widget_hxjBQL": {
           "type": "widget",
           "settings": {
-            "category": "pop-up",
+            "category": "all",
             "widget_type": "free-gift",
             "content_layout": "content-left",
             "badge": "Free Gift",
@@ -175,7 +175,7 @@
         "widget_XFyEXX": {
           "type": "widget",
           "settings": {
-            "category": "product-page",
+            "category": "all",
             "widget_type": "free-gift",
             "content_layout": "content-right",
             "badge": "Free Gift",
