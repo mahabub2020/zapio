@@ -179,11 +179,11 @@
         "widget_XFyEXX": {
           "type": "widget",
           "settings": {
-            "cat_product_page": false,
-            "cat_cart_page": false,
-            "cat_checkout_page": false,
-            "cat_thank_you_page": false,
-            "cat_popup": false,
+            "cat_product_page": true,
+            "cat_cart_page": true,
+            "cat_checkout_page": true,
+            "cat_thank_you_page": true,
+            "cat_popup": true,
             "widget_type": "free-gift",
             "content_layout": "content-right",
             "badge": "Free Gift",
@@ -213,11 +213,11 @@
         "widget_tB63VR": {
           "type": "widget",
           "settings": {
-            "cat_product_page": false,
-            "cat_cart_page": false,
-            "cat_checkout_page": false,
-            "cat_thank_you_page": false,
-            "cat_popup": false,
+            "cat_product_page": true,
+            "cat_cart_page": true,
+            "cat_checkout_page": true,
+            "cat_thank_you_page": true,
+            "cat_popup": true,
             "widget_type": "free-gift",
             "content_layout": "content-left",
             "badge": "Free Gift",
