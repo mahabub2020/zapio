@@ -286,7 +286,8 @@
       console.log(`filterAndSort running. Total cards found in DOM: ${visibleCards.length}`);
       
       if (visibleCards.length === 0) {
-        console.warn('WARNING: No cards found. Dumping container HTML (first 500 chars):', this.container.innerHTML.substring(0, 500));
+        console.warn('WARNING: No cards found. Dumping container HTML (first 2000 chars):', this.container.innerHTML.substring(0, 2000));
+        console.log('section.blocks check - Looking for data-widget-grid:', !!this.container.querySelector('[data-widget-grid]'));
       }
 
       // Filter by category
