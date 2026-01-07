@@ -331,7 +331,7 @@
             "description_font_size": 16,
             "background_color": "#334fb4",
             "background_image": "shopify://shop_images/card-bg-img_d3fa7d85-5223-47b4-9119-900e52317207.png",
-            "background_image_position": "right",
+            "background_image_position": "left",
             "background_size": "auto",
             "overlay_color": "#e8d7ff",
             "overlay_opacity": 65,
