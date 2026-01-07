@@ -114,7 +114,7 @@
           <div
             class="zapio-widget-types__card zapio-widget-types__card--{{ block.settings.content_layout }}"
             data-widget-card
-            {%- liquid
+            {% liquid
               assign categories = ''
               if block.settings.cat_product_page
                 assign categories = categories | append: 'product-page '
@@ -131,7 +131,7 @@
               if block.settings.cat_popup
                 assign categories = categories | append: 'pop-up '
               endif
-            -%}
+            %}
             data-category="{{ categories | strip }}"
             data-widget-type="{{ block.settings.widget_type }}"
             data-name="{{ block.settings.title | escape }}"
