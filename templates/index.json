@@ -315,8 +315,8 @@
         "widget_aiTFkb": {
           "type": "widget",
           "settings": {
-            "cat_product_page": false,
-            "cat_cart_page": false,
+            "cat_product_page": true,
+            "cat_cart_page": true,
             "cat_checkout_page": false,
             "cat_thank_you_page": false,
             "cat_popup": false,
