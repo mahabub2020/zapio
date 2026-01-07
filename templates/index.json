@@ -281,10 +281,10 @@
         "widget_cEj7yK": {
           "type": "widget",
           "settings": {
-            "cat_product_page": false,
+            "cat_product_page": true,
             "cat_cart_page": false,
             "cat_checkout_page": false,
-            "cat_thank_you_page": false,
+            "cat_thank_you_page": true,
             "cat_popup": false,
             "widget_type": "bxgy-bogo",
             "content_layout": "content-left",
