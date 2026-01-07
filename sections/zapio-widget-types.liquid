@@ -87,7 +87,7 @@
           <button class="zapio-widget-types__filter-tab" data-filter="product-page">Product page</button>
           <button class="zapio-widget-types__filter-tab" data-filter="cart-page">Cart page</button>
           {% comment %} <button class="zapio-widget-types__filter-tab" data-filter="checkout-page">Checkout page</button> {% endcomment %}
-          {% comment %} <button class="zapio-widget-types__filter-tab" data-filter="thank-you-page">Thank you page</button> {% endcomment %}
+          <button class="zapio-widget-types__filter-tab" data-filter="thank-you-page">Thank you page</button>
           <button class="zapio-widget-types__filter-tab" data-filter="pop-up">Pop-up</button>
         </div>
 
@@ -113,7 +113,25 @@
           <div
             class="zapio-widget-types__card zapio-widget-types__card--{{ block.settings.content_layout }}"
             data-widget-card
-            data-category="{{ block.settings.category }}"
+            {%- liquid
+              assign categories = ''
+              if block.settings.cat_product_page
+                assign categories = categories | append: 'product-page '
+              endif
+              if block.settings.cat_cart_page
+                assign categories = categories | append: 'cart-page '
+              endif
+              if block.settings.cat_checkout_page
+                assign categories = categories | append: 'checkout-page '
+              endif
+              if block.settings.cat_thank_you_page
+                assign categories = categories | append: 'thank-you-page '
+              endif
+              if block.settings.cat_popup
+                assign categories = categories | append: 'pop-up '
+              endif
+            -%}
+            data-category="{{ categories | strip }}"
             data-widget-type="{{ block.settings.widget_type }}"
             data-name="{{ block.settings.title | escape }}"
             style="{{ card_bg_style }}"
@@ -266,7 +284,7 @@
       // Filter by category
       if (this.currentFilter !== 'all') {
         visibleCards = visibleCards.filter(card =>
-          card.dataset.category === this.currentFilter
+          card.dataset.category.split(' ').includes(this.currentFilter)
         );
       }
 
@@ -539,36 +557,34 @@
       "name": "Widget Card",
       "settings": [
         {
-          "type": "select",
-          "id": "category",
-          "label": "Widget category",
-          "options": [
-            {
-              "value": "all",
-              "label": "All Widgets"
-            },
-            {
-              "value": "product-page",
-              "label": "Product page"
-            },
-            {
-              "value": "cart-page",
-              "label": "Cart page"
-            },
-            {
-              "value": "checkout-page",
-              "label": "Checkout page"
-            },
-            {
-              "value": "thank-you-page",
-              "label": "Thank you page"
-            },
-            {
-              "value": "pop-up",
-              "label": "Pop-up"
-            }
-          ],
-          "default": "all"
+          "type": "checkbox",
+          "id": "cat_product_page",
+          "label": "Product page",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "cat_cart_page",
+          "label": "Cart page",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "cat_checkout_page",
+          "label": "Checkout page",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "cat_thank_you_page",
+          "label": "Thank you page",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "cat_popup",
+          "label": "Pop-up",
+          "default": false
         },
         {
           "type": "select",
@@ -827,7 +843,7 @@
         {
           "type": "widget",
           "settings": {
-            "category": "pop-up",
+            "cat_popup": true,
             "widget_type": "free-gift",
             "badge": "Free Gift",
             "title": "Floating Pop-up"
@@ -836,7 +852,7 @@
         {
           "type": "widget",
           "settings": {
-            "category": "product-page",
+            "cat_product_page": true,
             "widget_type": "free-gift",
             "badge": "Free Gift",
             "title": "Floating Slider"
@@ -845,7 +861,7 @@
         {
           "type": "widget",
           "settings": {
-            "category": "cart-page",
+            "cat_cart_page": true,
             "widget_type": "bxgy-bogo",
             "badge": "Buy X Get Y",
             "title": "BXGY Embedded"
