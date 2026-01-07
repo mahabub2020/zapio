@@ -145,7 +145,11 @@
         "widget_hxjBQL": {
           "type": "widget",
           "settings": {
-            "category": "all",
+            "cat_product_page": true,
+            "cat_cart_page": true,
+            "cat_checkout_page": true,
+            "cat_thank_you_page": true,
+            "cat_popup": true,
             "widget_type": "free-gift",
             "content_layout": "content-left",
             "badge": "Free Gift",
@@ -175,7 +179,11 @@
         "widget_XFyEXX": {
           "type": "widget",
           "settings": {
-            "category": "all",
+            "cat_product_page": true,
+            "cat_cart_page": true,
+            "cat_checkout_page": true,
+            "cat_thank_you_page": true,
+            "cat_popup": true,
             "widget_type": "free-gift",
             "content_layout": "content-right",
             "badge": "Free Gift",
@@ -205,7 +213,11 @@
         "widget_tB63VR": {
           "type": "widget",
           "settings": {
-            "category": "all",
+            "cat_product_page": true,
+            "cat_cart_page": true,
+            "cat_checkout_page": true,
+            "cat_thank_you_page": true,
+            "cat_popup": true,
             "widget_type": "free-gift",
             "content_layout": "content-left",
             "badge": "Free Gift",
@@ -235,7 +247,11 @@
         "widget_LxfgtD": {
           "type": "widget",
           "settings": {
-            "category": "cart-page",
+            "cat_product_page": true,
+            "cat_cart_page": false,
+            "cat_checkout_page": false,
+            "cat_thank_you_page": true,
+            "cat_popup": false,
             "widget_type": "bxgy-bogo",
             "content_layout": "content-right",
             "badge": "BXGY / BOGO",
@@ -265,7 +281,11 @@
         "widget_cEj7yK": {
           "type": "widget",
           "settings": {
-            "category": "cart-page",
+            "cat_product_page": true,
+            "cat_cart_page": false,
+            "cat_checkout_page": false,
+            "cat_thank_you_page": true,
+            "cat_popup": false,
             "widget_type": "bxgy-bogo",
             "content_layout": "content-left",
             "badge": "BXGY / BOGO",
@@ -295,7 +315,11 @@
         "widget_aiTFkb": {
           "type": "widget",
           "settings": {
-            "category": "cart-page",
+            "cat_product_page": true,
+            "cat_cart_page": true,
+            "cat_checkout_page": false,
+            "cat_thank_you_page": false,
+            "cat_popup": false,
             "widget_type": "milestone-rewards",
             "content_layout": "content-right",
             "badge": "Milestone Rewards",
