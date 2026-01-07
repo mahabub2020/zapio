@@ -75,6 +75,7 @@
         },
         "column_kyV6K8": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Product_Bundles.png",
             "tagline": "Increase Average Order Value",
@@ -88,6 +89,7 @@
         },
         "column_DRHWke": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Volume_Discounts.png",
             "tagline": "Increase Average Order Value",
@@ -101,6 +103,7 @@
         },
         "column_wyV3zL": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Frequently_Bought_Together.png",
             "tagline": "Increase Average Order Value",
@@ -201,7 +204,7 @@
             "overlay_opacity": 60,
             "preview_image": "shopify://shop_images/Group_7.png",
             "main_image": "shopify://shop_images/Group_7.png",
-            "image_position_x": 13,
+            "image_position_x": 18,
             "image_position_y": 50,
             "button_label": "View Widget",
             "button_link": "",
@@ -263,7 +266,7 @@
             "description_font_size": 16,
             "background_color": "#fce5af",
             "background_image": "shopify://shop_images/card-bg-img_d3fa7d85-5223-47b4-9119-900e52317207.png",
-            "background_image_position": "right",
+            "background_image_position": "left",
             "background_size": "auto",
             "overlay_color": "#d0b9ef",
             "overlay_opacity": 65,
@@ -331,7 +334,7 @@
             "description_font_size": 16,
             "background_color": "#334fb4",
             "background_image": "shopify://shop_images/card-bg-img_d3fa7d85-5223-47b4-9119-900e52317207.png",
-            "background_image_position": "right",
+            "background_image_position": "left",
             "background_size": "auto",
             "overlay_color": "#e8d7ff",
             "overlay_opacity": 65,
