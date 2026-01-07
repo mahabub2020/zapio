@@ -282,6 +282,7 @@
 
     filterAndSort() {
       let visibleCards = Array.from(this.cards);
+      console.log(`filterAndSort running. Total cards found in DOM: ${visibleCards.length}`);
 
       // Filter by category
       if (this.currentFilter !== 'all') {
