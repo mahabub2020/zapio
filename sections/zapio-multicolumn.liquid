@@ -119,36 +119,37 @@
             {%- endif -%}
 
             <div class="zapio-multicolumn__content">
-              {%- if block.settings.tagline != blank -%}
-                <div class="zapio-multicolumn__tagline">
-                 {{ 'trending-up.svg' | inline_asset_content }} {{ block.settings.tagline }}
-                </div>
-              {%- endif -%}
+              
+                {%- if block.settings.tagline != blank -%}
+                  <div class="zapio-multicolumn__tagline">
+                  {{ 'trending-up.svg' | inline_asset_content }} {{ block.settings.tagline }}
+                  </div>
+                {%- endif -%}
 
-              {%- if block.settings.title != blank -%}
-                <h3 class="zapio-multicolumn__item-title">
-                  {{ block.settings.title }}
-                </h3>
-              {%- endif -%}
+                {%- if block.settings.title != blank -%}
+                  <h3 class="zapio-multicolumn__item-title">
+                    {{ block.settings.title }}
+                  </h3>
+                {%- endif -%}
 
-              {%- if block.settings.description != blank -%}
-                <div class="zapio-multicolumn__item-description">
-                 <p>{{ block.settings.description }}</p> 
-                </div>
-              {%- endif -%}
+                {%- if block.settings.description != blank -%}
+                  <div class="zapio-multicolumn__item-description">
+                  <p>{{ block.settings.description }}</p> 
+                  </div>
+                {%- endif -%}
 
-              {%- if block.settings.use_case_title != blank or block.settings.use_cases != blank -%}
-                <div class="zapio-multicolumn__use-cases">
-                  {%- if block.settings.use_case_title != blank -%}
-                    <strong class="zapio-multicolumn__use-cases-title">{{ block.settings.use_case_title }}</strong>
-                  {%- endif -%}
-                  {%- if block.settings.use_cases != blank -%}
-                    <div class="zapio-multicolumn__use-cases-content rte">
-                      {{ block.settings.use_cases }}
-                    </div>
-                  {%- endif -%}
-                </div>
-              {%- endif -%}
+                {%- if block.settings.use_case_title != blank or block.settings.use_cases != blank -%}
+                  <div class="zapio-multicolumn__use-cases">
+                    {%- if block.settings.use_case_title != blank -%}
+                      <strong class="zapio-multicolumn__use-cases-title">{{ block.settings.use_case_title }}</strong>
+                    {%- endif -%}
+                    {%- if block.settings.use_cases != blank -%}
+                      <div class="zapio-multicolumn__use-cases-content rte">
+                        {{ block.settings.use_cases }}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
 
               {%- if block.settings.button_label != blank -%}
                 <a
@@ -163,6 +164,8 @@
                   <span class="zapio-multicolumn__button-icon"> {{ 'right-linear.svg' | inline_asset_content }}</span>
                 </a>
               {%- endif -%}
+
+
             </div>
           </div></li>
         {%- endfor -%}

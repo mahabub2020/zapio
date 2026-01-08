@@ -5,31 +5,35 @@
 /* Header */
 .zapio-multicolumn__header {
   text-align: left;
-  margin-bottom: 4rem; 
+  margin-bottom: 4rem;
   justify-content: space-between;
-  align-items: flex-start; 
+  align-items: flex-start;
   flex-wrap: wrap;
   display: flex;
 }
-.zapio-multicolumn__header.inline .title-wrp{
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
+
+.zapio-multicolumn__header.inline .title-wrp {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
 }
-.zapio-multicolumn__header.inline .zapio-multicolumn__title{
+
+.zapio-multicolumn__header.inline .zapio-multicolumn__title {
   max-width: 540px;
 }
+
 .zapio-multicolumn__title {
-  margin: 0 0 1rem 0;  
+  margin: 0 0 1rem 0;
   flex: 1;
-   
+
 }
-.zapio-multicolumn__header.inline 
-.zapio-multicolumn__description { 
+
+.zapio-multicolumn__header.inline .zapio-multicolumn__description {
   max-width: 600px;
 }
+
 .zapio-multicolumn__header.inline .zapio-multicolumn__title {
-  
+
   max-width: 440px;
 }
 
@@ -38,7 +42,7 @@
   line-height: 1.6;
   color: rgba(var(--color-foreground), 0.75);
   margin-bottom: 1rem;
-  flex: 1; 
+  flex: 1;
 }
 
 .zapio-multicolumn__header-button {
@@ -48,7 +52,7 @@
 
 /* Grid */
 .zapio-multicolumn__grid {
-   
+
   margin: 0;
   padding: 0;
   list-style: none;
@@ -100,11 +104,13 @@
 /* Content */
 .zapio-multicolumn__content {
   padding: 32px;
-   
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 /* Tagline */
-.zapio-multicolumn__tagline { 
+.zapio-multicolumn__tagline {
   gap: .4rem;
   font-size: 12px;
   font-weight: 500;
@@ -117,10 +123,10 @@
   align-items: center;
   margin-bottom: 20px;
 }
- 
+
 /* Item Title */
 .zapio-multicolumn__item-title {
-  margin: 0;  
+  margin: 0;
 }
 
 /* Item Description */
@@ -195,7 +201,7 @@
   transition: all 0.3s ease;
   background: transparent;
   color: rgb(var(--color-foreground));
-  margin-top: 1rem;
+  margin-top: auto;
 }
 
 .zapio-multicolumn__button:hover {
@@ -203,11 +209,12 @@
   background: rgba(var(--color-foreground), 0.05);
 }
 
-.zapio-multicolumn__button-icon { 
+.zapio-multicolumn__button-icon {
   transition: transform 0.3s ease;
   line-height: 1;
 }
-.zapio-multicolumn__button span.zapio-multicolumn__button-icon{
+
+.zapio-multicolumn__button span.zapio-multicolumn__button-icon {
   line-height: 1rem;
 }
 
