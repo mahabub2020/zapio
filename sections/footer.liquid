@@ -90,6 +90,10 @@
     opacity: 0.7;
   }
 
+  .footer-simple__content--social-hidden .footer-simple__menu {
+    justify-content: flex-end;
+  }
+
   @media screen and (max-width: 989px) {
     .footer-simple__content {
       flex-direction: column;
@@ -106,7 +110,7 @@
 
 <footer class="footer footer-simple section-{{ section.id }}-padding">
   <div class="page-width">
-    <div class="footer-simple__content">
+    <div class="footer-simple__content{% unless section.settings.show_social_link %} footer-simple__content--social-hidden{% endunless %}">
       {%- comment -%} Logo {%- endcomment -%}
       <div class="footer-simple__logo">
         {%- if section.settings.logo != blank -%}
@@ -136,13 +140,15 @@
       {%- endif -%}
 
       {%- comment -%} Social Link {%- endcomment -%}
-      {%- if section.settings.social_text != blank and section.settings.social_link != blank -%}
-        <div class="footer-simple__social">
-          <span>{{ section.settings.social_text }}</span>
-          <a href="{{ section.settings.social_link }}" target="_blank" rel="noopener">
-            {{ section.settings.social_link_text }}
-          </a>
-        </div>
+      {%- if section.settings.show_social_link -%}
+        {%- if section.settings.social_text != blank and section.settings.social_link != blank -%}
+          <div class="footer-simple__social">
+            <span>{{ section.settings.social_text }}</span>
+            <a href="{{ section.settings.social_link }}" target="_blank" rel="noopener">
+              {{ section.settings.social_link_text }}
+            </a>
+          </div>
+        {%- endif -%}
       {%- endif -%}
     </div>
   </div>
@@ -196,6 +202,12 @@
     {
       "type": "header",
       "content": "Social link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_link",
+      "label": "Show social link",
+      "default": true
     },
     {
       "type": "text",
