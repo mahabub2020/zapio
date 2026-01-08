@@ -660,10 +660,10 @@ summary {
 
 summary .icon-caret {
   position: absolute;
-  height: 0.6rem;
-  right: 1.5rem;
-  top: calc(50% - 0.2rem);
-  transition: transform 0.2s ease;
+  height: 15px;
+  right: -20px;
+  top: calc(50% - .7rem);
+  transition: all 0.5s !important;
 }
 
 summary::-webkit-details-marker {
