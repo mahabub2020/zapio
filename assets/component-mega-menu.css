@@ -118,11 +118,11 @@ div.mega-menu__no-link {
 }
 
 .mega-menu .icon-caret {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 
 .mega-menu[open] .icon-caret {
-  transform: rotate(0deg);
+  transform: rotate(180deg);
 }
 
 .mega-menu .mega-menu__list--condensed {

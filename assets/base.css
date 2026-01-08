@@ -2832,11 +2832,11 @@ details[open]:hover>.header__menu-item {
 }
 
 .header__menu-item .icon-caret {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 
 details[open]>.header__menu-item .icon-caret {
-  transform: rotate(0deg);
+  transform: rotate(180deg);
 }
 
 .header__active-menu-item {
