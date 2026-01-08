@@ -140,7 +140,7 @@
 .zapio-multicolumn__use-cases {
   margin-top: auto;
   padding-top: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .zapio-multicolumn__use-cases-title {
@@ -202,6 +202,7 @@
   background: transparent;
   color: rgb(var(--color-foreground));
   margin-top: auto;
+  width: 144px;
 }
 
 .zapio-multicolumn__button:hover {
