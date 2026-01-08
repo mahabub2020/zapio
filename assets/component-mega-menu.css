@@ -35,6 +35,11 @@
   transform: translateY(0);
 }
 
+.mega-menu[open].is-closing .mega-menu__content {
+  opacity: 0;
+  transform: translateY(-1.5rem);
+}
+
 .mega-menu__list {
   display: grid;
   gap: 1.8rem 4rem;

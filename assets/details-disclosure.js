@@ -2,10 +2,23 @@ class DetailsDisclosure extends HTMLElement {
   constructor() {
     super();
     this.mainDetailsToggle = this.querySelector('details');
-    this.content = this.mainDetailsToggle.querySelector('summary').nextElementSibling;
+    this.summary = this.mainDetailsToggle.querySelector('summary');
+    this.content = this.summary.nextElementSibling;
 
     this.mainDetailsToggle.addEventListener('focusout', this.onFocusOut.bind(this));
     this.mainDetailsToggle.addEventListener('toggle', this.onToggle.bind(this));
+    this.summary.addEventListener('click', this.onSummaryClick.bind(this));
+  }
+
+  onSummaryClick(event) {
+    if (!this.mainDetailsToggle.hasAttribute('open')) return;
+
+    event.preventDefault();
+    this.mainDetailsToggle.classList.add('is-closing');
+    setTimeout(() => {
+      this.close();
+      this.mainDetailsToggle.classList.remove('is-closing');
+    }, 400); // Matches the 0.4s CSS transition
   }
 
   onFocusOut() {
@@ -26,7 +39,7 @@ class DetailsDisclosure extends HTMLElement {
 
   close() {
     this.mainDetailsToggle.removeAttribute('open');
-    this.mainDetailsToggle.querySelector('summary').setAttribute('aria-expanded', false);
+    this.summary.setAttribute('aria-expanded', false);
   }
 }
 
