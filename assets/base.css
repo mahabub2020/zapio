@@ -2887,9 +2887,10 @@ details[open]>.header__menu-item .icon-caret {
   text-decoration-line: underline;
 }
 
+/* 
 .header__menu-item .icon-caret {
   right: 0.8rem;
-}
+} */
 
 .header__submenu .icon-caret {
   flex-shrink: 0;
