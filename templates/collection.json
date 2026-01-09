@@ -27,7 +27,7 @@
         "image_ratio": "adapt",
         "image_shape": "default",
         "primary_image": "featured_media",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "show_price": true,
@@ -35,7 +35,7 @@
         "enable_filtering": false,
         "filter_type": "horizontal",
         "enable_sorting": false,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 68
       }
     }
