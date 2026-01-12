@@ -398,7 +398,7 @@
       "settings": {
         "title": "Widget Types",
         "heading_size": "h1",
-        "subtitle": "Widgets control where and how campaigns appear. Each widget is lightweight, fast, and designed to trigger action at the right moment.",
+        "subtitle": "Widgets control where and how campaigns appear. <br>Each widget is lightweight, fast, and designed to trigger action at the right moment.",
         "description": "",
         "button_label": "Explore All Widgets",
         "button_link": "#",
