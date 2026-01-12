@@ -180,6 +180,22 @@
                 {%- if block.settings.description != blank -%}
                   <p class="zapio-widget-types__card-description" style="font-size: {{ block.settings.description_font_size }}px; {% if block.settings.description_color != blank %}color: {{ block.settings.description_color }};{% endif %}">{{ block.settings.description }}</p>
                 {%- endif -%}
+
+                {%- if block.settings.list_title != blank -%}
+                  <h4 class="zapio-widget-types__card-list-title" style="font-size: {{ block.settings.list_title_font_size }}px; {% if block.settings.list_title_color != blank %}color: {{ block.settings.list_title_color }};{% endif %} margin-top: 16px; margin-bottom: 8px; font-weight: 600;">{{ block.settings.list_title }}</h4>
+                {%- endif -%}
+
+                {%- assign list_items = block.settings.list_items | newline_to_br | split: '<br />' -%}
+                {%- if list_items.size > 0 and block.settings.list_items != blank -%}
+                  <ul class="zapio-widget-types__card-list" style="margin: 0; padding-left: 20px; list-style: disc;">
+                    {%- for item in list_items -%}
+                      {%- assign trimmed_item = item | strip -%}
+                      {%- if trimmed_item != blank -%}
+                        <li style="font-size: {{ block.settings.list_font_size }}px; {% if block.settings.list_color != blank %}color: {{ block.settings.list_color }};{% endif %} margin-bottom: 4px;">{{ trimmed_item }}</li>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
               </div>
                 {%- if block.settings.button_label != blank -%}
                   <a
@@ -709,6 +725,54 @@
           "step": 1,
           "unit": "px",
           "label": "Description font size",
+          "default": 14
+        },
+        {
+          "type": "header",
+          "content": "Card List"
+        },
+        {
+          "type": "text",
+          "id": "list_title",
+          "label": "List title",
+          "default": "Key Features",
+          "info": "Optional title for the list section"
+        },
+        {
+          "type": "color",
+          "id": "list_title_color",
+          "label": "List title color"
+        },
+        {
+          "type": "range",
+          "id": "list_title_font_size",
+          "min": 10,
+          "max": 32,
+          "step": 1,
+          "unit": "px",
+          "label": "List title font size",
+          "default": 16
+        },
+        {
+          "type": "textarea",
+          "id": "list_items",
+          "label": "List items",
+          "default": "Feature one\nFeature two\nFeature three",
+          "info": "Enter each list item on a new line"
+        },
+        {
+          "type": "color",
+          "id": "list_color",
+          "label": "List items color"
+        },
+        {
+          "type": "range",
+          "id": "list_font_size",
+          "min": 10,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "List items font size",
           "default": 14
         },
         {
