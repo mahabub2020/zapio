@@ -182,7 +182,7 @@
                 {%- endif -%}
 
                 {%- if block.settings.list_title != blank -%}
-                  <h4 class="zapio-widget-types__card-list-title" style="font-size: {{ block.settings.list_title_font_size }}px; {% if block.settings.list_title_color != blank %}color: {{ block.settings.list_title_color }};{% endif %} margin-top: 16px; margin-bottom: 8px; font-weight: 600;">{{ block.settings.list_title }}</h4>
+                  <h4 class="zapio-widget-types__card-list-title" style="font-size: {{ block.settings.list_title_font_size }}px; {% if block.settings.list_title_color != blank %}color: {{ block.settings.list_title_color }};{% endif %} margin-top: 10px; margin-bottom: 8px; font-weight: 600;">{{ block.settings.list_title }}</h4>
                 {%- endif -%}
 
                 {%- assign list_items = block.settings.list_items | newline_to_br | split: '<br />' -%}
