@@ -100,21 +100,27 @@
           ><div class="zapio-multicolumn__card">
             {%- if block.settings.image != blank -%}
               <div class="zapio-multicolumn__image-wrapper">
-                <img
-                  srcset="
-                    {%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
-                    {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
-                    {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | image_url: width: 710 }} 710w,{%- endif -%}
-                    {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
-                    {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
-                  "
-                  src="{{ block.settings.image | image_url: width: 550 }}"
-                  loading="lazy"
-                  alt="{{ block.settings.image.alt | escape }}"
-                  width="{{ block.settings.image.width }}"
-                  height="{{ block.settings.image.height }}"
-                  class="zapio-multicolumn__image"
-                >
+                {%- if block.settings.button_link != blank -%}
+                  <a href="{{ block.settings.button_link }}" class="zapio-multicolumn__image-link">
+                {%- endif -%}
+                  <img
+                    srcset="
+                      {%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
+                      {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                      {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | image_url: width: 710 }} 710w,{%- endif -%}
+                      {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+                      {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
+                    "
+                    src="{{ block.settings.image | image_url: width: 550 }}"
+                    loading="lazy"
+                    alt="{{ block.settings.image.alt | escape }}"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}"
+                    class="zapio-multicolumn__image"
+                  >
+                {%- if block.settings.button_link != blank -%}
+                  </a>
+                {%- endif -%}
               </div>
             {%- endif -%}
 
