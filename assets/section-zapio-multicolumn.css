@@ -7,7 +7,7 @@
   text-align: left;
   margin-bottom: 5rem;
   justify-content: space-between;
-  align-items: cancel;
+  align-items: center;
   flex-wrap: wrap;
   display: flex;
 }
