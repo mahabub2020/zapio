@@ -137,7 +137,7 @@
         "swipe_on_mobile": true,
         "color_scheme": "",
         "padding_top": 100,
-        "padding_bottom": 100,
+        "padding_bottom": 112,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 72
       }
