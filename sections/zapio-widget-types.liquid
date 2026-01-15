@@ -141,7 +141,7 @@
             {%- if block.settings.background_image != blank -%}
               <div
                 class="zapio-widget-types__card-bg-image"
-                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; background-image: url('{{ block.settings.background_image | image_url: width: 1000 }}'); background-position: {{ block.settings.background_image_position | default: 'right' }}; background-size: {{ block.settings.background_size | default: 'cover' }};"
+                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; background-image: url('{{ block.settings.background_image | image_url: width: 1000 }}'); background-position: {{ block.settings.background_image_position | default: 'right' }}; background-size: {{ block.settings.background_size | default: 'contain' }};"
               > &nbsp; </div>
             {%- endif -%}
 
