@@ -56,7 +56,7 @@
 
       <div class="zapio-banner__content">
         {%- if section.settings.badge_text_1 != blank or section.settings.badge_text_2 != blank or section.settings.badge_text_3 != blank -%}
-          <div class="zapio-banner__badges">
+          <div class="zapio-banner__badges animate-fade-in-up">
             {%- if section.settings.badge_text_1 != blank -%}
               <span class="zapio-banner__badge badge-1">{{ section.settings.badge_text_1 }}</span>
             {%- endif -%}
@@ -70,7 +70,7 @@
         {%- endif -%}
 
         {%- if section.settings.heading != blank -%}
-          <h1 class="zapio-banner__heading {{ section.settings.heading_size }}">
+          <h1 class="zapio-banner__heading {{ section.settings.heading_size }} animate-fade-in-up">
             {{ section.settings.heading }}
           </h1>
         {%- endif -%}
@@ -100,13 +100,13 @@
         {%- endif -%}
 
         {%- if section.settings.description != blank -%}
-          <div class="zapio-banner__description">
+          <div class="zapio-banner__description animate-fade-in-up">
             {{ section.settings.description }}
           </div>
         {%- endif -%}
 
         {%- if section.settings.button_label_1 != blank or section.settings.button_label_2 != blank -%}
-          <div class="zapio-banner__buttons">
+          <div class="zapio-banner__buttons animate-fade-in-up">
             {%- if section.settings.button_label_1 != blank -%}
               <a
                 {% if section.settings.button_link_1 == blank %}
