@@ -42,6 +42,14 @@
         color: {{ block.settings.button_hover_text_color }} !important;
       }
     {%- endif -%}
+    .zapio-widget-bg-{{ block.id }} {
+      background-position: {{ block.settings.background_image_position | default: 'right' }};
+    }
+    @media screen and (max-width: 749px) {
+      .zapio-widget-bg-{{ block.id }} {
+        background-position: {{ block.settings.background_image_position_mobile | default: block.settings.background_image_position | default: 'center' }};
+      }
+    }
   {%- endfor -%}
 {%- endstyle -%}
 
@@ -140,8 +148,8 @@
           >
             {%- if block.settings.background_image != blank -%}
               <div
-                class="zapio-widget-types__card-bg-image"
-                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; background-image: url('{{ block.settings.background_image | image_url: width: 1000 }}'); background-position: {{ block.settings.background_image_position | default: 'right' }}; background-size: {{ block.settings.background_size | default: 'cover' }};"
+                class="zapio-widget-types__card-bg-image zapio-widget-bg-{{ block.id }}"
+                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; background-image: url('{{ block.settings.background_image | image_url: width: 1000 }}'); background-size: {{ block.settings.background_size | default: 'cover' }};"
               > &nbsp; </div>
             {%- endif -%}
 
@@ -811,6 +819,35 @@
           ],
           "default": "right",
           "info": "Horizontal position of background image"
+        },
+        {
+          "type": "select",
+          "id": "background_image_position_mobile",
+          "label": "Background image position (mobile)",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            },
+            {
+              "value": "top",
+              "label": "Top"
+            },
+            {
+              "value": "bottom",
+              "label": "Bottom"
+            }
+          ],
+          "default": "center",
+          "info": "Position of background image on mobile devices"
         },
         {
           "type": "select",
