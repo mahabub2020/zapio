@@ -34,23 +34,10 @@
     "zapio_multicolumn_pKY3Bc": {
       "type": "zapio-multicolumn",
       "blocks": {
-        "column_pA6WDA": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Free-Gift.png",
-            "tagline": "Increase Average Order Value",
-            "title": "Free Gift",
-            "description": "Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion.",
-            "use_case_title": "Use Cases:",
-            "use_cases": "<ul><li>Spend $50, get a free gift</li><li>Cart reminder when customers are close to a reward</li><li>First-purchase incentive for new customers</li></ul>",
-            "button_label": "View Demo",
-            "button_link": "shopify://products/floating-pop-up"
-          }
-        },
         "column_nhjtpF": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Buy_X_Get_Y.png",
+            "image": "shopify://shop_images/Buy-X-Get-Y.jpg",
             "tagline": "Increase Average Order Value",
             "title": "Buy X Get Y",
             "description": "Bundle logic that encourages multi-item purchases without reducing core product price.",
@@ -60,10 +47,23 @@
             "button_link": "shopify://products/bxgy-embedded"
           }
         },
+        "column_pA6WDA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/free-gift.jpg",
+            "tagline": "Increase Average Order Value",
+            "title": "Free Gift",
+            "description": "Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion.",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend $50, get a free gift</li><li>Cart reminder when customers are close to a reward</li><li>First-purchase incentive for new customers</li></ul>",
+            "button_label": "View Demo",
+            "button_link": "shopify://products/floating-pop-up"
+          }
+        },
         "column_JPxGpm": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Milestone_Rewards.png",
+            "image": "shopify://shop_images/Milestone-Rewards.png",
             "tagline": "Increase Average Order Value",
             "title": "Milestone Rewards",
             "description": "Progress-based incentives that keep customers spending to unlock the next reward.",
@@ -117,8 +117,8 @@
         }
       },
       "block_order": [
-        "column_pA6WDA",
         "column_nhjtpF",
+        "column_pA6WDA",
         "column_JPxGpm",
         "column_kyV6K8",
         "column_DRHWke",
@@ -128,7 +128,7 @@
       "settings": {
         "title": "Campaign Type and Use Cases",
         "heading_size": "h1",
-        "description": "<p>Pre-built promotional campaigns designed to increase average order value,  conversion rate, and purchase frequency.</p>",
+        "description": "<p>Pre-built promotional campaigns designed to increase average order value,  &lt;br&gt; conversion rate, and purchase frequency.</p>",
         "description_alignment": "block",
         "button_label": "Explore All Campaign Types",
         "button_link": "#",
@@ -169,13 +169,11 @@
             "list_color": "#3d2d2d",
             "list_font_size": 14,
             "background_color": "#f5d78e",
-            "background_image": "shopify://shop_images/card-bg-img_d3fa7d85-5223-47b4-9119-900e52317207.png",
+            "background_image": "shopify://shop_images/Floating_Pop-up.png",
             "background_image_position": "right",
             "background_size": "auto",
-            "overlay_color": "#f5d78e",
+            "overlay_color": "rgba(0,0,0,0)",
             "overlay_opacity": 60,
-            "preview_image": "shopify://shop_images/Floating_popup.png",
-            "main_image": "shopify://shop_images/Floating_popup.png",
             "image_position_x": 67,
             "image_position_y": 50,
             "button_label": "View Widget",
@@ -209,13 +207,11 @@
             "list_color": "#0d0c0c",
             "list_font_size": 14,
             "background_color": "#bac7fe",
-            "background_image": "shopify://shop_images/card-bg-img_d3fa7d85-5223-47b4-9119-900e52317207.png",
+            "background_image": "shopify://shop_images/image.png",
             "background_image_position": "left",
             "background_size": "auto",
             "overlay_color": "#bac7fe",
             "overlay_opacity": 60,
-            "preview_image": "shopify://shop_images/Group_7.png",
-            "main_image": "shopify://shop_images/Group_7.png",
             "image_position_x": 18,
             "image_position_y": 50,
             "button_label": "View Widget",
@@ -292,7 +288,7 @@
             "background_image": "shopify://shop_images/card-bg-img_d3fa7d85-5223-47b4-9119-900e52317207.png",
             "background_image_position": "left",
             "background_size": "auto",
-            "overlay_color": "#d0b9ef",
+            "overlay_color": "#fce5af",
             "overlay_opacity": 65,
             "preview_image": "shopify://shop_images/BXGY_Embedded.png",
             "main_image": "shopify://shop_images/BXGY_Embedded.png",
@@ -332,7 +328,7 @@
             "background_image": "shopify://shop_images/card-bg-img_d3fa7d85-5223-47b4-9119-900e52317207.png",
             "background_image_position": "right",
             "background_size": "auto",
-            "overlay_color": "#97acf9",
+            "overlay_color": "#d0b9ef",
             "overlay_opacity": 65,
             "preview_image": "shopify://shop_images/BXGY_Embedded.png",
             "main_image": "shopify://shop_images/BXGY_Embedded.png",
@@ -368,11 +364,11 @@
             "list_items": "Spend-to-unlock campaigns\nFree gift or discount thresholds\nAOV-driving incentives",
             "list_color": "#3d2d2d",
             "list_font_size": 14,
-            "background_color": "#334fb4",
+            "background_color": "#febaf3",
             "background_image": "shopify://shop_images/card-bg-img_d3fa7d85-5223-47b4-9119-900e52317207.png",
             "background_image_position": "left",
             "background_size": "auto",
-            "overlay_color": "#e8d7ff",
+            "overlay_color": "#febaf3",
             "overlay_opacity": 65,
             "preview_image": "shopify://shop_images/BXGY_Embedded.png",
             "main_image": "shopify://shop_images/BXGY_Embedded.png",
