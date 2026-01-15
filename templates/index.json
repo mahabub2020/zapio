@@ -128,7 +128,7 @@
       "settings": {
         "title": "Campaign Type and Use Cases",
         "heading_size": "h1",
-        "description": "<p>Pre-built promotional campaigns designed to increase average order value,  conversion rate, and purchase frequency.</p>",
+        "description": "Pre-built promotional campaigns designed to increase average order value,  conversion rate,<br> and purchase frequency.",
         "description_alignment": "block",
         "button_label": "Explore All Campaign Types",
         "button_link": "#",
