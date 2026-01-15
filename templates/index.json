@@ -34,23 +34,10 @@
     "zapio_multicolumn_pKY3Bc": {
       "type": "zapio-multicolumn",
       "blocks": {
-        "column_pA6WDA": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Buy-X-Get-Y.jpg",
-            "tagline": "Increase Average Order Value",
-            "title": "Free Gift",
-            "description": "Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion.",
-            "use_case_title": "Use Cases:",
-            "use_cases": "<ul><li>Spend $50, get a free gift</li><li>Cart reminder when customers are close to a reward</li><li>First-purchase incentive for new customers</li></ul>",
-            "button_label": "View Demo",
-            "button_link": "shopify://products/floating-pop-up"
-          }
-        },
         "column_nhjtpF": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Buy_X_Get_Y.png",
+            "image": "shopify://shop_images/Buy-X-Get-Y.jpg",
             "tagline": "Increase Average Order Value",
             "title": "Buy X Get Y",
             "description": "Bundle logic that encourages multi-item purchases without reducing core product price.",
@@ -60,10 +47,23 @@
             "button_link": "shopify://products/bxgy-embedded"
           }
         },
+        "column_pA6WDA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/free-gift.jpg",
+            "tagline": "Increase Average Order Value",
+            "title": "Free Gift",
+            "description": "Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion.",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend $50, get a free gift</li><li>Cart reminder when customers are close to a reward</li><li>First-purchase incentive for new customers</li></ul>",
+            "button_label": "View Demo",
+            "button_link": "shopify://products/floating-pop-up"
+          }
+        },
         "column_JPxGpm": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Milestone_Rewards.png",
+            "image": "shopify://shop_images/Milestone-Rewards.png",
             "tagline": "Increase Average Order Value",
             "title": "Milestone Rewards",
             "description": "Progress-based incentives that keep customers spending to unlock the next reward.",
@@ -117,8 +117,8 @@
         }
       },
       "block_order": [
-        "column_pA6WDA",
         "column_nhjtpF",
+        "column_pA6WDA",
         "column_JPxGpm",
         "column_kyV6K8",
         "column_DRHWke",
