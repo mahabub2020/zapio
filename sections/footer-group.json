@@ -17,7 +17,7 @@
       "settings": {
         "heading": "Transform Your Store Today",
         "heading_size": "h1",
-        "description": "Deploy high-impact promotional campaigns without engineering overhead. Launch, test, and optimize offers directly from your <br>dashboard.",
+        "description": "Deploy high-impact promotional campaigns without engineering overhead.<br> Launch, test, and optimize offers directly from your  dashboard.",
         "button_label": "Install for Free",
         "button_link": "#",
         "color_scheme": "scheme-4",
@@ -30,7 +30,7 @@
       "settings": {
         "background_color": "#0d0c0c",
         "text_color": "#ffffff",
-        "logo": "shopify://shop_images/Company_Logo.png",
+        "logo": "shopify://shop_images/footer-logo.png",
         "logo_width": 120,
         "menu": "footer",
         "show_social_link": false,
