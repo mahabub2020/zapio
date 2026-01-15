@@ -11,13 +11,37 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 44,
         "padding_bottom": 28
       }
+    },
+    "zapio_banner_7qdhMa": {
+      "type": "zapio-banner",
+      "name": "Zapio Banner",
+      "settings": {
+        "image": "shopify://shop_images/Content.png",
+        "badge_text_1": "12+ Campaign types",
+        "badge_text_2": "25+ Use cases",
+        "badge_text_3": "8+ Widget types",
+        "heading": "Unlock Your Store's Full <br>Sales Potential",
+        "heading_size": "h0",
+        "description": "Transform your Shopify store with our powerful upsell and marketing tools. Increase your sales, enhance visibility, and engage customers effortlessly.",
+        "button_label_1": "Install for Free",
+        "button_link_1": "#",
+        "button_label_2": "Visit Official Website",
+        "button_link_2": "#",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 24
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "zapio_banner_7qdhMa"
   ]
 }
