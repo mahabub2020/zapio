@@ -1,6 +1,9 @@
 .zapio-banner {
   overflow: hidden;
 }
+.zapio-hero-banner {
+   background: linear-gradient(112.56deg, #FFFFFF 19.22%, #EFF5F2 100%);
+}
 
 .zapio-banner__wrapper {
   display: grid;
