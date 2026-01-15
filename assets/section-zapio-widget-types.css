@@ -22,6 +22,10 @@
   color: rgba(var(--color-foreground), 0.8);
 }
 
+.zapio-widget-types__subtitle p {
+  margin: 0;
+}
+
 .zapio-widget-types__description {
   margin: 0;
   font-size: 1.5rem;
