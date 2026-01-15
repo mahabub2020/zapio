@@ -5,7 +5,7 @@
 /* Header */
 .zapio-multicolumn__header {
   text-align: left;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   justify-content: space-between;
   align-items: cancel;
   flex-wrap: wrap;
@@ -127,6 +127,7 @@
 /* Item Title */
 .zapio-multicolumn__item-title {
   margin: 0;
+  font-size: 22px;
 }
 
 /* Item Description */
