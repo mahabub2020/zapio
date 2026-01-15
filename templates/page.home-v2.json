@@ -17,13 +17,35 @@
         "padding_bottom": 28
       }
     },
+    "zapio_banner_7qdhMa": {
+      "type": "zapio-banner",
+      "name": "Zapio Banner",
+      "settings": {
+        "image": "shopify://shop_images/Content_7c78d0db-eada-4c89-99a3-2dad7c740a8d.png",
+        "badge_text_1": "12+ Campaign types",
+        "badge_text_2": "25+ Use cases",
+        "badge_text_3": "8+ Widget types",
+        "heading": "Unlock Your Store's Full <br>Sales Potential",
+        "heading_size": "h0",
+        "description": "Transform your Shopify store with our powerful upsell and marketing tools. Increase your sales, enhance visibility, and engage customers effortlessly.",
+        "button_label_1": "Install for Free",
+        "button_link_1": "#",
+        "button_label_2": "Visit Official Website",
+        "button_link_2": "#",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 24
+      }
+    },
     "zapio_multicolumn_b9pJUF": {
       "type": "zapio-multicolumn",
       "blocks": {
         "column_7RTFei": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Buy-X-Get-Y.jpg",
+            "image": "shopify://shop_images/Frame_9.png",
             "tagline": "Increase Average Order Value",
             "title": "Buy X Get Y",
             "description": "<p>Bundle logic that encourages multi-item purchases without reducing core product price.</p>",
@@ -36,7 +58,7 @@
         "column_mBVbAm": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/free-gift.jpg",
+            "image": "shopify://shop_images/Frame_9_bfe29411-991e-40f4-966b-1674804e1661.png",
             "tagline": "Increase Average Order Value",
             "title": "Free Gift",
             "description": "<p>Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion.</p>",
@@ -126,28 +148,6 @@
         "padding_bottom": 112,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 72
-      }
-    },
-    "zapio_banner_7qdhMa": {
-      "type": "zapio-banner",
-      "name": "Zapio Banner",
-      "settings": {
-        "image": "shopify://shop_images/Content_7c78d0db-eada-4c89-99a3-2dad7c740a8d.png",
-        "badge_text_1": "12+ Campaign types",
-        "badge_text_2": "25+ Use cases",
-        "badge_text_3": "8+ Widget types",
-        "heading": "Unlock Your Store's Full <br>Sales Potential",
-        "heading_size": "h0",
-        "description": "Transform your Shopify store with our powerful upsell and marketing tools. Increase your sales, enhance visibility, and engage customers effortlessly.",
-        "button_label_1": "Install for Free",
-        "button_link_1": "#",
-        "button_label_2": "Visit Official Website",
-        "button_link_2": "#",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 32,
-        "padding_bottom_mobile": 24
       }
     }
   },
