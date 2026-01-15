@@ -33,7 +33,7 @@
         background: linear-gradient(112.56deg, #FFFFFF 19.22%, #EFF5F2 100%);
       {%- endif -%}
     {%- else -%}
-      background: transparent;
+      background-color: {{ section.settings.background_color | default: 'transparent' }};
     {%- endif -%}
   }
 {%- endstyle -%}
@@ -277,6 +277,13 @@
       "id": "custom_gradient",
       "label": "Custom gradient CSS",
       "info": "Example: linear-gradient(112.56deg, #FFFFFF 19.22%, #EFF5F2 100%)"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "info": "Used when 'Show background gradient' is off",
+      "default": "#ffffff"
     },
     {
       "type": "header",
