@@ -44,6 +44,12 @@
     height: auto;
   }
 
+  {%- if section.settings.logo_small != blank -%}
+    .footer-simple__logo img {
+      max-width: {{ section.settings.logo_width_small }}px;
+    }
+  {%- endif -%}
+
   .footer-simple__logo-text {
     font-size: 2.4rem;
     font-weight: 700;
@@ -114,12 +120,20 @@
     <div class="footer-simple__content{% unless section.settings.show_social_link %} footer-simple__content--social-hidden{% endunless %}">
       {%- comment -%} Logo {%- endcomment -%}
       <div class="footer-simple__logo">
-        {%- if section.settings.logo != blank -%}
+        {%- liquid
+          assign footer_logo = section.settings.logo
+          assign footer_logo_width = section.settings.logo_width
+          if section.settings.logo_small != blank
+            assign footer_logo = section.settings.logo_small
+            assign footer_logo_width = section.settings.logo_width_small
+          endif
+        -%}
+        {%- if footer_logo != blank -%}
           <a href="{{ routes.root_url }}">
             <img
-              src="{{ section.settings.logo | image_url: width: 600 }}"
+              src="{{ footer_logo | image_url: width: 600 }}"
               alt="{{ shop.name }}"
-              width="{{ section.settings.logo_width }}"
+              width="{{ footer_logo_width }}"
               height="auto"
               loading="lazy"
             >
@@ -184,11 +198,26 @@
       "type": "range",
       "id": "logo_width",
       "min": 50,
-      "max": 250,
+      "max": 350,
       "step": 10,
       "unit": "px",
       "label": "Logo width",
       "default": 120
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_small",
+      "label": "Logo image (Small)"
+    },
+    {
+      "type": "range",
+      "id": "logo_width_small",
+      "min": 30,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Small logo width",
+      "default": 60
     },
     {
       "type": "header",
