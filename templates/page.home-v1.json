@@ -9,19 +9,11 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 44,
-        "padding_bottom": 28
-      }
-    },
-    "zapio_banner_7qdhMa": {
+    "zapio_banner_7Yatk3": {
       "type": "zapio-banner",
       "name": "Zapio Banner",
       "settings": {
-        "image": "shopify://shop_images/Content_7c78d0db-eada-4c89-99a3-2dad7c740a8d.png",
+        "image": "shopify://shop_images/Content.png",
         "badge_text_1": "12+ Campaign types",
         "badge_text_2": "25+ Use cases",
         "badge_text_3": "8+ Widget types",
@@ -33,22 +25,19 @@
         "button_label_2": "Visit Official Website",
         "button_link_2": "#",
         "color_scheme": "",
-        "show_gradient": false,
-        "custom_gradient": "",
-        "background_color": "#f0f0f0",
         "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_mobile": 32,
         "padding_bottom_mobile": 24
       }
     },
-    "zapio_multicolumn_b9pJUF": {
+    "zapio_multicolumn_pKY3Bc": {
       "type": "zapio-multicolumn",
       "blocks": {
-        "column_7RTFei": {
+        "column_nhjtpF": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9.png",
+            "image": "shopify://shop_images/Buy-X-Get-Y.jpg",
             "tagline": "Increase Average Order Value",
             "title": "Buy X Get Y",
             "description": "<p>Bundle logic that encourages multi-item purchases without reducing core product price.</p>",
@@ -58,10 +47,10 @@
             "button_link": "shopify://products/bxgy-embedded"
           }
         },
-        "column_mBVbAm": {
+        "column_pA6WDA": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9_bfe29411-991e-40f4-966b-1674804e1661.png",
+            "image": "shopify://shop_images/free-gift.jpg",
             "tagline": "Increase Average Order Value",
             "title": "Free Gift",
             "description": "<p>Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion.</p>",
@@ -71,10 +60,10 @@
             "button_link": "shopify://products/floating-pop-up"
           }
         },
-        "column_93TcLn": {
+        "column_JPxGpm": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9_42818e63-c802-4486-af95-322e1e70fd01.png",
+            "image": "shopify://shop_images/Milestone-Rewards.png",
             "tagline": "Increase Average Order Value",
             "title": "Milestone Rewards",
             "description": "<p>Progress-based incentives that keep customers spending to unlock the next reward.</p>",
@@ -84,7 +73,7 @@
             "button_link": "shopify://products/bundle-discount"
           }
         },
-        "column_iRdXKD": {
+        "column_kyV6K8": {
           "type": "column",
           "disabled": true,
           "settings": {
@@ -98,7 +87,7 @@
             "button_link": "shopify://products/floating-slider"
           }
         },
-        "column_rXAxYW": {
+        "column_DRHWke": {
           "type": "column",
           "disabled": true,
           "settings": {
@@ -112,7 +101,7 @@
             "button_link": "shopify://products/floating-pop-up"
           }
         },
-        "column_DFadEp": {
+        "column_wyV3zL": {
           "type": "column",
           "disabled": true,
           "settings": {
@@ -128,12 +117,12 @@
         }
       },
       "block_order": [
-        "column_7RTFei",
-        "column_mBVbAm",
-        "column_93TcLn",
-        "column_iRdXKD",
-        "column_rXAxYW",
-        "column_DFadEp"
+        "column_nhjtpF",
+        "column_pA6WDA",
+        "column_JPxGpm",
+        "column_kyV6K8",
+        "column_DRHWke",
+        "column_wyV3zL"
       ],
       "name": "Zapio Multicolumn",
       "settings": {
@@ -153,10 +142,10 @@
         "padding_bottom_mobile": 72
       }
     },
-    "zapio_widget_types_HYWGc9": {
+    "zapio_widget_types_4dCgAV": {
       "type": "zapio-widget-types",
       "blocks": {
-        "widget_hthyUW": {
+        "widget_hxjBQL": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
@@ -180,7 +169,7 @@
             "list_color": "#3d2d2d",
             "list_font_size": 14,
             "background_color": "#f5d78e",
-            "background_image": "shopify://shop_images/Image_ce558851-c72f-4eed-83b6-4cfb0f17c018.png",
+            "background_image": "shopify://shop_images/Floating_Pop-up.png",
             "background_image_position": "right",
             "background_image_position_mobile": "bottom",
             "background_size": "contain",
@@ -195,7 +184,7 @@
             "button_hover_text_color": ""
           }
         },
-        "widget_yjGeEq": {
+        "widget_XFyEXX": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
@@ -219,7 +208,7 @@
             "list_color": "#0d0c0c",
             "list_font_size": 14,
             "background_color": "#bac7fe",
-            "background_image": "shopify://shop_images/Image_9ca3b35f-32df-44fb-b415-56cca9710965.png",
+            "background_image": "shopify://shop_images/Floating_Slider_b14dba85-0704-40a0-a2e1-90935c29d890.png",
             "background_image_position": "left",
             "background_image_position_mobile": "bottom",
             "background_size": "contain",
@@ -234,7 +223,7 @@
             "button_hover_text_color": ""
           }
         },
-        "widget_TNRxwz": {
+        "widget_tB63VR": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
@@ -258,7 +247,7 @@
             "list_color": "#0d0c0c",
             "list_font_size": 14,
             "background_color": "#d0b9ef",
-            "background_image": "shopify://shop_images/Image_785b92a5-75bd-40b4-86ec-886abaac85d1.png",
+            "background_image": "shopify://shop_images/Congrats_Bar.png",
             "background_image_position": "right",
             "background_image_position_mobile": "bottom",
             "background_size": "contain",
@@ -273,7 +262,7 @@
             "button_hover_text_color": ""
           }
         },
-        "widget_P6Yq6M": {
+        "widget_LxfgtD": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
@@ -297,7 +286,7 @@
             "list_color": "#0d0c0c",
             "list_font_size": 14,
             "background_color": "#febaf3",
-            "background_image": "shopify://shop_images/Image_d24d2007-bff1-41de-a10d-acfddaf5e5a6.png",
+            "background_image": "shopify://shop_images/BXGY_Embedded_d36cbfa3-3621-4103-8a7c-920af06b882c.png",
             "background_image_position": "left",
             "background_image_position_mobile": "bottom",
             "background_size": "contain",
@@ -312,7 +301,7 @@
             "button_hover_text_color": ""
           }
         },
-        "widget_9fd6wa": {
+        "widget_cEj7yK": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
@@ -336,7 +325,7 @@
             "list_color": "#3d2d2d",
             "list_font_size": 14,
             "background_color": "#febad1",
-            "background_image": "shopify://shop_images/Image_a1c8e4b9-6b63-4d42-83bb-d2d3b8639d5b.png",
+            "background_image": "shopify://shop_images/Pop-up_on_Add_to_Cart.png",
             "background_image_position": "right",
             "background_image_position_mobile": "bottom",
             "background_size": "contain",
@@ -351,7 +340,7 @@
             "button_hover_text_color": ""
           }
         },
-        "widget_H3x863": {
+        "widget_aiTFkb": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
@@ -375,7 +364,7 @@
             "list_color": "#3d2d2d",
             "list_font_size": 14,
             "background_color": "#f5d17b",
-            "background_image": "shopify://shop_images/Image_bf9b0676-35b9-43a4-8eb4-408b1f348c1b.png",
+            "background_image": "shopify://shop_images/Progress_Bar.png",
             "background_image_position": "left",
             "background_image_position_mobile": "bottom",
             "background_size": "contain",
@@ -392,12 +381,12 @@
         }
       },
       "block_order": [
-        "widget_hthyUW",
-        "widget_yjGeEq",
-        "widget_TNRxwz",
-        "widget_P6Yq6M",
-        "widget_9fd6wa",
-        "widget_H3x863"
+        "widget_hxjBQL",
+        "widget_XFyEXX",
+        "widget_tB63VR",
+        "widget_LxfgtD",
+        "widget_cEj7yK",
+        "widget_aiTFkb"
       ],
       "name": "Zapio Widget Types",
       "settings": {
@@ -422,9 +411,8 @@
     }
   },
   "order": [
-    "main",
-    "zapio_banner_7qdhMa",
-    "zapio_multicolumn_b9pJUF",
-    "zapio_widget_types_HYWGc9"
+    "zapio_banner_7Yatk3",
+    "zapio_multicolumn_pKY3Bc",
+    "zapio_widget_types_4dCgAV"
   ]
 }
