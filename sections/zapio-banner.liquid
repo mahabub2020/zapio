@@ -24,6 +24,18 @@
       display: none;
     }
   }
+
+  #ZapioBanner-{{ section.id }}.zapio-hero-banner {
+    {%- if section.settings.show_gradient -%}
+      {%- if section.settings.custom_gradient != blank -%}
+        background: {{ section.settings.custom_gradient }};
+      {%- else -%}
+        background: linear-gradient(112.56deg, #FFFFFF 19.22%, #EFF5F2 100%);
+      {%- endif -%}
+    {%- else -%}
+      background: transparent;
+    {%- endif -%}
+  }
 {%- endstyle -%}
 
 <div class="zapio-hero-banner" id="ZapioBanner-{{ section.id }}" class="zapio-banner color-{{ section.settings.color_scheme }} gradient">
@@ -249,6 +261,22 @@
       "id": "color_scheme",
       "label": "Color scheme",
       "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gradient",
+      "label": "Show background gradient",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "custom_gradient",
+      "label": "Custom gradient CSS",
+      "info": "Example: linear-gradient(112.56deg, #FFFFFF 19.22%, #EFF5F2 100%)"
     },
     {
       "type": "header",
