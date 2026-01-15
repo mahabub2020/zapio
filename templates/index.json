@@ -13,7 +13,7 @@
       "type": "zapio-banner",
       "name": "Zapio Banner",
       "settings": {
-        "image": "shopify://shop_images/hero-image.png",
+        "image": "shopify://shop_images/Content.png",
         "badge_text_1": "12+ Campaign types",
         "badge_text_2": "25+ Use cases",
         "badge_text_3": "8+ Widget types",
