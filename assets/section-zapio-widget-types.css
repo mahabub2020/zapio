@@ -221,6 +221,7 @@
   flex-direction: column;
   gap: 3.2rem;
   max-width: 50%;
+  padding-right: 2rem;
 }
 
 /* Content Layout: Content Left (default) */
