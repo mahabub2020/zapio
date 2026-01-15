@@ -111,9 +111,25 @@
   }
 }
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .animate-fade-in-up {
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-right {
+  opacity: 0;
+  animation: fadeInRight 1s ease-out forwards;
 }
 
 .zapio-banner__badges.animate-fade-in-up {
@@ -130,6 +146,10 @@
 
 .zapio-banner__buttons.animate-fade-in-up {
   animation-delay: 0.7s;
+}
+
+.zapio-banner__image-wrapper.animate-fade-in-right {
+  animation-delay: 0.4s;
 }
 
 /* Responsive adjustments */
