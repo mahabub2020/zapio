@@ -33,12 +33,12 @@
         background: linear-gradient(112.56deg, #FFFFFF 19.22%, #EFF5F2 100%);
       {%- endif -%}
     {%- else -%}
-      background-color: {{ section.settings.background_color | default: 'transparent' }};
+      background: {{ section.settings.background_color | default: 'transparent' }};
     {%- endif -%}
   }
 {%- endstyle -%}
 
-<div class="zapio-hero-banner" id="ZapioBanner-{{ section.id }}" class="zapio-banner color-{{ section.settings.color_scheme }} gradient">
+<div class="zapio-hero-banner zapio-banner color-{{ section.settings.color_scheme }} gradient" id="ZapioBanner-{{ section.id }}">
   <div class="page-width">
     <div class="zapio-banner__wrapper">
      
