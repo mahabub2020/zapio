@@ -134,7 +134,7 @@
 
                 {%- if block.settings.description != blank -%}
                   <div class="zapio-multicolumn__item-description">
-                  <p>{{ block.settings.description }}</p> 
+                    {{ block.settings.description }}
                   </div>
                 {%- endif -%}
 
@@ -391,10 +391,10 @@
           "default": "Free Gift"
         },
         {
-          "type": "textarea",
+          "type": "richtext",
           "id": "description",
           "label": "Description",
-          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>"
         },
         {
           "type": "text",
