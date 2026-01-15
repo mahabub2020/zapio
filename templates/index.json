@@ -171,7 +171,7 @@
             "background_color": "#f5d78e",
             "background_image": "shopify://shop_images/Floating_Pop-up.png",
             "background_image_position": "right",
-            "background_size": "auto",
+            "background_size": "contain",
             "overlay_color": "rgba(0,0,0,0)",
             "overlay_opacity": 60,
             "image_position_x": 67,
