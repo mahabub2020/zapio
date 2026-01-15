@@ -68,7 +68,7 @@
       {%- endif -%}
 
       {%- if section.settings.subtitle != blank -%}
-        <div class="zapio-widget-types__subtitle">{{ section.settings.subtitle }}</div>
+        <div class="zapio-widget-types__subtitle"><p>{{ section.settings.subtitle }}</p></div>
       {%- endif -%} 
       
    </div>
@@ -462,7 +462,7 @@
       "label": "Heading size"
     },
     {
-      "type": "richtext",
+      "type": "textarea",
       "id": "subtitle",
       "label": "Subtitle"
     },
