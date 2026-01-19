@@ -104,7 +104,7 @@
   gap: 16px;
   height: 750px;
   overflow: hidden;
-  mask-image: linear-gradient(
+  /* mask-image: linear-gradient(
     to bottom,
     transparent,
     black 15%,
@@ -117,7 +117,7 @@
     black 15%,
     black 85%,
     transparent
-  );
+  ); */
   align-items: flex-start;
   order: 2;
 }
