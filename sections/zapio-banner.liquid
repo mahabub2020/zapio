@@ -42,7 +42,68 @@
   <div class="page-width">
     <div class="zapio-banner__wrapper">
      
-      {%- if section.settings.image != blank -%}
+      {%- if section.blocks.size > 0 -%}
+        <div class="zapio-banner__ticker-wrapper show-on-desktop">
+          <div class="zapio-banner__column zapio-banner__column--up">
+            {%- for block in section.blocks -%}
+              {%- if block.settings.image != blank -%}
+                <div class="zapio-banner__ticker-image">
+                  <img
+                    src="{{ block.settings.image | image_url: width: 400 }}"
+                    loading="lazy"
+                    alt="{{ block.settings.image.alt | escape }}"
+                    width="400"
+                    height="{{ 400 | divided_by: block.settings.image.aspect_ratio | round }}"
+                  >
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+            {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
+            {%- for block in section.blocks -%}
+              {%- if block.settings.image != blank -%}
+                <div class="zapio-banner__ticker-image">
+                  <img
+                    src="{{ block.settings.image | image_url: width: 400 }}"
+                    loading="lazy"
+                    alt="{{ block.settings.image.alt | escape }}"
+                    width="400"
+                    height="{{ 400 | divided_by: block.settings.image.aspect_ratio | round }}"
+                  >
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+          <div class="zapio-banner__column zapio-banner__column--down">
+            {%- for block in section.blocks reversed -%}
+              {%- if block.settings.image != blank -%}
+                <div class="zapio-banner__ticker-image">
+                  <img
+                    src="{{ block.settings.image | image_url: width: 400 }}"
+                    loading="lazy"
+                    alt="{{ block.settings.image.alt | escape }}"
+                    width="400"
+                    height="{{ 400 | divided_by: block.settings.image.aspect_ratio | round }}"
+                  >
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+            {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
+            {%- for block in section.blocks reversed -%}
+              {%- if block.settings.image != blank -%}
+                <div class="zapio-banner__ticker-image">
+                  <img
+                    src="{{ block.settings.image | image_url: width: 400 }}"
+                    loading="lazy"
+                    alt="{{ block.settings.image.alt | escape }}"
+                    width="400"
+                    height="{{ 400 | divided_by: block.settings.image.aspect_ratio | round }}"
+                  >
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- elsif section.settings.image != blank -%}
         <div class="zapio-banner__image-wrapper show-on-desktop animate-fade-in-right">
           <img
             srcset="
@@ -87,7 +148,39 @@
           </h1>
         {%- endif -%}
 
-        {%- if section.settings.image != blank -%}
+        {%- if section.blocks.size > 0 -%}
+           <div class="zapio-banner__ticker-wrapper show-on-mobile">
+            <div class="zapio-banner__column zapio-banner__column--up">
+              {%- for block in section.blocks -%}
+                {%- if block.settings.image != blank -%}
+                  <div class="zapio-banner__ticker-image">
+                    <img
+                      src="{{ block.settings.image | image_url: width: 400 }}"
+                      loading="lazy"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      width="400"
+                      height="{{ 400 | divided_by: block.settings.image.aspect_ratio | round }}"
+                    >
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+              {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
+              {%- for block in section.blocks -%}
+                {%- if block.settings.image != blank -%}
+                  <div class="zapio-banner__ticker-image">
+                    <img
+                      src="{{ block.settings.image | image_url: width: 400 }}"
+                      loading="lazy"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      width="400"
+                      height="{{ 400 | divided_by: block.settings.image.aspect_ratio | round }}"
+                    >
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- elsif section.settings.image != blank -%}
           <div class="zapio-banner__image-wrapper show-on-mobile animate-fade-in-right">
             <img
               srcset="
@@ -162,7 +255,7 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "Fallback Image (if no blocks)"
     },
     {
       "type": "header",
@@ -330,9 +423,36 @@
       "default": 60
     }
   ],
+  "blocks": [
+    {
+      "type": "ticker_image",
+      "name": "Ticker Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Zapio Banner"
+      "name": "Zapio Banner",
+      "blocks": [
+        {
+          "type": "ticker_image"
+        },
+        {
+          "type": "ticker_image"
+        },
+        {
+          "type": "ticker_image"
+        },
+        {
+          "type": "ticker_image"
+        }
+      ]
     }
   ]
 }

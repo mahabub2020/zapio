@@ -2,7 +2,7 @@
   overflow: hidden;
 }
 .zapio-hero-banner {
-   background: linear-gradient(112.56deg, #FFFFFF 19.22%, #EFF5F2 100%);
+  background: linear-gradient(112.56deg, #ffffff 19.22%, #eff5f2 100%);
 }
 
 .zapio-banner__wrapper {
@@ -48,19 +48,18 @@
   font-size: 12px;
   font-weight: 600;
   line-height: 1;
-  color: #0D0C0C;
-  background-color: #B6F7D0;
+  color: #0d0c0c;
+  background-color: #b6f7d0;
 }
-
 
 /* Heading */
 .zapio-banner__heading {
-  margin: 0;  
+  margin: 0;
   word-break: break-word;
   font-size: 44px;
   line-height: 1.1;
   font-weight: 400;
-} 
+}
 /* Description */
 .zapio-banner__description {
   font-size: 1.6rem;
@@ -76,7 +75,6 @@
   gap: 1.6rem;
   margin-top: 1rem;
 }
-
 
 /* Image Area */
 .zapio-banner__image-wrapper {
@@ -97,6 +95,82 @@
   display: block;
   object-fit: cover;
   border-radius: 1rem;
+}
+
+/* Ticker Animation */
+.zapio-banner__ticker-wrapper {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  height: 600px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  align-items: flex-start;
+  order: 2;
+}
+
+.zapio-banner__column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+}
+
+.zapio-banner__ticker-image {
+  width: 100%;
+}
+
+.zapio-banner__ticker-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.zapio-banner__column--up {
+  animation: scrollUp 30s linear infinite;
+}
+
+.zapio-banner__column--down {
+  animation: scrollDown 30s linear infinite;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Pause on hover */
+.zapio-banner__ticker-wrapper:hover .zapio-banner__column {
+  animation-play-state: paused;
 }
 
 /* Animations */
@@ -148,11 +222,23 @@
   animation-delay: 0.7s;
 }
 
-.zapio-banner__image-wrapper.animate-fade-in-right {
+.zapio-banner__image-wrapper.animate-fade-in-right,
+.zapio-banner__ticker-wrapper.show-on-desktop {
   animation-delay: 0.4s;
 }
 
 /* Responsive adjustments */
+@media screen and (max-width: 990px) {
+  .zapio-banner__ticker-wrapper {
+    height: 400px;
+    margin-bottom: 2rem;
+  }
+
+  .zapio-banner__ticker-wrapper.show-on-desktop {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 749px) {
   .zapio-banner__content {
     gap: 1.5rem;
