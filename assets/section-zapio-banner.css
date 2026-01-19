@@ -141,10 +141,13 @@
 }
 
 .zapio-banner__column--up {
+  will-change: transform;
   animation: scrollUp 30s linear infinite;
 }
 
 .zapio-banner__column--down {
+  will-change: transform;
+  transform: translateY(-50%); /* Set initial state to match animation start and prevent jump */
   animation: scrollDown 30s linear infinite;
 }
 
