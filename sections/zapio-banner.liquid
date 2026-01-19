@@ -42,10 +42,13 @@
   <div class="page-width">
     <div class="zapio-banner__wrapper">
      
-      {%- if section.blocks.size > 0 -%}
+      {%- assign left_blocks = section.blocks | where: "type", "ticker_image_left" -%}
+      {%- assign right_blocks = section.blocks | where: "type", "ticker_image_right" -%}
+
+      {%- if left_blocks.size > 0 or right_blocks.size > 0 -%}
         <div class="zapio-banner__ticker-wrapper show-on-desktop">
           <div class="zapio-banner__column zapio-banner__column--up">
-            {%- for block in section.blocks -%}
+            {%- for block in left_blocks -%}
               {%- if block.settings.image != blank -%}
                 <div class="zapio-banner__ticker-image">
                   <img
@@ -59,7 +62,7 @@
               {%- endif -%}
             {%- endfor -%}
             {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
-            {%- for block in section.blocks -%}
+            {%- for block in left_blocks -%}
               {%- if block.settings.image != blank -%}
                 <div class="zapio-banner__ticker-image">
                   <img
@@ -74,7 +77,7 @@
             {%- endfor -%}
           </div>
           <div class="zapio-banner__column zapio-banner__column--down">
-            {%- for block in section.blocks reversed -%}
+            {%- for block in right_blocks -%}
               {%- if block.settings.image != blank -%}
                 <div class="zapio-banner__ticker-image">
                   <img
@@ -88,7 +91,7 @@
               {%- endif -%}
             {%- endfor -%}
             {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
-            {%- for block in section.blocks reversed -%}
+            {%- for block in right_blocks -%}
               {%- if block.settings.image != blank -%}
                 <div class="zapio-banner__ticker-image">
                   <img
@@ -148,10 +151,10 @@
           </h1>
         {%- endif -%}
 
-        {%- if section.blocks.size > 0 -%}
+        {%- if left_blocks.size > 0 or right_blocks.size > 0 -%}
            <div class="zapio-banner__ticker-wrapper show-on-mobile">
             <div class="zapio-banner__column zapio-banner__column--up">
-              {%- for block in section.blocks -%}
+              {%- for block in left_blocks -%}
                 {%- if block.settings.image != blank -%}
                   <div class="zapio-banner__ticker-image">
                     <img
@@ -165,7 +168,36 @@
                 {%- endif -%}
               {%- endfor -%}
               {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
-              {%- for block in section.blocks -%}
+              {%- for block in left_blocks -%}
+                {%- if block.settings.image != blank -%}
+                  <div class="zapio-banner__ticker-image">
+                    <img
+                      src="{{ block.settings.image | image_url: width: 400 }}"
+                      loading="lazy"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      width="400"
+                      height="{{ 400 | divided_by: block.settings.image.aspect_ratio | round }}"
+                    >
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+            <div class="zapio-banner__column zapio-banner__column--down">
+              {%- for block in right_blocks -%}
+                {%- if block.settings.image != blank -%}
+                  <div class="zapio-banner__ticker-image">
+                    <img
+                      src="{{ block.settings.image | image_url: width: 400 }}"
+                      loading="lazy"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      width="400"
+                      height="{{ 400 | divided_by: block.settings.image.aspect_ratio | round }}"
+                    >
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+              {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
+              {%- for block in right_blocks -%}
                 {%- if block.settings.image != blank -%}
                   <div class="zapio-banner__ticker-image">
                     <img
@@ -425,8 +457,19 @@
   ],
   "blocks": [
     {
-      "type": "ticker_image",
-      "name": "Ticker Image",
+      "type": "ticker_image_left",
+      "name": "Ticker Image (Left)",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "ticker_image_right",
+      "name": "Ticker Image (Right)",
       "settings": [
         {
           "type": "image_picker",
@@ -441,19 +484,20 @@
       "name": "Zapio Banner",
       "blocks": [
         {
-          "type": "ticker_image"
+          "type": "ticker_image_left"
         },
         {
-          "type": "ticker_image"
+          "type": "ticker_image_left"
         },
         {
-          "type": "ticker_image"
+          "type": "ticker_image_right"
         },
         {
-          "type": "ticker_image"
+          "type": "ticker_image_right"
         }
       ]
     }
   ]
 }
 {% endschema %}
+
