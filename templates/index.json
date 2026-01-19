@@ -20,16 +20,22 @@
     "zapio_banner_7qdhMa": {
       "type": "zapio-banner",
       "blocks": {
-        "ticker_image_left_N88YLf": {
+        "ticker_image_left_krLG8a": {
           "type": "ticker_image_left",
           "settings": {
-            "image": "shopify://shop_images/Congrats_bar_8338b5e2-f38f-4a6f-b75f-7104ef8de320.png"
+            "image": "shopify://shop_images/Congrats_bar_c623daaf-2c3f-49ac-86c9-ce5435f7e520.png"
           }
         },
-        "ticker_image_left_kyKRpR": {
+        "ticker_image_left_6rAeqL": {
           "type": "ticker_image_left",
           "settings": {
-            "image": "shopify://shop_images/Floating_popup_9f85b461-74e9-4b29-95a2-489a1c4602d0.png"
+            "image": "shopify://shop_images/Group_13.png"
+          }
+        },
+        "ticker_image_left_FcfQCW": {
+          "type": "ticker_image_left",
+          "settings": {
+            "image": "shopify://shop_images/Milestone_Reward.png"
           }
         },
         "ticker_image_right_YH8eTp": {
@@ -49,21 +55,15 @@
           "settings": {
             "image": "shopify://shop_images/Group_6.png"
           }
-        },
-        "ticker_image_left_CcBNbd": {
-          "type": "ticker_image_left",
-          "settings": {
-            "image": "shopify://shop_images/Spending_goal.png"
-          }
         }
       },
       "block_order": [
-        "ticker_image_left_N88YLf",
-        "ticker_image_left_kyKRpR",
+        "ticker_image_left_krLG8a",
+        "ticker_image_left_6rAeqL",
+        "ticker_image_left_FcfQCW",
         "ticker_image_right_YH8eTp",
         "ticker_image_right_UtVpXi",
-        "ticker_image_right_d47dwY",
-        "ticker_image_left_CcBNbd"
+        "ticker_image_right_d47dwY"
       ],
       "name": "Zapio Banner",
       "settings": {
