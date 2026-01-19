@@ -101,7 +101,7 @@
 .zapio-banner__ticker-wrapper {
   position: relative;
   display: flex;
-  gap: 2rem;
+  gap: 16px;
   height: 750px;
   overflow: hidden;
   mask-image: linear-gradient(
