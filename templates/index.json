@@ -19,6 +19,31 @@
     },
     "zapio_banner_7qdhMa": {
       "type": "zapio-banner",
+      "blocks": {
+        "ticker_image_KkiM3T": {
+          "type": "ticker_image",
+          "settings": {
+            "image": "shopify://shop_images/Image_9ca3b35f-32df-44fb-b415-56cca9710965.png"
+          }
+        },
+        "ticker_image_jfkJD6": {
+          "type": "ticker_image",
+          "settings": {
+            "image": "shopify://shop_images/Image_d24d2007-bff1-41de-a10d-acfddaf5e5a6.png"
+          }
+        },
+        "ticker_image_xf4rXm": {
+          "type": "ticker_image",
+          "settings": {
+            "image": "shopify://shop_images/Image_a1c8e4b9-6b63-4d42-83bb-d2d3b8639d5b.png"
+          }
+        }
+      },
+      "block_order": [
+        "ticker_image_KkiM3T",
+        "ticker_image_jfkJD6",
+        "ticker_image_xf4rXm"
+      ],
       "name": "Zapio Banner",
       "settings": {
         "image": "shopify://shop_images/Content_7c78d0db-eada-4c89-99a3-2dad7c740a8d.png",
