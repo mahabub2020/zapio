@@ -1581,3 +1581,15 @@ a.product__text {
     display: block;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .product__info-wrapper .product__title h1 {
+    font-size: 28px;
+  }
+  .product__info-wrapper.grid__item {
+    padding-top: 30px;
+  }
+  .zapio-multicolumn__header.inline .title-wrp {
+    display: block;
+  }
+}
