@@ -31,7 +31,7 @@
         "show_vendor": false,
         "show_rating": false,
         "show_price": true,
-        "quick_add": "standard",
+        "quick_add": "bulk",
         "enable_filtering": false,
         "filter_type": "horizontal",
         "enable_sorting": false,
