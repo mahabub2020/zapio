@@ -57,6 +57,9 @@
   .zapio-multicolumn__grid {
     gap: 1.5rem;
   }
+  .zapio-multicolumn__header.inline .title-wrp {
+    display: block;
+  }
 }
 
 /* Item */
