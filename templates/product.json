@@ -89,6 +89,10 @@
             "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>",
             "page": ""
           }
+        },
+        "zapio_upsell_zapio_widget_block_milestone_xYQ7Jr": {
+          "type": "shopify://apps/zapio-upsell/blocks/zapio-widget-block-milestone/019b220e-8c46-7b31-a4a6-4d6d4848207b",
+          "settings": {}
         }
       },
       "block_order": [
@@ -102,7 +106,8 @@
         "buy_buttons",
         "collapsible_tab_ychK9a",
         "collapsible_tab_79jFkD",
-        "collapsible_tab_kJBHxr"
+        "collapsible_tab_kJBHxr",
+        "zapio_upsell_zapio_widget_block_milestone_xYQ7Jr"
       ],
       "settings": {
         "enable_sticky_info": true,
