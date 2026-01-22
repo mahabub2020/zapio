@@ -23,19 +23,31 @@
         "ticker_image_left_FcfQCW": {
           "type": "ticker_image_left",
           "settings": {
-            "image": "shopify://shop_images/Milestone_Reward.png"
+            "image": "shopify://shop_images/left-1.png"
           }
         },
         "ticker_image_left_6rAeqL": {
           "type": "ticker_image_left",
           "settings": {
-            "image": "shopify://shop_images/Group_13.png"
+            "image": "shopify://shop_images/left-2.jpg"
           }
         },
         "ticker_image_left_krLG8a": {
           "type": "ticker_image_left",
           "settings": {
-            "image": "shopify://shop_images/Congrats_bar_c623daaf-2c3f-49ac-86c9-ce5435f7e520.png"
+            "image": "shopify://shop_images/left-3.png"
+          }
+        },
+        "ticker_image_left_Mn6R6e": {
+          "type": "ticker_image_left",
+          "settings": {
+            "image": "shopify://shop_images/left-4.png"
+          }
+        },
+        "ticker_image_left_QnNBgw": {
+          "type": "ticker_image_left",
+          "settings": {
+            "image": "shopify://shop_images/left-5.png"
           }
         },
         "ticker_image_right_YH8eTp": {
@@ -61,6 +73,8 @@
         "ticker_image_left_FcfQCW",
         "ticker_image_left_6rAeqL",
         "ticker_image_left_krLG8a",
+        "ticker_image_left_Mn6R6e",
+        "ticker_image_left_QnNBgw",
         "ticker_image_right_YH8eTp",
         "ticker_image_right_UtVpXi",
         "ticker_image_right_d47dwY"
