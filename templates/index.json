@@ -53,19 +53,31 @@
         "ticker_image_right_YH8eTp": {
           "type": "ticker_image_right",
           "settings": {
-            "image": "shopify://shop_images/Group_12.png"
+            "image": "shopify://shop_images/right-2.png"
           }
         },
         "ticker_image_right_UtVpXi": {
           "type": "ticker_image_right",
           "settings": {
-            "image": "shopify://shop_images/BXGY_embed.png"
+            "image": "shopify://shop_images/right-3.png"
           }
         },
         "ticker_image_right_d47dwY": {
           "type": "ticker_image_right",
           "settings": {
-            "image": "shopify://shop_images/Spending_goal_ef2dac5f-de25-4d98-92ee-c688fe93ae43.png"
+            "image": "shopify://shop_images/right-4.png"
+          }
+        },
+        "ticker_image_right_NmXgxb": {
+          "type": "ticker_image_right",
+          "settings": {
+            "image": "shopify://shop_images/right-5.png"
+          }
+        },
+        "ticker_image_right_tXq8xz": {
+          "type": "ticker_image_right",
+          "settings": {
+            "image": "shopify://shop_images/right-6.png"
           }
         }
       },
@@ -77,7 +89,9 @@
         "ticker_image_left_QnNBgw",
         "ticker_image_right_YH8eTp",
         "ticker_image_right_UtVpXi",
-        "ticker_image_right_d47dwY"
+        "ticker_image_right_d47dwY",
+        "ticker_image_right_NmXgxb",
+        "ticker_image_right_tXq8xz"
       ],
       "name": "Zapio Banner",
       "settings": {
