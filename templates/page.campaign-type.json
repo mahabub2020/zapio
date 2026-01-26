@@ -26,11 +26,11 @@
             "image": "shopify://shop_images/Free-Gift.png",
             "tagline": "Increase Average Order Value",
             "title": "Free Gift",
-            "description": "Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion.",
+            "description": "<p>Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion.</p>",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend $50, get a free gift</li><li>Cart reminder when customers are close to a reward</li><li>First-purchase incentive for new customers</li></ul>",
             "button_label": "View Demo",
-            "button_link": "shopify://products/floating-pop-up"
+            "button_link": "shopify://products/classic-high-tops"
           }
         },
         "column_EUkYYE": {
@@ -39,11 +39,11 @@
             "image": "shopify://shop_images/Buy_X_Get_Y.png",
             "tagline": "Increase Average Order Value",
             "title": "Buy X Get Y",
-            "description": "Bundle logic that encourages multi-item purchases without reducing core product price.",
+            "description": "<p>Bundle logic that encourages multi-item purchases without reducing core product price.</p>",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Buy 2, get 1 free</li><li>Buy X, get Y at a discount</li><li>Clearance or overstock acceleration</li></ul>",
             "button_label": "View Demo",
-            "button_link": "shopify://products/bxgy-embedded"
+            "button_link": "shopify://products/classic-white-crew-socks-3-pack"
           }
         },
         "column_rVfDhA": {
@@ -52,11 +52,11 @@
             "image": "shopify://shop_images/Milestone_Rewards.png",
             "tagline": "Increase Average Order Value",
             "title": "Milestone Rewards",
-            "description": "Progress-based incentives that keep customers spending to unlock the next reward.",
+            "description": "<p>Progress-based incentives that keep customers spending to unlock the next reward.</p>",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend thresholds with visible progress</li><li>Tiered rewards (gift, discount, free shipping)</li><li>Cart nudges before checkout</li></ul>",
             "button_label": "View Demo",
-            "button_link": "shopify://products/bundle-discount"
+            "button_link": "shopify://products/cleansweep-brush"
           }
         },
         "column_eUwKVy": {
@@ -66,7 +66,7 @@
             "image": "shopify://shop_images/Product_Bundles.png",
             "tagline": "Increase Average Order Value",
             "title": "Product Bundles",
-            "description": "Pre-packaged sets that simplify decisions and increase perceived savings.",
+            "description": "<p>Pre-packaged sets that simplify decisions and increase perceived savings.</p>",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Complementary product pairings</li><li>Starter kits and best-seller bundles</li><li>Seasonal or campaign-specific bundles</li></ul>",
             "button_label": "View Demo",
@@ -80,7 +80,7 @@
             "image": "shopify://shop_images/Volume_Discounts.png",
             "tagline": "Increase Average Order Value",
             "title": "Volume Discounts",
-            "description": "Encourage customers to buy more by offering larger discounts for adding more items.",
+            "description": "<p>Encourage customers to buy more by offering larger discounts for adding more items.</p>",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Buy more, save more pricing</li><li>Wholesale-style consumer offers</li><li>High-repeat consumable products</li></ul>",
             "button_label": "View Demo",
@@ -94,7 +94,7 @@
             "image": "shopify://shop_images/Frequently_Bought_Together.png",
             "tagline": "Increase Average Order Value",
             "title": "Frequently Bought Together",
-            "description": "Contextual sells based on product affinity.",
+            "description": "<p>Contextual sells based on product affinity.</p>",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Accessories and add-ons</li><li>Checkout cross-sell moments</li><li>Product page recommendations</li></ul>",
             "button_label": "View Demo",
