@@ -53,7 +53,7 @@
             "image_position_x": 67,
             "image_position_y": 50,
             "button_label": "View Widget",
-            "button_link": "shopify://products/floating-pop-up",
+            "button_link": "shopify://products/core-runner",
             "button_font_size": 14,
             "button_text_color": "",
             "button_hover_text_color": ""
@@ -92,7 +92,7 @@
             "image_position_x": 18,
             "image_position_y": 50,
             "button_label": "View Widget",
-            "button_link": "",
+            "button_link": "shopify://products/crew-socks-3-pack",
             "button_font_size": 14,
             "button_text_color": "",
             "button_hover_text_color": ""
@@ -131,7 +131,7 @@
             "image_position_x": 72,
             "image_position_y": 50,
             "button_label": "View Widget",
-            "button_link": "shopify://products/bxgy-embedded",
+            "button_link": "shopify://products/zap-drawstring-pack",
             "button_font_size": 14,
             "button_text_color": "",
             "button_hover_text_color": ""
@@ -170,7 +170,7 @@
             "image_position_x": 15,
             "image_position_y": 50,
             "button_label": "View Widget",
-            "button_link": "shopify://products/bxgy-embedded",
+            "button_link": "shopify://products/green-sneakers",
             "button_font_size": 14,
             "button_text_color": "",
             "button_hover_text_color": ""
@@ -209,7 +209,7 @@
             "image_position_x": 73,
             "image_position_y": 50,
             "button_label": "View Widget",
-            "button_link": "shopify://products/bxgy-embedded",
+            "button_link": "shopify://products/hoff-sneakers",
             "button_font_size": 14,
             "button_text_color": "",
             "button_hover_text_color": ""
@@ -248,7 +248,7 @@
             "image_position_x": 27,
             "image_position_y": 26,
             "button_label": "View Widget",
-            "button_link": "shopify://products/bxgy-embedded",
+            "button_link": "shopify://products/hoff-white-orange-sneakers",
             "button_font_size": 14,
             "button_text_color": "",
             "button_hover_text_color": ""
