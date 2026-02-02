@@ -124,6 +124,19 @@
           "settings": {
             "image": "shopify://shop_images/Frame_9.png",
             "tagline": "Increase Average Order Value",
+            "title": "Cross-Sell",
+            "description": "<p>Product, Pop-up on Add to Cart, Cart page</p>",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Buy 2, get 1 free</li><li>Buy X, get Y at a discount</li><li>Clearance or overstock acceleration</li></ul>",
+            "button_label": "View Demo",
+            "button_link": "shopify://products/core-runner"
+          }
+        },
+        "column_MJcmDj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_9.png",
+            "tagline": "Increase Average Order Value",
             "title": "Buy X Get Y",
             "description": "<p>Bundle logic that encourages multi-item purchases without reducing core product price.</p>",
             "use_case_title": "Use Cases:",
@@ -134,6 +147,7 @@
         },
         "column_mBVbAm": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Frame_9_bfe29411-991e-40f4-966b-1674804e1661.png",
             "tagline": "Increase Average Order Value",
@@ -203,6 +217,7 @@
       },
       "block_order": [
         "column_7RTFei",
+        "column_MJcmDj",
         "column_mBVbAm",
         "column_93TcLn",
         "column_iRdXKD",
