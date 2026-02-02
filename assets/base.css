@@ -3617,3 +3617,11 @@ details-disclosure>details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+/* Product-specific block visibility */
+#shopify-block-AYzQ1SWp0c08xMVlra__12147612498419570842{
+    display: none !important;
+}
+body.product-10222771470625 #shopify-block-AYzQ1SWp0c08xMVlra__12147612498419570842 {
+    display: block !important ;
+}
