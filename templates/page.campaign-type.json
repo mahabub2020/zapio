@@ -107,11 +107,11 @@
             "image": "shopify://shop_images/Free-Gift.png",
             "tagline": "Increase Average Order Value",
             "title": "Free Gift",
-            "description": "<p>Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion.</p>",
+            "description": "<p>Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion. </p>",
             "use_case_title": "Use Cases:",
             "use_cases": "<ul><li>Spend $50, get a free gift</li><li>Cart reminder when customers are close to a reward</li><li>First-purchase incentive for new customers</li></ul>",
             "button_label": "View Demo",
-            "button_link": "shopify://products/classic-high-tops"
+            "button_link": "shopify://products/hoff-sneakers"
           }
         }
       },
