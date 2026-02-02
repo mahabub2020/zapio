@@ -127,7 +127,7 @@
             "title": "Cross-Sell",
             "description": "<p>Product, Pop-up on Add to Cart, Cart page</p>",
             "use_case_title": "Use Cases:",
-            "use_cases": "<ul><li>Buy 2, get 1 free</li><li>Buy X, get Y at a discount</li><li>Clearance or overstock acceleration</li></ul>",
+            "use_cases": "<ul><li>Any product</li><li>Specific products</li><li>Products purchased by a specific collection</li></ul>",
             "button_label": "View Demo",
             "button_link": "shopify://products/core-runner"
           }
