@@ -125,9 +125,9 @@
             "image": "shopify://shop_images/Frame_9.png",
             "tagline": "Increase Average Order Value",
             "title": "Cross-Sell",
-            "description": "<p>Product, Pop-up on Add to Cart, Cart page</p>",
+            "description": "<p>Strategic add-on offers that surface complementary products exactly when purchase intent is highest.</p>",
             "use_case_title": "Use Cases:",
-            "use_cases": "<ul><li>Any product</li><li>Specific products</li><li>Products purchased by a specific collection</li></ul>",
+            "use_cases": "<ul><li>Automatically recommend matching or compatible items</li><li>One-click add-ons from product and cart views</li><li>“Complete the set” prompts</li></ul>",
             "button_label": "View Demo",
             "button_link": "shopify://products/core-runner"
           }
@@ -145,6 +145,19 @@
             "button_link": "shopify://products/core-runner"
           }
         },
+        "column_93TcLn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_9_42818e63-c802-4486-af95-322e1e70fd01.png",
+            "tagline": "Increase Average Order Value",
+            "title": "Milestone Rewards",
+            "description": "<p>Progress-based incentives that keep customers spending to unlock the next reward.</p>",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend thresholds with visible progress</li><li>Tiered rewards (gift, discount, free shipping)</li><li>Cart nudges before checkout</li></ul>",
+            "button_label": "View Demo",
+            "button_link": "shopify://products/hoff-white-orange-sneakers"
+          }
+        },
         "column_mBVbAm": {
           "type": "column",
           "disabled": true,
@@ -157,19 +170,6 @@
             "use_cases": "<ul><li>Spend $50, get a free gift</li><li>Cart reminder when customers are close to a reward</li><li>First-purchase incentive for new customers</li></ul>",
             "button_label": "View Demo",
             "button_link": "shopify://products/hoff-sneakers"
-          }
-        },
-        "column_93TcLn": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Frame_9_42818e63-c802-4486-af95-322e1e70fd01.png",
-            "tagline": "Increase Average Order Value",
-            "title": "Milestone Rewards",
-            "description": "<p>Progress-based incentives that keep customers spending to unlock the next reward.</p>",
-            "use_case_title": "Use Cases:",
-            "use_cases": "<ul><li>Spend thresholds with visible progress</li><li>Tiered rewards (gift, discount, free shipping)</li><li>Cart nudges before checkout</li></ul>",
-            "button_label": "View Demo",
-            "button_link": "shopify://products/hoff-white-orange-sneakers"
           }
         },
         "column_iRdXKD": {
@@ -218,8 +218,8 @@
       "block_order": [
         "column_7RTFei",
         "column_MJcmDj",
-        "column_mBVbAm",
         "column_93TcLn",
+        "column_mBVbAm",
         "column_iRdXKD",
         "column_rXAxYW",
         "column_DFadEp"
