@@ -119,6 +119,19 @@
     "zapio_multicolumn_b9pJUF": {
       "type": "zapio-multicolumn",
       "blocks": {
+        "column_DFadEp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frequently-Bought_Together.png",
+            "tagline": "Increase Average Order Value",
+            "title": "Frequently Bought Together",
+            "description": "<p>Contextual sells based on product affinity.</p>",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Accessories and add-ons</li><li>Checkout cross-sell moments</li><li>Product page recommendations</li></ul>",
+            "button_label": "View Demo",
+            "button_link": "shopify://products/bundle-discount"
+          }
+        },
         "column_7RTFei": {
           "type": "column",
           "settings": {
@@ -199,29 +212,16 @@
             "button_label": "View Demo",
             "button_link": "shopify://products/floating-pop-up"
           }
-        },
-        "column_DFadEp": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Frequently_Bought_Together.png",
-            "tagline": "Increase Average Order Value",
-            "title": "Frequently Bought Together",
-            "description": "<p>Contextual sells based on product affinity.</p>",
-            "use_case_title": "Use Cases:",
-            "use_cases": "<ul><li>Accessories and add-ons</li><li>Checkout cross-sell moments</li><li>Product page recommendations</li></ul>",
-            "button_label": "View Demo",
-            "button_link": "shopify://products/bundle-discount"
-          }
         }
       },
       "block_order": [
+        "column_DFadEp",
         "column_7RTFei",
         "column_MJcmDj",
         "column_93TcLn",
         "column_mBVbAm",
         "column_iRdXKD",
-        "column_rXAxYW",
-        "column_DFadEp"
+        "column_rXAxYW"
       ],
       "name": "Zapio Multicolumn",
       "settings": {
