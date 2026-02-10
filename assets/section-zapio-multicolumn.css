@@ -84,6 +84,10 @@
   transform: translateY(-2px);
 }
 
+.color-scheme-4 .zapio-multicolumn__card {
+  border-color: rgba(var(--color-foreground), 0.15);
+}
+
 /* Image */
 .zapio-multicolumn__image-wrapper {
   width: 100%;
