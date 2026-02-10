@@ -595,6 +595,45 @@
             "button_text_color": "",
             "button_hover_text_color": ""
           }
+        },
+        "widget_YBEpcw": {
+          "type": "widget",
+          "settings": {
+            "cat_product_page": true,
+            "cat_cart_page": false,
+            "cat_checkout_page": false,
+            "cat_thank_you_page": false,
+            "cat_popup": false,
+            "widget_type": "bxgy-bogo",
+            "content_layout": "content-right",
+            "badge": "Frequently Bought Together",
+            "title": "FBT product page",
+            "description": "Triggers a contextual popup based on user behavior or rules, delivering targeted messages at controlled moments.",
+            "title_color": "",
+            "title_font_size": 28,
+            "description_color": "",
+            "description_font_size": 14,
+            "list_title": "Best For",
+            "list_title_color": "#0d0c0c",
+            "list_title_font_size": 14,
+            "list_items": "Targeted product or collection offers\nScroll- or time-based prompts\nCart-based interventions",
+            "list_color": "#3d2d2d",
+            "list_font_size": 14,
+            "background_color": "#f5d17b",
+            "background_image": "shopify://shop_images/Image_78550db8-cfb3-4f0d-94e6-f69ff3dd71bb.png",
+            "background_image_position": "left",
+            "background_image_position_mobile": "bottom",
+            "background_size": "contain",
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "image_position_x": 73,
+            "image_position_y": 50,
+            "button_label": "View Widget",
+            "button_link": "shopify://products/hoff-sneakers",
+            "button_font_size": 14,
+            "button_text_color": "",
+            "button_hover_text_color": ""
+          }
         }
       },
       "block_order": [
@@ -606,7 +645,8 @@
         "widget_QcAL8i",
         "widget_9fd6wa",
         "widget_mDHDdT",
-        "widget_UWjXQF"
+        "widget_UWjXQF",
+        "widget_YBEpcw"
       ],
       "name": "Zapio Widget Types",
       "settings": {
