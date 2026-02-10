@@ -202,7 +202,6 @@
         },
         "column_DFadEp": {
           "type": "column",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Frequently_Bought_Together.png",
             "tagline": "Increase Average Order Value",
