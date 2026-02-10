@@ -20,10 +20,23 @@
     "zapio_multicolumn_fpewky": {
       "type": "zapio-multicolumn",
       "blocks": {
-        "column_mMXTtH": {
+        "column_mCkFLG": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9.png",
+            "image": "shopify://shop_images/Frequently-Bought_Together.png",
+            "tagline": "Increase Average Order Value",
+            "title": "Frequently Bought Together",
+            "description": "<p>Contextual sells based on product affinity.</p>",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Accessories and add-ons</li><li>Checkout cross-sell moments</li><li>Product page recommendations</li></ul>",
+            "button_label": "View Demo",
+            "button_link": "shopify://products/bundle-discount"
+          }
+        },
+        "column_H3zpFK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cross-Sell.png",
             "tagline": "Increase Average Order Value",
             "title": "Cross-Sell",
             "description": "<p>Strategic add-on offers that surface complementary products exactly when purchase intent is highest.</p>",
@@ -44,19 +57,6 @@
             "use_cases": "<ul><li>Buy 2, get 1 free</li><li>Buy X, get Y at a discount</li><li>Clearance or overstock acceleration</li></ul>",
             "button_label": "View Demo",
             "button_link": "shopify://products/core-runner"
-          }
-        },
-        "column_rVfDhA": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Milestone_Rewards.png",
-            "tagline": "Increase Average Order Value",
-            "title": "Milestone Rewards",
-            "description": "<p>Progress-based incentives that keep customers spending to unlock the next reward.</p>",
-            "use_case_title": "Use Cases:",
-            "use_cases": "<ul><li>Spend thresholds with visible progress</li><li>Tiered rewards (gift, discount, free shipping)</li><li>Cart nudges before checkout</li></ul>",
-            "button_label": "View Demo",
-            "button_link": "shopify://products/hoff-white-orange-sneakers"
           }
         },
         "column_eUwKVy": {
@@ -87,6 +87,19 @@
             "button_link": "shopify://products/floating-pop-up"
           }
         },
+        "column_VaUqT4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Free-Gift.png",
+            "tagline": "Increase Average Order Value",
+            "title": "Free Gift",
+            "description": "<p>Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion. </p>",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend $50, get a free gift</li><li>Cart reminder when customers are close to a reward</li><li>First-purchase incentive for new customers</li></ul>",
+            "button_label": "View Demo",
+            "button_link": "shopify://products/hoff-sneakers"
+          }
+        },
         "column_yJbrny": {
           "type": "column",
           "disabled": true,
@@ -101,28 +114,29 @@
             "button_link": "shopify://products/bundle-discount"
           }
         },
-        "column_VaUqT4": {
+        "column_rVfDhA": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Free-Gift.png",
+            "image": "shopify://shop_images/Milestone_Rewards.png",
             "tagline": "Increase Average Order Value",
-            "title": "Free Gift",
-            "description": "<p>Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion. </p>",
+            "title": "Milestone Rewards",
+            "description": "<p>Progress-based incentives that keep customers spending to unlock the next reward.</p>",
             "use_case_title": "Use Cases:",
-            "use_cases": "<ul><li>Spend $50, get a free gift</li><li>Cart reminder when customers are close to a reward</li><li>First-purchase incentive for new customers</li></ul>",
+            "use_cases": "<ul><li>Spend thresholds with visible progress</li><li>Tiered rewards (gift, discount, free shipping)</li><li>Cart nudges before checkout</li></ul>",
             "button_label": "View Demo",
-            "button_link": "shopify://products/hoff-sneakers"
+            "button_link": "shopify://products/hoff-white-orange-sneakers"
           }
         }
       },
       "block_order": [
-        "column_mMXTtH",
+        "column_mCkFLG",
+        "column_H3zpFK",
         "column_EUkYYE",
-        "column_rVfDhA",
         "column_eUwKVy",
         "column_HH9YhA",
+        "column_VaUqT4",
         "column_yJbrny",
-        "column_VaUqT4"
+        "column_rVfDhA"
       ],
       "name": "Zapio Multicolumn",
       "settings": {
@@ -135,7 +149,7 @@
         "columns_desktop": 3,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 60,
         "padding_bottom": 96,
         "padding_top_mobile": 60,
