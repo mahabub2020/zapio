@@ -17,10 +17,10 @@
         "padding_bottom": 28
       }
     },
-    "zapio_widget_types_xhMkgY": {
+    "zapio_widget_types_xR6QyW": {
       "type": "zapio-widget-types",
       "blocks": {
-        "widget_pfdz3X": {
+        "widget_3qYftW": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
@@ -59,7 +59,7 @@
             "button_hover_text_color": ""
           }
         },
-        "widget_GCrycG": {
+        "widget_mt3iYk": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
@@ -98,7 +98,7 @@
             "button_hover_text_color": ""
           }
         },
-        "widget_XbNBq7": {
+        "widget_hwKD6C": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
@@ -137,7 +137,7 @@
             "button_hover_text_color": ""
           }
         },
-        "widget_4zyF7Y": {
+        "widget_rtpVM6": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
@@ -147,7 +147,7 @@
             "cat_popup": false,
             "widget_type": "bxgy-bogo",
             "content_layout": "content-right",
-            "badge": "BXGY / BOGO",
+            "badge": "Buy X Get Y",
             "title": "BXGY Embedded",
             "description": "Embedded directly within product or cart layouts, ensuring promotional value is visible at the exact decision point",
             "title_color": "#0d0c0c",
@@ -176,19 +176,19 @@
             "button_hover_text_color": ""
           }
         },
-        "widget_KXHJM4": {
+        "widget_jcF9PH": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
-            "cat_cart_page": false,
+            "cat_cart_page": true,
             "cat_checkout_page": false,
             "cat_thank_you_page": false,
             "cat_popup": false,
-            "widget_type": "bxgy-bogo",
+            "widget_type": "milestone-rewards",
             "content_layout": "content-left",
-            "badge": "BXGY / BOGO",
-            "title": "Floating Popup",
-            "description": "Triggers a contextual popup based on user behavior or rules, delivering targeted messages at controlled moments.",
+            "badge": "Buy X Get Y",
+            "title": "Pop-up on Add to Cart",
+            "description": "Shows a visual progress indicator that tracks spend or actions, turning completion into a clear, goal-driven outcome.",
             "title_color": "",
             "title_font_size": 28,
             "description_color": "",
@@ -196,30 +196,30 @@
             "list_title": "Best For",
             "list_title_color": "#0d0c0c",
             "list_title_font_size": 14,
-            "list_items": "Targeted product or collection offers\nScroll- or time-based prompts\nCart-based interventions",
+            "list_items": "Spend-to-unlock campaigns\nFree gift or discount thresholds\nAOV-driving incentives",
             "list_color": "#3d2d2d",
             "list_font_size": 14,
             "background_color": "#febad1",
-            "background_image": "shopify://shop_images/Image_a1c8e4b9-6b63-4d42-83bb-d2d3b8639d5b.png",
+            "background_image": "shopify://shop_images/Image_8f105e36-8fe5-4631-a777-6355bf0551c5.png",
             "background_image_position": "right",
             "background_image_position_mobile": "bottom",
             "background_size": "contain",
             "overlay_color": "rgba(0,0,0,0)",
             "overlay_opacity": 0,
-            "image_position_x": 73,
-            "image_position_y": 50,
+            "image_position_x": 27,
+            "image_position_y": 26,
             "button_label": "View Widget",
-            "button_link": "shopify://products/hoff-sneakers",
+            "button_link": "shopify://products/hoff-white-orange-sneakers",
             "button_font_size": 14,
             "button_text_color": "",
             "button_hover_text_color": ""
           }
         },
-        "widget_VtbkMU": {
+        "widget_kJp7RQ": {
           "type": "widget",
           "settings": {
             "cat_product_page": true,
-            "cat_cart_page": true,
+            "cat_cart_page": false,
             "cat_checkout_page": false,
             "cat_thank_you_page": false,
             "cat_popup": false,
@@ -253,23 +253,183 @@
             "button_text_color": "",
             "button_hover_text_color": ""
           }
+        },
+        "widget_hQTMqx": {
+          "type": "widget",
+          "settings": {
+            "cat_product_page": true,
+            "cat_cart_page": false,
+            "cat_checkout_page": false,
+            "cat_thank_you_page": false,
+            "cat_popup": false,
+            "widget_type": "bxgy-bogo",
+            "content_layout": "content-left",
+            "badge": "Cross Sell",
+            "title": "Cross Sell (product page)",
+            "description": "Triggers a contextual popup based on user behavior or rules, delivering targeted messages at controlled moments.",
+            "title_color": "",
+            "title_font_size": 28,
+            "description_color": "",
+            "description_font_size": 14,
+            "list_title": "Best For",
+            "list_title_color": "#0d0c0c",
+            "list_title_font_size": 14,
+            "list_items": "Targeted product or collection offers\nScroll- or time-based prompts\nCart-based interventions",
+            "list_color": "#3d2d2d",
+            "list_font_size": 14,
+            "background_color": "#bac7fe",
+            "background_image": "shopify://shop_images/Image_06b33b0d-2bfb-4f24-afe7-807817c348f0.png",
+            "background_image_position": "right",
+            "background_image_position_mobile": "bottom",
+            "background_size": "contain",
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "image_position_x": 73,
+            "image_position_y": 50,
+            "button_label": "View Widget",
+            "button_link": "shopify://products/hoff-sneakers",
+            "button_font_size": 14,
+            "button_text_color": "",
+            "button_hover_text_color": ""
+          }
+        },
+        "widget_Ah77Pg": {
+          "type": "widget",
+          "settings": {
+            "cat_product_page": true,
+            "cat_cart_page": true,
+            "cat_checkout_page": false,
+            "cat_thank_you_page": false,
+            "cat_popup": false,
+            "widget_type": "bxgy-bogo",
+            "content_layout": "content-right",
+            "badge": "Cross Sell",
+            "title": "Cross Sell (cart page)",
+            "description": "Triggers a contextual popup based on user behavior or rules, delivering targeted messages at controlled moments.",
+            "title_color": "",
+            "title_font_size": 28,
+            "description_color": "",
+            "description_font_size": 14,
+            "list_title": "Best For",
+            "list_title_color": "#0d0c0c",
+            "list_title_font_size": 14,
+            "list_items": "Targeted product or collection offers\nScroll- or time-based prompts\nCart-based interventions",
+            "list_color": "#3d2d2d",
+            "list_font_size": 14,
+            "background_color": "#d0b9ef",
+            "background_image": "shopify://shop_images/Image_78550db8-cfb3-4f0d-94e6-f69ff3dd71bb.png",
+            "background_image_position": "left",
+            "background_image_position_mobile": "bottom",
+            "background_size": "contain",
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "image_position_x": 73,
+            "image_position_y": 50,
+            "button_label": "View Widget",
+            "button_link": "shopify://products/hoff-sneakers",
+            "button_font_size": 14,
+            "button_text_color": "",
+            "button_hover_text_color": ""
+          }
+        },
+        "widget_YtVwDD": {
+          "type": "widget",
+          "settings": {
+            "cat_product_page": true,
+            "cat_cart_page": false,
+            "cat_checkout_page": false,
+            "cat_thank_you_page": false,
+            "cat_popup": false,
+            "widget_type": "bxgy-bogo",
+            "content_layout": "content-left",
+            "badge": "Cross Sell",
+            "title": "Cross Sell (Pop-up on Add to Cart)",
+            "description": "Triggers a contextual popup based on user behavior or rules, delivering targeted messages at controlled moments.",
+            "title_color": "",
+            "title_font_size": 28,
+            "description_color": "",
+            "description_font_size": 14,
+            "list_title": "Best For",
+            "list_title_color": "#0d0c0c",
+            "list_title_font_size": 14,
+            "list_items": "Targeted product or collection offers\nScroll- or time-based prompts\nCart-based interventions",
+            "list_color": "#3d2d2d",
+            "list_font_size": 14,
+            "background_color": "#febaf3",
+            "background_image": "shopify://shop_images/Image_f0facf9f-9fa3-4ba2-b68e-2d0872148d9a.png",
+            "background_image_position": "right",
+            "background_image_position_mobile": "bottom",
+            "background_size": "contain",
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "image_position_x": 73,
+            "image_position_y": 50,
+            "button_label": "View Widget",
+            "button_link": "shopify://products/hoff-sneakers",
+            "button_font_size": 14,
+            "button_text_color": "",
+            "button_hover_text_color": ""
+          }
+        },
+        "widget_xzcLYf": {
+          "type": "widget",
+          "settings": {
+            "cat_product_page": true,
+            "cat_cart_page": false,
+            "cat_checkout_page": false,
+            "cat_thank_you_page": false,
+            "cat_popup": false,
+            "widget_type": "bxgy-bogo",
+            "content_layout": "content-right",
+            "badge": "Frequently Bought Together",
+            "title": "FBT product page",
+            "description": "Triggers a contextual popup based on user behavior or rules, delivering targeted messages at controlled moments.",
+            "title_color": "",
+            "title_font_size": 28,
+            "description_color": "",
+            "description_font_size": 14,
+            "list_title": "Best For",
+            "list_title_color": "#0d0c0c",
+            "list_title_font_size": 14,
+            "list_items": "Targeted product or collection offers\nScroll- or time-based prompts\nCart-based interventions",
+            "list_color": "#3d2d2d",
+            "list_font_size": 14,
+            "background_color": "#f5d17b",
+            "background_image": "shopify://shop_images/Image_b45a4fa4-7fb8-4229-8072-7deb2cf59837.png",
+            "background_image_position": "left",
+            "background_image_position_mobile": "bottom",
+            "background_size": "contain",
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "image_position_x": 73,
+            "image_position_y": 50,
+            "button_label": "View Widget",
+            "button_link": "shopify://products/hoff-sneakers",
+            "button_font_size": 14,
+            "button_text_color": "",
+            "button_hover_text_color": ""
+          }
         }
       },
       "block_order": [
-        "widget_pfdz3X",
-        "widget_GCrycG",
-        "widget_XbNBq7",
-        "widget_4zyF7Y",
-        "widget_KXHJM4",
-        "widget_VtbkMU"
+        "widget_3qYftW",
+        "widget_mt3iYk",
+        "widget_hwKD6C",
+        "widget_rtpVM6",
+        "widget_jcF9PH",
+        "widget_kJp7RQ",
+        "widget_hQTMqx",
+        "widget_Ah77Pg",
+        "widget_YtVwDD",
+        "widget_xzcLYf"
       ],
       "name": "Zapio Widget Types",
       "settings": {
         "title": "Widget Types",
         "heading_size": "h1",
-        "subtitle": "Widgets control where and how campaigns appear. Each widget is lightweight, fast, <br> and designed to trigger action at the right moment.",
-        "description": "",
-        "button_label": "Explore All Widgets",
+        "subtitle": "",
+        "description": "Widgets control where and how campaigns appear. <br> Each widget is lightweight, fast, and designed to <br> trigger action at the right moment.",
+        "button_label": "",
         "button_link": "#",
         "columns_desktop": 1,
         "columns_mobile": "1",
@@ -287,6 +447,6 @@
   },
   "order": [
     "main",
-    "zapio_widget_types_xhMkgY"
+    "zapio_widget_types_xR6QyW"
   ]
 }
