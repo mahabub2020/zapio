@@ -33,10 +33,10 @@
             "button_link": "shopify://products/bundle-discount"
           }
         },
-        "column_mMXTtH": {
+        "column_H3zpFK": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9.png",
+            "image": "shopify://shop_images/Cross-Sell.png",
             "tagline": "Increase Average Order Value",
             "title": "Cross-Sell",
             "description": "<p>Strategic add-on offers that surface complementary products exactly when purchase intent is highest.</p>",
@@ -100,6 +100,19 @@
             "button_link": "shopify://products/floating-pop-up"
           }
         },
+        "column_VaUqT4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Free-Gift.png",
+            "tagline": "Increase Average Order Value",
+            "title": "Free Gift",
+            "description": "<p>Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion. </p>",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend $50, get a free gift</li><li>Cart reminder when customers are close to a reward</li><li>First-purchase incentive for new customers</li></ul>",
+            "button_label": "View Demo",
+            "button_link": "shopify://products/hoff-sneakers"
+          }
+        },
         "column_yJbrny": {
           "type": "column",
           "disabled": true,
@@ -113,30 +126,17 @@
             "button_label": "View Demo",
             "button_link": "shopify://products/bundle-discount"
           }
-        },
-        "column_VaUqT4": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Free-Gift.png",
-            "tagline": "Increase Average Order Value",
-            "title": "Free Gift",
-            "description": "<p>Reward higher spend with a tangible incentive. Free gifts anchor perceived value and accelerate checkout completion. </p>",
-            "use_case_title": "Use Cases:",
-            "use_cases": "<ul><li>Spend $50, get a free gift</li><li>Cart reminder when customers are close to a reward</li><li>First-purchase incentive for new customers</li></ul>",
-            "button_label": "View Demo",
-            "button_link": "shopify://products/hoff-sneakers"
-          }
         }
       },
       "block_order": [
         "column_mCkFLG",
-        "column_mMXTtH",
+        "column_H3zpFK",
         "column_EUkYYE",
         "column_rVfDhA",
         "column_eUwKVy",
         "column_HH9YhA",
-        "column_yJbrny",
-        "column_VaUqT4"
+        "column_VaUqT4",
+        "column_yJbrny"
       ],
       "name": "Zapio Multicolumn",
       "settings": {
