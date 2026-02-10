@@ -135,7 +135,7 @@
         "column_7RTFei": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_9.png",
+            "image": "shopify://shop_images/Cross-Sell.png",
             "tagline": "Increase Average Order Value",
             "title": "Cross-Sell",
             "description": "<p>Strategic add-on offers that surface complementary products exactly when purchase intent is highest.</p>",
@@ -160,6 +160,7 @@
         },
         "column_93TcLn": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Frame_9_42818e63-c802-4486-af95-322e1e70fd01.png",
             "tagline": "Increase Average Order Value",
