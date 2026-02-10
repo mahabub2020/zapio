@@ -59,19 +59,6 @@
             "button_link": "shopify://products/core-runner"
           }
         },
-        "column_rVfDhA": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Milestone_Rewards.png",
-            "tagline": "Increase Average Order Value",
-            "title": "Milestone Rewards",
-            "description": "<p>Progress-based incentives that keep customers spending to unlock the next reward.</p>",
-            "use_case_title": "Use Cases:",
-            "use_cases": "<ul><li>Spend thresholds with visible progress</li><li>Tiered rewards (gift, discount, free shipping)</li><li>Cart nudges before checkout</li></ul>",
-            "button_label": "View Demo",
-            "button_link": "shopify://products/hoff-white-orange-sneakers"
-          }
-        },
         "column_eUwKVy": {
           "type": "column",
           "disabled": true,
@@ -126,17 +113,30 @@
             "button_label": "View Demo",
             "button_link": "shopify://products/bundle-discount"
           }
+        },
+        "column_rVfDhA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Milestone_Rewards.png",
+            "tagline": "Increase Average Order Value",
+            "title": "Milestone Rewards",
+            "description": "<p>Progress-based incentives that keep customers spending to unlock the next reward.</p>",
+            "use_case_title": "Use Cases:",
+            "use_cases": "<ul><li>Spend thresholds with visible progress</li><li>Tiered rewards (gift, discount, free shipping)</li><li>Cart nudges before checkout</li></ul>",
+            "button_label": "View Demo",
+            "button_link": "shopify://products/hoff-white-orange-sneakers"
+          }
         }
       },
       "block_order": [
         "column_mCkFLG",
         "column_H3zpFK",
         "column_EUkYYE",
-        "column_rVfDhA",
         "column_eUwKVy",
         "column_HH9YhA",
         "column_VaUqT4",
-        "column_yJbrny"
+        "column_yJbrny",
+        "column_rVfDhA"
       ],
       "name": "Zapio Multicolumn",
       "settings": {
