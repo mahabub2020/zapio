@@ -529,7 +529,7 @@
             "widget_type": "bxgy-bogo",
             "content_layout": "content-right",
             "badge": "Cross Sell",
-            "title": "Cross Sell (product page)",
+            "title": "Cross Sell (cart page)",
             "description": "Triggers a contextual popup based on user behavior or rules, delivering targeted messages at controlled moments.",
             "title_color": "",
             "title_font_size": 28,
