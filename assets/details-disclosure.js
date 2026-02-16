@@ -59,18 +59,40 @@ class HeaderMenu extends DetailsDisclosure {
 
   onMouseEnter() {
     if (!window.matchMedia('(min-width: 990px)').matches) return;
+    
+    // If we are in the process of closing, cancel it and reopen/stay open
+    if (this.mainDetailsToggle.classList.contains('is-closing') || this.hasAttribute('open')) {
+      this.mainDetailsToggle.classList.remove('is-closing');
+      clearTimeout(this.closeTimer);
+    }
+    
     this.mainDetailsToggle.setAttribute('open', true);
     this.summary.setAttribute('aria-expanded', true);
   }
 
   onMouseLeave() {
     if (!window.matchMedia('(min-width: 990px)').matches) return;
-    setTimeout(() => {
+    
+    // Delay adding the closing class to allow for quick mouse movements
+    this.closeTimer = setTimeout(() => {
         if (!this.mainDetailsToggle.matches(':hover')) {
-             this.mainDetailsToggle.removeAttribute('open');
-             this.summary.setAttribute('aria-expanded', false);
+             this.closeMenuDrawer();
         }
     }, 200); 
+  }
+
+  closeMenuDrawer() {
+    this.mainDetailsToggle.classList.add('is-closing');
+    this.summary.setAttribute('aria-expanded', false);
+    
+    // Wait for animation to finish before removing open attribute
+    setTimeout(() => {
+       // Check again if we haven't re-entered
+       if (this.mainDetailsToggle.classList.contains('is-closing')) {
+          this.mainDetailsToggle.removeAttribute('open');
+          this.mainDetailsToggle.classList.remove('is-closing');
+       }
+    }, 400); // 400ms matches the CSS transition duration
   }
 
   onSummaryClick(event) {
