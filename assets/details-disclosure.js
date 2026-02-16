@@ -73,6 +73,18 @@ class HeaderMenu extends DetailsDisclosure {
     }, 200); 
   }
 
+  onSummaryClick(event) {
+    if (window.matchMedia('(min-width: 990px)').matches) {
+       const url = this.summary.dataset.href;
+       if (url) {
+           event.preventDefault();
+           window.location.href = url;
+           return;
+       }
+    }
+    super.onSummaryClick(event);
+  }
+
   onToggle() {
     if (!this.header) return;
     this.header.preventHide = this.mainDetailsToggle.open;
