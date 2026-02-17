@@ -662,7 +662,7 @@ summary .icon-caret {
   height: 15px;
   right: -20px;
   top: calc(50% - .7rem);
-  transition: all 0.2s !important;
+  transition: all 0.1s !important;
 }
 
 summary::-webkit-details-marker {
@@ -2836,6 +2836,10 @@ details[open]:hover>.header__menu-item {
 
 details[open]>.header__menu-item .icon-caret {
   transform: rotate(180deg);
+}
+
+details[open].is-closing > .header__menu-item .icon-caret {
+  transform: rotate(0deg);
 }
 
 .header__active-menu-item {

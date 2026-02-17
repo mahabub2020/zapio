@@ -131,6 +131,10 @@ div.mega-menu__no-link {
   transform: rotate(180deg);
 }
 
+.mega-menu[open].is-closing .icon-caret {
+  transform: rotate(0deg);
+}
+
 .mega-menu .mega-menu__list--condensed {
   display: block;
 }
