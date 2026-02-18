@@ -122,7 +122,14 @@
             assign image_position = 'left: ' | append: block.settings.image_position_x | append: '%; top: ' | append: block.settings.image_position_y | append: '%;'
             assign card_bg_style = 'background-color: ' | append: block.settings.background_color | append: '; position: relative; overflow: hidden;'
           -%}
-          <div
+          {%- liquid
+            assign card_tag = 'div'
+            if block.settings.button_link != blank
+              assign card_tag = 'a'
+            endif
+          -%}
+          <{{ card_tag }}
+            {% if card_tag == 'a' %}href="{{ block.settings.button_link }}"{% endif %}
             class="zapio-widget-types__card zapio-widget-types__card--{{ block.settings.content_layout }}"
             data-widget-card
             {% liquid
@@ -146,7 +153,7 @@
             data-category="{{ categories | strip }}"
             data-widget-type="{{ block.settings.widget_type }}"
             data-name="{{ block.settings.title | escape }}"
-            style="{{ card_bg_style }}"
+            style="{{ card_bg_style }}; text-decoration: none; color: inherit; display: block;"
             {{ block.shopify_attributes }}
           >
             {%- if block.settings.background_image != blank -%}
@@ -211,18 +218,28 @@
                 {%- endif -%}
               </div>
                 {%- if block.settings.button_label != blank -%}
-                  <a
-                    {% if block.settings.button_link == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.button_link }}"
-                    {% endif %}
-                    class="zapio-widget-types__card-link zapio-widget-btn-{{ block.id }}"
-                    style="font-size: {{ block.settings.button_font_size }}px; {% if block.settings.button_text_color != blank %}color: {{ block.settings.button_text_color }};{% endif %}"
-                  >
-                    {{ block.settings.button_label | escape }}
-                    <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
-                  </a>
+                  {%- if card_tag == 'a' -%}
+                    <span
+                      class="zapio-widget-types__card-link zapio-widget-btn-{{ block.id }}"
+                      style="font-size: {{ block.settings.button_font_size }}px; {% if block.settings.button_text_color != blank %}color: {{ block.settings.button_text_color }};{% endif %}"
+                    >
+                      {{ block.settings.button_label | escape }}
+                      <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
+                    </span>
+                  {%- else -%}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="zapio-widget-types__card-link zapio-widget-btn-{{ block.id }}"
+                      style="font-size: {{ block.settings.button_font_size }}px; {% if block.settings.button_text_color != blank %}color: {{ block.settings.button_text_color }};{% endif %}"
+                    >
+                      {{ block.settings.button_label | escape }}
+                      <span class="zapio-widget-types__card-arrow">{{ 'right-linear.svg' | inline_asset_content }}</span>
+                    </a>
+                  {%- endif -%}
                 {%- endif -%}
                
           
@@ -239,7 +256,7 @@
                 >
               </div>
             {%- endif -%}
-          </div>
+          </{{ card_tag }}>
         {%- endfor -%}
       </div>
 
